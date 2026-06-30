@@ -1,0 +1,9 @@
+{
+  "updated_at": "2026-06-29",
+  "total_ads": 22,
+  "by_competitor": {"ADVBOX": 38, "Projuris": 18, "Aurum": 8, "JusDocs": 6},
+  "by_category": {"Aquisi\u00e7\u00e3o": 27, "Produto": 15, "Educa\u00e7\u00e3o": 13, "Branding": 8, "Oferta/Desconto": 4, "Outro": 3},
+  "by_tom": {"Direto/Comercial": 43, "Autoridade": 19, "Educativo": 10, "Urg\u00eancia": 6},
+  "by_cta": {"Fale com o nosso time": 18, "Teste gr\u00e1tis": 9, "Baixe gr\u00e1tis": 6, "Saiba mais": 5, "Assine agora": 3},
+  "ads": []
+}
