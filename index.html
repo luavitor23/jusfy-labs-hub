@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jusfy Labs</title>
+<meta name="description" content="Suite interna de plataformas de IA da Jusfy">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fafaf8;
+  --paper:#ffffff;
+  --ink:#15151a;
+  --ink-soft:#46453f;
+  --ink-faint:#8a8578;
+  --line:#dedad0;
+  --line-soft:#ece9e1;
+  --blue:#1a4d8f;
+  --blue-deep:#0f3563;
+  --red:#a6332e;
+  --green:#3a6b4f;
+  --serif:'Source Serif 4',serif;
+  --mono:'IBM Plex Mono',monospace;
+  --sans:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
+}
+
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+/* ===== HEADER ===== */
+header{
+  border-bottom:1px solid var(--line);
+  background:var(--paper);
+}
+.hdr-inner{
+  max-width:1180px;margin:0 auto;padding:1.1rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:13px;font-weight:500;
+  letter-spacing:0.02em;color:var(--ink);
+}
+.brand-mark{
+  width:22px;height:22px;border:1.5px solid var(--ink);border-radius:3px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:13px;font-weight:600;flex-shrink:0;
+}
+.hdr-meta{font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:0.03em}
+
+/* ===== HERO ===== */
+.hero{
+  max-width:1180px;margin:0 auto;
+  padding:5rem 2rem 4rem;
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.hero-eyebrow{
+  font-family:var(--mono);font-size:11px;color:var(--ink-faint);
+  letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-eyebrow::before{
+  content:'';width:24px;height:1px;background:var(--ink-faint);
+}
+.hero h1{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(2.4rem,5.5vw,4.2rem);
+  line-height:1.05;letter-spacing:-0.01em;
+  max-width:14ch;margin-bottom:1.5rem;
+}
+.hero h1 em{font-style:italic;color:var(--blue)}
+.hero-sub{
+  font-size:17px;color:var(--ink-soft);max-width:48ch;line-height:1.6;
+}
+
+/* signature element: index ledger numbers */
+.hero-index{
+  position:absolute;top:5rem;right:2rem;
+  font-family:var(--mono);font-size:11px;color:var(--ink-faint);
+  text-align:right;line-height:1.8;display:none;
+}
+@media(min-width:900px){.hero-index{display:block}}
+
+/* ===== REGISTRY (product list) ===== */
+.registry{max-width:1180px;margin:0 auto;padding:0 2rem}
+.registry-head{
+  display:flex;align-items:baseline;justify-content:space-between;
+  padding:2.5rem 0 1.25rem;
+}
+.registry-title{
+  font-family:var(--mono);font-size:11px;letter-spacing:0.08em;
+  text-transform:uppercase;color:var(--ink-faint);
+}
+.registry-count{font-family:var(--mono);font-size:11px;color:var(--ink-faint)}
+
+.product{
+  display:grid;
+  grid-template-columns:64px 1fr auto;
+  align-items:start;
+  gap:1.5rem;
+  padding:1.75rem 0;
+  border-top:1px solid var(--line);
+  text-decoration:none;
+  position:relative;
+  transition:padding-left .25s ease;
+}
+.product:last-child{border-bottom:1px solid var(--line)}
+.product:hover{padding-left:8px}
+.product:hover .product-arrow{transform:translateX(4px);opacity:1}
+.product:hover .product-name{color:var(--blue)}
+
+.product-num{
+  font-family:var(--mono);font-size:12px;color:var(--ink-faint);
+  padding-top:4px;
+}
+.product-body{min-width:0}
+.product-name{
+  font-family:var(--serif);font-size:1.5rem;font-weight:500;
+  color:var(--ink);margin-bottom:6px;transition:color .2s ease;
+  letter-spacing:-0.005em;
+}
+.product-desc{
+  font-size:14px;color:var(--ink-soft);max-width:54ch;line-height:1.6;
+  margin-bottom:10px;
+}
+.product-tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:0.03em;
+  padding:3px 8px;border-radius:3px;border:1px solid var(--line);
+  color:var(--ink-faint);
+}
+
+.product-right{
+  text-align:right;padding-top:4px;
+  display:flex;flex-direction:column;align-items:flex-end;gap:10px;
+}
+.status{
+  display:flex;align-items:center;gap:6px;
+  font-family:var(--mono);font-size:11px;letter-spacing:0.03em;
+}
+.status-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.status.live .status-dot{background:var(--green)}
+.status.live{color:var(--green)}
+.status.dev .status-dot{background:var(--blue);animation:pulse 2s ease-in-out infinite}
+.status.dev{color:var(--blue)}
+.status.planned .status-dot{background:var(--ink-faint)}
+.status.planned{color:var(--ink-faint)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+.product-arrow{
+  font-family:var(--mono);font-size:13px;color:var(--ink-faint);
+  opacity:.5;transition:all .2s ease;
+}
+
+.product.disabled{cursor:default}
+.product.disabled .product-name{color:var(--ink-faint)}
+.product.disabled:hover{padding-left:0}
+.product.disabled:hover .product-name{color:var(--ink-faint)}
+
+/* ===== FOOTER ===== */
+footer{
+  border-top:1px solid var(--line);
+  margin-top:3rem;
+}
+.footer-inner{
+  max-width:1180px;margin:0 auto;padding:2rem 2rem 3rem;
+  display:flex;justify-content:space-between;align-items:flex-end;
+  flex-wrap:wrap;gap:1rem;
+}
+.footer-note{
+  font-family:var(--mono);font-size:11px;color:var(--ink-faint);
+  line-height:1.7;
+}
+.footer-stamp{
+  font-family:var(--mono);font-size:10px;color:var(--line);
+  letter-spacing:0.1em;
+}
+
+@media(max-width:680px){
+  .hero{padding:3rem 1.5rem 2.5rem}
+  .registry{padding:0 1.5rem}
+  .footer-inner{padding:2rem 1.5rem}
+  .product{grid-template-columns:32px 1fr;gap:1rem}
+  .product-right{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between;padding-top:8px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hdr-inner">
+    <div class="brand">
+      <span class="brand-mark">J</span>
+      JUSFY&nbsp;LABS
+    </div>
+    <span class="hdr-meta">USO&nbsp;INTERNO</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-eyebrow">Suite de plataformas internas</div>
+  <h1>Onde os produtos de IA da Jusfy <em>tomam forma</em>.</h1>
+  <p class="hero-sub">Um único ponto de entrada para acompanhar, abrir e navegar entre as plataformas internas construídas pelo time — de automação de conteúdo a inteligência de mercado.</p>
+  <div class="hero-index">
+    REGISTRO&nbsp;Nº&nbsp;01<br>
+    JUSFY&nbsp;LABS<br>
+    ATUALIZADO&nbsp;<span id="today"></span>
+  </div>
+</section>
+
+<section class="registry">
+  <div class="registry-head">
+    <span class="registry-title">Índice de produtos</span>
+    <span class="registry-count" id="prod-count">4 registrados</span>
+  </div>
+
+  <a class="product" href="https://exquisite-treacle-76235c.netlify.app" target="_blank" rel="noopener">
+    <span class="product-num">01</span>
+    <div class="product-body">
+      <div class="product-name">JusfySEO</div>
+      <p class="product-desc">Automação de conteúdo para o blog jurídico — seleção de palavras-chave via SEMRush, geração de briefings e publicação direta no WordPress.</p>
+      <div class="product-tags">
+        <span class="tag">CONTEÚDO</span>
+        <span class="tag">SEO</span>
+        <span class="tag">4 AGENTES</span>
+      </div>
+    </div>
+    <div class="product-right">
+      <span class="status live"><span class="status-dot"></span>EM PRODUÇÃO</span>
+      <span class="product-arrow">ABRIR&nbsp;→</span>
+    </div>
+  </a>
+
+  <a class="product" href="https://ornate-parfait-ef8f66.netlify.app" target="_blank" rel="noopener">
+    <span class="product-num">02</span>
+    <div class="product-body">
+      <div class="product-name">Inteligência Competitiva</div>
+      <p class="product-desc">Monitoramento contínuo de campanhas pagas dos concorrentes no Meta Ads — biblioteca de criativos, classificação por IA e insights estratégicos de posicionamento.</p>
+      <div class="product-tags">
+        <span class="tag">META&nbsp;ADS</span>
+        <span class="tag">BENCHMARK</span>
+        <span class="tag">SPRINT&nbsp;1</span>
+      </div>
+    </div>
+    <div class="product-right">
+      <span class="status live"><span class="status-dot"></span>EM PRODUÇÃO</span>
+      <span class="product-arrow">ABRIR&nbsp;→</span>
+    </div>
+  </a>
+
+  <div class="product disabled">
+    <span class="product-num">03</span>
+    <div class="product-body">
+      <div class="product-name">Briefing Platform</div>
+      <p class="product-desc">Geração automatizada de copy e peças visuais a partir de briefings internos de marketing, com agentes de estratégia, design e QA.</p>
+      <div class="product-tags">
+        <span class="tag">MARKETING</span>
+        <span class="tag">NOTION</span>
+      </div>
+    </div>
+    <div class="product-right">
+      <span class="status dev"><span class="status-dot"></span>EM DESENVOLVIMENTO</span>
+    </div>
+  </div>
+
+  <div class="product disabled">
+    <span class="product-num">04</span>
+    <div class="product-body">
+      <div class="product-name">Social Listening</div>
+      <p class="product-desc">Monitoramento de canais próprios e menções à marca em redes sociais — validação de dados via integrações Meta e LinkedIn já disponíveis.</p>
+      <div class="product-tags">
+        <span class="tag">BRAND&nbsp;MONITORING</span>
+      </div>
+    </div>
+    <div class="product-right">
+      <span class="status planned"><span class="status-dot"></span>PLANEJADO</span>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-note">
+      Jusfy Labs — plataformas internas construídas pelo time de growth & produto.<br>
+      Acesso restrito a colaboradores Jusfy.
+    </div>
+    <div class="footer-stamp">JUSFY&nbsp;LABS&nbsp;/&nbsp;INDEX</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('today').textContent = new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase();
+</script>
+
+</body>
+</html>
