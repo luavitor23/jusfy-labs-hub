@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jusfy · Inteligência Competitiva</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f5f4f1;--surface:#fff;--s1:#f9f8f6;--s2:#f0efec;
+  --border:rgba(0,0,0,0.08);--border2:rgba(0,0,0,0.14);
+  --text:#0d0d0b;--t2:#52514e;--t3:#898781;
+  --r:10px;
+  --blue:#2a78d6;--green:#1baf7a;--amber:#eda100;
+  --violet:#4a3aa7;--red:#e34948;--gray:#888780;
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;min-height:100vh}
+header{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:15px}
+.logo-dot{width:8px;height:8px;background:var(--blue);border-radius:50%}
+.badge{font-size:11px;font-weight:500;background:#e6f1fb;color:#185fa5;padding:3px 10px;border-radius:20px}
+.last-upd{font-size:12px;color:var(--t3)}
+nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 2rem;display:flex}
+.nav-tab{padding:12px 16px;font-size:13px;font-weight:500;color:var(--t3);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s}
+.nav-tab:hover{color:var(--text)}
+.nav-tab.active{color:var(--blue);border-bottom-color:var(--blue)}
+main{max-width:1140px;margin:0 auto;padding:2rem 1.5rem}
+.page{display:none}.page.active{display:block}
+.page-title{font-size:20px;font-weight:600;margin-bottom:4px}
+.page-sub{font-size:13px;color:var(--t2);margin-bottom:1.5rem}
+.kpi-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:1.25rem}
+.kpi{background:var(--surface);border-radius:var(--r);padding:1rem 1.1rem;border:1px solid var(--border)}
+.kpi-label{font-size:11px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.kpi-value{font-size:26px;font-weight:600;color:var(--text);line-height:1;margin-bottom:3px}
+.kpi-value.sm{font-size:18px;padding-top:4px}
+.kpi-sub{font-size:11px;color:var(--t3)}
+.kpi-trend{font-size:11px;font-weight:500}
+.kpi-trend.up{color:var(--green)}
+.kpi-trend.warn{color:var(--amber)}
+.row2{display:grid;grid-template-columns:1.2fr 1fr;gap:12px;margin-bottom:12px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.row-full{margin-bottom:12px}
+.card{background:var(--surface);border-radius:var(--r);padding:1.25rem;border:1px solid var(--border)}
+.card-title{font-size:11px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.leg{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--t2)}
+.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.bar-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.bar-label{width:130px;font-size:12px;color:var(--t2);text-align:right;flex-shrink:0}
+.bar-track{flex:1;height:8px;background:var(--s2);border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px}
+.bar-val{width:30px;font-size:12px;color:var(--t2);font-weight:500;flex-shrink:0}
+.insights-list{display:flex;flex-direction:column}
+.insight{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-bottom:1px solid var(--border)}
+.insight:last-child{border-bottom:none;padding-bottom:0}
+.insight:first-child{padding-top:0}
+.ins-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px}
+.ins-title{font-size:13px;font-weight:600;margin-bottom:2px}
+.ins-body{font-size:12px;color:var(--t2);line-height:1.55}
+.ins-tags{margin-top:5px;display:flex;flex-wrap:wrap;gap:4px}
+.ins-tag{font-size:10px;font-weight:500;padding:2px 7px;border-radius:4px;background:var(--s2);color:var(--t2)}
+.lib-filters{display:flex;align-items:center;gap:8px;margin-bottom:1.25rem;flex-wrap:wrap}
+.filter-btn{padding:6px 14px;border-radius:20px;border:1px solid var(--border2);background:var(--surface);font-size:12px;font-weight:500;color:var(--t2);cursor:pointer;transition:all .15s}
+.filter-btn:hover{border-color:var(--blue);color:var(--blue)}
+.filter-btn.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.filter-sep{width:1px;height:20px;background:var(--border2);margin:0 4px}
+.lib-search{padding:6px 12px;border-radius:20px;border:1px solid var(--border2);background:var(--surface);font-size:12px;color:var(--text);outline:none;width:200px}
+.lib-search:focus{border-color:var(--blue)}
+.lib-count{font-size:12px;color:var(--t3);margin-left:auto}
+.ads-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ad-card{background:var(--surface);border-radius:var(--r);border:1px solid var(--border);padding:1rem;display:flex;flex-direction:column;gap:8px;transition:box-shadow .15s}
+.ad-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.ad-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.ad-badge{font-size:10px;font-weight:600;padding:3px 8px;border-radius:4px;flex-shrink:0}
+.ad-status{font-size:10px;font-weight:500;padding:3px 8px;border-radius:4px}
+.ad-status.ativo{background:#e1f5ee;color:#0f6e56}
+.ad-status.inativo{background:var(--s2);color:var(--t3)}
+.ad-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.4}
+.ad-msg{font-size:12px;color:var(--t2);line-height:1.5}
+.ad-footer{display:flex;align-items:center;justify-content:space-between;padding-top:6px;border-top:1px solid var(--border)}
+.ad-meta{font-size:11px;color:var(--t3)}
+.ad-link{font-size:11px;font-weight:500;color:var(--blue);text-decoration:none}
+.ad-link:hover{text-decoration:underline}
+.ad-cta-pill{display:inline-block;font-size:10px;font-weight:500;padding:2px 7px;border-radius:3px;background:var(--s1);color:var(--t2);border:1px solid var(--border)}
+.ad-tom{display:inline-block;font-size:10px;font-weight:500;margin-left:4px;color:var(--t3)}
+.empty-state{text-align:center;padding:4rem 2rem;color:var(--t3);font-size:14px;grid-column:1/-1}
+.loading{text-align:center;padding:4rem;color:var(--t3)}
+.heatmap-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.hm-cell{border-radius:6px;padding:10px 8px;text-align:center}
+.hm-label{font-size:11px;font-weight:600;margin-bottom:4px}
+.hm-value{font-size:20px;font-weight:600}
+.hm-sub{font-size:10px;opacity:.7;margin-top:2px}
+@media(max-width:900px){.kpi-grid{grid-template-columns:repeat(3,1fr)}.row2,.row3{grid-template-columns:1fr}.ads-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.kpi-grid{grid-template-columns:1fr 1fr}.ads-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><div class="logo-dot"></div>Jusfy · Inteligência Competitiva<span class="badge">Beta</span></div>
+  <span class="last-upd" id="last-upd">Carregando...</span>
+</header>
+<nav>
+  <div class="nav-tab active" onclick="showPage('dashboard',this)">Dashboard</div>
+  <div class="nav-tab" onclick="showPage('biblioteca',this)">Biblioteca de peças</div>
+</nav>
+<main>
+
+<!-- DASHBOARD -->
+<div id="page-dashboard" class="page active">
+  <h1 class="page-title">Visão geral competitiva</h1>
+  <p class="page-sub">Meta Ads · Coleta automatizada via Apify · Atualiza seg, qua e sex às 08h</p>
+  <div id="loading-dash" class="loading">Carregando dados...</div>
+  <div id="dash-content" style="display:none">
+    <div class="kpi-grid" id="kpi-grid"></div>
+    <div class="row2">
+      <div class="card">
+        <div class="card-title">Anúncios por concorrente</div>
+        <div class="legend" id="leg-comp"></div>
+        <div style="position:relative;height:220px"><canvas id="c1"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Mix de categorias</div>
+        <div class="legend" id="leg-cat"></div>
+        <div style="position:relative;height:220px"><canvas id="c2"></canvas></div>
+      </div>
+    </div>
+    <div class="row-full">
+      <div class="card">
+        <div class="card-title">CTAs mais usados</div>
+        <div id="cta-bars"></div>
+      </div>
+    </div>
+    <div class="row-full">
+      <div class="card">
+        <div class="card-title">Insights estratégicos</div>
+        <div class="insights-list" id="insights"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BIBLIOTECA -->
+<div id="page-biblioteca" class="page">
+  <h1 class="page-title">Biblioteca de peças</h1>
+  <p class="page-sub">Todos os anúncios coletados — clique em "Ver no Meta" para visualizar o criativo original</p>
+  <div id="loading-lib" class="loading">Carregando anúncios...</div>
+  <div id="lib-content" style="display:none">
+    <div class="lib-filters" id="lib-filters">
+      <span class="lib-count" id="lib-count"></span>
+    </div>
+    <div class="ads-grid" id="ads-grid"></div>
+  </div>
+</div>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const DATA_URL = 'https://raw.githubusercontent.com/luavitor23/jusfy-labs-hub/main/data-intel.json';
+const COLORS = ['#2a78d6','#1baf7a','#eda100','#4a3aa7','#e34948','#888780'];
+const CAT_COLORS = {
+  'Aquisição':'#e6f1fb|#185fa5','Aquisicao':'#e6f1fb|#185fa5',
+  'Educação':'#faeeda|#854f0b','Educacao':'#faeeda|#854f0b',
+  'Oferta/Desconto':'#fee2e2|#991b1b',
+  'Produto':'#d1fae5|#065f46',
+  'Branding':'#ede9fe|#4c1d95',
+  'Conversão':'#fef3c7|#92400e','Conversao':'#fef3c7|#92400e',
+  'Institucional':'#f1f5f9|#475569',
+  'Outro':'#f1f5f9|#475569'
+};
+const COMP_COLORS = {'ADVBOX':'#2a78d6','Projuris':'#1baf7a','Aurum':'#eda100','JusDocs':'#4a3aa7','Outro':'#888780'};
+
+let DATA = null;
+let currentFilter = 'all';
+let currentSearch = '';
+
+function showPage(id, tab) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  tab.classList.add('active');
+}
+
+async function loadData() {
+  try {
+    const res = await fetch(DATA_URL + '?t=' + Date.now());
+    DATA = await res.json();
+    renderDashboard();
+    renderBiblioteca();
+    document.getElementById('last-upd').textContent = 'Atualizado em ' + (DATA.updated_at || 'hoje');
+  } catch(e) {
+    document.getElementById('loading-dash').textContent = 'Erro ao carregar dados. Tente novamente.';
+  }
+}
+
+function renderDashboard() {
+  document.getElementById('loading-dash').style.display = 'none';
+  document.getElementById('dash-content').style.display = 'block';
+
+  const comp = DATA.by_competitor || {};
+  const cat = DATA.by_category || {};
+  const tom = DATA.by_tom || {};
+  const cta = DATA.by_cta || {};
+  const total = DATA.total_ads || 0;
+
+  const topComp = Object.entries(comp).sort((a,b) => b[1]-a[1])[0] || ['—', 0];
+  const topCat = Object.entries(cat).sort((a,b) => b[1]-a[1])[0] || ['—', 0];
+  const topTom = Object.entries(tom).sort((a,b) => b[1]-a[1])[0] || ['—', 0];
+
+  document.getElementById('kpi-grid').innerHTML = `
+    <div class="kpi"><div class="kpi-label">Anúncios coletados</div><div class="kpi-value">${total}</div><div class="kpi-sub">nesta rodada</div></div>
+    <div class="kpi"><div class="kpi-label">Concorrentes</div><div class="kpi-value">${Object.keys(comp).length}</div><div class="kpi-sub">${topComp[0]} lidera</div></div>
+    <div class="kpi"><div class="kpi-label">Categoria dominante</div><div class="kpi-value sm">${topCat[0]}</div><div class="kpi-trend warn">${total ? Math.round(topCat[1]/total*100) : 0}% dos anúncios</div></div>
+    <div class="kpi"><div class="kpi-label">Tom mais usado</div><div class="kpi-value sm">${topTom[0]}</div><div class="kpi-sub">${total ? Math.round(topTom[1]/total*100) : 0}% do mercado</div></div>
+    <div class="kpi"><div class="kpi-label">Artigos no banco</div><div class="kpi-value">${(DATA.ads||[]).length}</div><div class="kpi-sub">na biblioteca</div></div>
+  `;
+
+  // Gráfico concorrentes
+  const compEntries = Object.entries(comp).sort((a,b) => b[1]-a[1]);
+  const legComp = document.getElementById('leg-comp');
+  legComp.innerHTML = compEntries.map((e,i) => `<span class="leg"><span class="leg-dot" style="background:${COLORS[i%COLORS.length]}"></span>${e[0]}</span>`).join('');
+  new Chart(document.getElementById('c1'), {
+    type:'bar',
+    data:{labels:compEntries.map(e=>e[0]),datasets:[{data:compEntries.map(e=>e[1]),backgroundColor:compEntries.map((_,i)=>COLORS[i%COLORS.length]),borderRadius:5,borderSkipped:false}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{grid:{color:'#f0efec'},border:{display:false}}}}
+  });
+
+  // Gráfico categorias
+  const catEntries = Object.entries(cat).sort((a,b) => b[1]-a[1]);
+  const legCat = document.getElementById('leg-cat');
+  legCat.innerHTML = catEntries.map((e,i) => `<span class="leg"><span class="leg-dot" style="background:${COLORS[i%COLORS.length]}"></span>${e[0]} ${total?Math.round(e[1]/total*100):0}%</span>`).join('');
+  new Chart(document.getElementById('c2'), {
+    type:'doughnut',
+    data:{labels:catEntries.map(e=>e[0]),datasets:[{data:catEntries.map(e=>e[1]),backgroundColor:catEntries.map((_,i)=>COLORS[i%COLORS.length]),borderWidth:3,borderColor:'#fff'}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{display:false}}}
+  });
+
+  // CTAs
+  const ctaEntries = Object.entries(cta).sort((a,b) => b[1]-a[1]).slice(0,6);
+  const maxCta = ctaEntries[0]?.[1] || 1;
+  document.getElementById('cta-bars').innerHTML = ctaEntries.map(([k,v],i) =>
+    `<div class="bar-row"><span class="bar-label" style="width:160px">${k}</span><div class="bar-track"><div class="bar-fill" style="width:${Math.round(v/maxCta*100)}%;background:${COLORS[i%COLORS.length]}"></div></div><span class="bar-val">${v}</span></div>`
+  ).join('');
+
+  // Insights
+  const insights = [
+    {icon:'📈',bg:'#dbeafe',title:`${topComp[0]} domina em volume`,body:`Lidera com ${topComp[1]} anúncios — ${total?Math.round(topComp[1]/total*100):0}% do total coletado.`},
+    {icon:'🧠',bg:'#ede9fe',title:'Corrida por narrativa de IA',body:'JusDocs e Projuris comunicam IA ativamente. Janela de oportunidade para a Jusfy se posicionar antes que o mercado sature.'},
+    {icon:'🏷️',bg:'#fef3c7',title:'JusDocs usa preço como diferencial',body:'Único concorrente com oferta ativa (50% OFF). Estratégia de capturar early adopters com custo de aquisição mais baixo.'},
+    {icon:'⚡',bg:'#fee2e2',title:'Gap: transparência de preço',body:'Nenhum concorrente comunica preço com clareza, exceto JusDocs. Oportunidade para a Jusfy se diferenciar.'},
+  ];
+  document.getElementById('insights').innerHTML = insights.map(i =>
+    `<div class="insight"><div class="ins-icon" style="background:${i.bg}">${i.icon}</div><div><div class="ins-title">${i.title}</div><div class="ins-body">${i.body}</div></div></div>`
+  ).join('');
+}
+
+function getCatColors(cat) {
+  const c = CAT_COLORS[cat] || CAT_COLORS['Outro'];
+  const [bg,text] = c.split('|');
+  return {bg,text};
+}
+
+function renderBiblioteca() {
+  document.getElementById('loading-lib').style.display = 'none';
+  document.getElementById('lib-content').style.display = 'block';
+
+  const ads = DATA.ads || [];
+  const competitors = [...new Set(ads.map(a=>a.concorrente).filter(Boolean))];
+  const categories = [...new Set(ads.map(a=>a.categoria).filter(Boolean))];
+
+  const filtersEl = document.getElementById('lib-filters');
+  filtersEl.innerHTML = `
+    <button class="filter-btn active" onclick="filterAds('all',this)">Todos (${ads.length})</button>
+    <div class="filter-sep"></div>
+    ${competitors.map(c=>`<button class="filter-btn" onclick="filterAds('${c}',this)">${c}</button>`).join('')}
+    <div class="filter-sep"></div>
+    ${categories.map(c=>`<button class="filter-btn" onclick="filterAds('${c}',this)">${c}</button>`).join('')}
+    <div class="filter-sep"></div>
+    <button class="filter-btn" onclick="filterAds('Ativo',this)">Ativos</button>
+    <input class="lib-search" type="text" placeholder="Buscar..." oninput="searchAds(this.value)" id="lib-search">
+    <span class="lib-count" id="lib-count">${ads.length} peças</span>
+  `;
+
+  renderAds();
+}
+
+function renderAds() {
+  const ads = DATA.ads || [];
+  const filtered = ads.filter(ad => {
+    const matchFilter = currentFilter === 'all' || ad.concorrente === currentFilter || ad.categoria === currentFilter || ad.status === currentFilter;
+    const matchSearch = !currentSearch || (ad.titulo||'').toLowerCase().includes(currentSearch.toLowerCase()) || (ad.mensagem||'').toLowerCase().includes(currentSearch.toLowerCase());
+    return matchFilter && matchSearch;
+  });
+
+  const countEl = document.getElementById('lib-count');
+  if(countEl) countEl.textContent = filtered.length + ' peças';
+
+  const grid = document.getElementById('ads-grid');
+  if(!filtered.length) { grid.innerHTML = '<div class="empty-state">Nenhum anúncio encontrado.</div>'; return; }
+
+  grid.innerHTML = filtered.map(ad => {
+    const cc = COMP_COLORS[ad.concorrente] || '#888780';
+    const cat = getCatColors(ad.categoria || 'Outro');
+    const dataFmt = ad.data ? new Date(ad.data+'T00:00:00').toLocaleDateString('pt-BR',{day:'2-digit',month:'short',year:'numeric'}) : '—';
+    return `<div class="ad-card">
+      <div class="ad-header">
+        <span class="ad-badge" style="background:${cat.bg};color:${cat.text}">${ad.categoria||'—'}</span>
+        <span class="ad-status ${(ad.status||'').toLowerCase()}">${ad.status||'—'}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px">
+        <span style="width:8px;height:8px;border-radius:50%;background:${cc};flex-shrink:0"></span>
+        <span style="font-size:11px;font-weight:600;color:${cc}">${ad.concorrente||'—'}</span>
+      </div>
+      <div class="ad-title">${ad.titulo||'Sem título'}</div>
+      <div class="ad-msg">${ad.mensagem||''}</div>
+      ${ad.objetivo?`<div style="font-size:11px;color:var(--t3)"><strong style="color:var(--t2)">Objetivo:</strong> ${ad.objetivo}</div>`:''}
+      <div><span class="ad-cta-pill">${ad.cta||'—'}</span><span class="ad-tom">· ${ad.tom||'—'}</span></div>
+      <div class="ad-footer">
+        <span class="ad-meta">Início: ${dataFmt}</span>
+        ${ad.link?`<a class="ad-link" href="${ad.link}" target="_blank" rel="noopener">Ver no Meta ↗</a>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function filterAds(value, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentFilter = value;
+  document.getElementById('lib-search').value = '';
+  currentSearch = '';
+  renderAds();
+}
+
+function searchAds(val) {
+  currentSearch = val;
+  currentFilter = 'all';
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('.filter-btn').classList.add('active');
+  renderAds();
+}
+
+Chart.defaults.font.family = 'Inter,sans-serif';
+Chart.defaults.font.size = 11;
+Chart.defaults.color = '#898781';
+loadData();
+</script>
+</body>
+</html>
