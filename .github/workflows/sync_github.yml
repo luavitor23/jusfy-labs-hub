@@ -1,0 +1,31 @@
+name: Jusfy · Sync GitHub (Intel + SEO)
+
+on:
+  schedule:
+    # Diário às 08:30 BRT (11:30 UTC)
+    - cron: '30 11 * * *'
+  workflow_dispatch: # Permite rodar manualmente
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Executar sync Notion → GitHub
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.JUSFY_GITHUB_TOKEN }}
+        run: python scripts/sync_github.py
