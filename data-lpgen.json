@@ -1,0 +1,18 @@
+{
+  "updated_at": "2026-07-01",
+  "total_projects": 1,
+  "projects": [
+    {
+      "nome": "LP Jurisprudência — teste 1",
+      "origem": "https://page.jusfy.com.br/jurisprudencia-certa-para-o-seu-caso-em-segundos/",
+      "status": "Prompts Gerados",
+      "score_original": 52,
+      "notion_url": "https://app.notion.com/p/3909b4d672128128ad1eea5fa74d5c0a",
+      "versoes": {
+        "v1": {"status": "pendente"},
+        "v2": {"status": "pendente"},
+        "v3": {"status": "pendente"}
+      }
+    }
+  ]
+}
