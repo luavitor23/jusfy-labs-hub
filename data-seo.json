@@ -1,25 +1,180 @@
 {
   "updated_at": "2026-07-01",
-  "total_artigos": 1,
+  "total_artigos": 20,
   "by_status": {
-    "sem_status": 1
+    "👀 Em revisão": 12,
+    "🚀 Publicado": 6,
+    "⚙️ Aguardando Doc": 1,
+    "⚙️ Gerando": 1
   },
   "by_area": {
-    "direito_processual": 1
+    "Família": 4,
+    "Trabalhista": 10,
+    "Cível": 2
   },
   "by_intencao": {
-    "informacional": 1
+    "Informacional": 17
   },
   "artigos": [
     {
-      "titulo": "Recurso Inominado",
+      "titulo": "",
       "keyword": "recurso inominado",
-      "status": "sem_status",
-      "area": "direito_processual",
-      "intencao": "informacional",
-      "meta_title": "Recurso Inominado: O Que É, Prazo e Como Interpor nos Juizados Especiais",
-      "slug": "recurso-inominado",
+      "status": "👀 Em revisão",
+      "area": "",
+      "intencao": "Informacional",
       "data_criacao": "2026-06-26"
+    },
+    {
+      "titulo": "",
+      "keyword": "pensao alimenticia",
+      "status": "🚀 Publicado",
+      "area": "Família",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-25"
+    },
+    {
+      "titulo": "",
+      "keyword": "rescisao indireta",
+      "status": "🚀 Publicado",
+      "area": "Trabalhista",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-25"
+    },
+    {
+      "titulo": "",
+      "keyword": "guarda compartilhada",
+      "status": "🚀 Publicado",
+      "area": "Família",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-25"
+    },
+    {
+      "titulo": "",
+      "keyword": "seguro desemprego",
+      "status": "🚀 Publicado",
+      "area": "Trabalhista",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-25"
+    },
+    {
+      "titulo": "",
+      "keyword": "acidente de trabalho",
+      "status": "🚀 Publicado",
+      "area": "Trabalhista",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-24"
+    },
+    {
+      "titulo": "",
+      "keyword": "13 salario",
+      "status": "👀 Em revisão",
+      "area": "Trabalhista",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-24"
+    },
+    {
+      "titulo": "",
+      "keyword": "verbas rescisorias",
+      "status": "🚀 Publicado",
+      "area": "Trabalhista",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-24"
+    },
+    {
+      "titulo": "",
+      "keyword": "licenca maternidade",
+      "status": "👀 Em revisão",
+      "area": "Trabalhista",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-24"
+    },
+    {
+      "titulo": "",
+      "keyword": "",
+      "status": "👀 Em revisão",
+      "area": "",
+      "intencao": "",
+      "data_criacao": "2026-06-24"
+    },
+    {
+      "titulo": "",
+      "keyword": "",
+      "status": "👀 Em revisão",
+      "area": "",
+      "intencao": "",
+      "data_criacao": "2026-06-24"
+    },
+    {
+      "titulo": "",
+      "keyword": "",
+      "status": "👀 Em revisão",
+      "area": "",
+      "intencao": "",
+      "data_criacao": "2026-06-22"
+    },
+    {
+      "titulo": "",
+      "keyword": "usucapiao",
+      "status": "👀 Em revisão",
+      "area": "Cível",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-20"
+    },
+    {
+      "titulo": "",
+      "keyword": "FGTS",
+      "status": "👀 Em revisão",
+      "area": "Trabalhista",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-20"
+    },
+    {
+      "titulo": "",
+      "keyword": "FGTS",
+      "status": "⚙️ Aguardando Doc",
+      "area": "Trabalhista",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-20"
+    },
+    {
+      "titulo": "",
+      "keyword": "aviso prévio",
+      "status": "👀 Em revisão",
+      "area": "Trabalhista",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-20"
+    },
+    {
+      "titulo": "",
+      "keyword": "ação de despejo",
+      "status": "👀 Em revisão",
+      "area": "Cível",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-20"
+    },
+    {
+      "titulo": "",
+      "keyword": "como demitir funcionário",
+      "status": "👀 Em revisão",
+      "area": "Trabalhista",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-20"
+    },
+    {
+      "titulo": "",
+      "keyword": "divórcio consensual",
+      "status": "👀 Em revisão",
+      "area": "Família",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-20"
+    },
+    {
+      "titulo": "",
+      "keyword": "divórcio consensual",
+      "status": "⚙️ Gerando",
+      "area": "Família",
+      "intencao": "Informacional",
+      "data_criacao": "2026-06-20"
     }
   ]
 }
