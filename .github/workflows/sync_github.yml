@@ -2,9 +2,8 @@ name: Jusfy · Sync GitHub (Intel + SEO)
 
 on:
   schedule:
-    # Diário às 08:30 BRT (11:30 UTC)
     - cron: '30 11 * * *'
-  workflow_dispatch: # Permite rodar manualmente
+  workflow_dispatch:
 
 jobs:
   sync:
@@ -27,5 +26,6 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.JUSFY_GITHUB_TOKEN }}
+          JUSFY_GITHUB_TOKEN: ${{ secrets.JUSFY_GITHUB_TOKEN }}
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: python scripts/sync_github.py
