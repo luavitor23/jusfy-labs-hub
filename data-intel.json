@@ -1,57 +1,44 @@
 {
   "updated_at": "2026-07-01",
-  "total_ads": 3,
+  "total_ads": 2,
   "by_competitor": {
-    "Cálculo Juridico": 3
+    "Astrea": 2
   },
   "by_category": {
-    "Aquisição": 2
+    "Branding": 2
   },
   "by_tom": {
-    "Direto/Comercial": 1
+    "Emocional": 2
   },
   "by_cta": {
-    "Saiba mais": 1
+    "Learn more": 2
   },
   "ads": [
     {
-      "id": "3909b4d6-7212-81f9-bfdd-f3810c3cba55",
-      "concorrente": "Cálculo Juridico",
-      "categoria": "Aquisição",
-      "titulo": "TESTE CAMPOS CORRETOS",
-      "mensagem": "",
-      "objetivo": "Validar nomes de campos com acentos",
-      "cta": "",
-      "tom": "Direto/Comercial",
+      "id": "1589651345745828",
+      "concorrente": "Astrea",
+      "categoria": "Branding",
+      "titulo": "Astrea - Mais segurança na sua rotina jurídica",
+      "mensagem": "Astrea oferece mais segurança na rotina jurídica e mais liberdade no dia a dia do advogado.",
+      "objetivo": "Promover o Astrea como solução que traz segurança e liberdade para a rotina jurídica dos profissionais do direito.",
+      "cta": "Learn more",
+      "tom": "Emocional",
       "status": "Ativo",
-      "data": "2026-07-01",
-      "link": "https://www.facebook.com/ads/library"
+      "data": "2025-10-23",
+      "link": "https://www.facebook.com/ads/library/?id=1589651345745828"
     },
     {
-      "id": "3909b4d6-7212-8107-9eec-fa762609f3a5",
-      "concorrente": "Cálculo Juridico",
-      "categoria": "",
-      "titulo": "",
-      "mensagem": "",
-      "objetivo": "",
-      "cta": "",
-      "tom": "",
-      "status": "",
-      "data": "",
-      "link": ""
-    },
-    {
-      "id": "3909b4d6-7212-8136-80ca-dd455e203c33",
-      "concorrente": "Cálculo Juridico",
-      "categoria": "Aquisição",
-      "titulo": "",
-      "mensagem": "Plataforma de cálculos jurídicos",
-      "objetivo": "Validar pipeline sem campo Concorrente",
-      "cta": "Saiba mais",
-      "tom": "",
+      "id": "2069441327190185",
+      "concorrente": "Astrea",
+      "categoria": "Branding",
+      "titulo": "Astrea - Mais segurança na sua rotina jurídica",
+      "mensagem": "Astrea oferece mais segurança na rotina jurídica e mais liberdade no dia a dia para profissionais do direito.",
+      "objetivo": "Promover a plataforma Astrea como solução que traz segurança e liberdade para a rotina jurídica dos profissionais do direito.",
+      "cta": "Learn more",
+      "tom": "Emocional",
       "status": "Ativo",
-      "data": "2026-07-01",
-      "link": ""
+      "data": "2025-10-24",
+      "link": "https://www.facebook.com/ads/library/?id=2069441327190185"
     }
   ]
 }
