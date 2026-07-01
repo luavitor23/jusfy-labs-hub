@@ -1,0 +1,31 @@
+name: Jusfy · Coleta de Ads (Intel Competitiva)
+
+on:
+  schedule:
+    # Seg, Qua, Sex às 08:00 BRT (11:00 UTC)
+    - cron: '0 11 * * 1,3,5'
+  workflow_dispatch: # Permite rodar manualmente
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: pip install requests
+
+      - name: Executar coleta de anúncios
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: python scripts/collect_ads.py
