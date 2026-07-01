@@ -5,19 +5,19 @@
     "sem_status": 1
   },
   "by_area": {
-    "sem_area": 1
+    "direito_processual": 1
   },
   "by_intencao": {
-    "sem_intencao": 1
+    "informacional": 1
   },
   "artigos": [
     {
-      "titulo": "recurso-inominado",
+      "titulo": "Recurso Inominado",
       "keyword": "recurso inominado",
       "status": "sem_status",
-      "area": "sem_area",
-      "intencao": "sem_intencao",
-      "meta_title": "Preciso do título para criar a meta description. Poderia fornecê-lo?",
+      "area": "direito_processual",
+      "intencao": "informacional",
+      "meta_title": "Recurso Inominado: O Que É, Prazo e Como Interpor nos Juizados Especiais",
       "slug": "recurso-inominado",
       "data_criacao": "2026-06-26"
     }
