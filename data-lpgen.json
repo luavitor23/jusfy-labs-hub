@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-07-01",
+  "updated_at": "2026-07-02",
   "total_projects": 1,
   "projects": [
     {
       "nome": "LP Jurisprudência — teste 1",
       "origem": "https://page.jusfy.com.br/jurisprudencia-certa-para-o-seu-caso-em-segundos/",
-      "status": "Prompts Gerados",
+      "status": "Pronto",
       "score_original": 52,
       "notion_url": "https://app.notion.com/p/3909b4d672128128ad1eea5fa74d5c0a",
       "versoes": {
-        "v1": {"status": "pendente"},
-        "v2": {"status": "pendente"},
-        "v3": {"status": "pendente"}
+        "v1": {"nome": "Evolução", "status": "publicado", "url": "https://jusfy-jurisprudencia-v1-evolucao.lovable.app", "lovable_project_id": "0fb5b163-adf8-4570-9d87-b57eb71b7aa8"},
+        "v2": {"nome": "Redesign", "status": "publicado", "url": "https://jusfy-jurisprudencia-v2-redesign.lovable.app", "lovable_project_id": "443243df-f78b-41c7-8c59-e739c8f5a4bd"},
+        "v3": {"nome": "Criativa", "status": "publicado", "url": "https://jusfy-jurisprudencia-v3-criativa.lovable.app", "lovable_project_id": "c6265d31-6902-4759-a928-3efab7c34d6f"}
       }
     }
   ]
