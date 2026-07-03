@@ -1,202 +1,33 @@
 {
-  "updated_at": "2026-07-02",
-  "total_ads": 73,
+  "updated_at": "2026-07-03",
+  "total_ads": 60,
   "by_competitor": {
     "Cálculo Jurídico": 20,
     "Astrea": 20,
-    "SeguroCred": 13,
-    "JusBrasil": 13,
-    "Outro": 7
+    "JusBrasil": 14,
+    "Outro": 6
   },
   "by_category": {
-    "Outro": 55,
-    "Conversão": 8,
-    "Aquisição": 7,
-    "Produto": 3
+    "Outro": 42,
+    "Conversão": 11,
+    "Institucional": 4,
+    "Produto": 2,
+    "Branding": 1
   },
   "by_tom": {
-    "Direto/Comercial": 63,
-    "Urgência": 8,
+    "Direto/Comercial": 51,
+    "Emocional": 5,
+    "Educativo": 2,
     "Outro": 2
   },
   "by_cta": {
-    "Learn more": 52,
-    "See details": 10,
-    "Subscribe": 7,
-    "None": 2,
+    "Learn more": 48,
+    "Subscribe": 8,
+    "See details": 2,
     "No button": 1,
     "Send WhatsApp message": 1
   },
   "ads": [
-    {
-      "id": "2249699125769302",
-      "concorrente": "SeguroCred",
-      "titulo": "None",
-      "mensagem": "Processo parado. Bem oculto. Honorários em risco. Enquanto eles fazem piada, o tempo passa.\n\nChega de papo furado. Com tecnologia e IA, a Segurocred localiza bens, cruza dados e entrega a petição pronta para destravar a execução.\n\nPlaca encontrada.\nEscritura localizada.\nExecução em movimento.\n\nDestr",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-05-25",
-      "link": "https://www.facebook.com/ads/library/?id=2249699125769302",
-      "categoria": "Outro",
-      "tom": "Outro",
-      "objetivo": ""
-    },
-    {
-      "id": "1472464337417433",
-      "concorrente": "SeguroCred",
-      "titulo": "Teste agora",
-      "mensagem": "Os melhores profissionais usam e indicam a SeguroCred.\nAdvogados que localizam rápido, executam melhor.\nConheça a plataforma que está mudando o jogo na execução judicial.",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-05-25",
-      "link": "https://www.facebook.com/ads/library/?id=1472464337417433",
-      "categoria": "Aquisição",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "963772026441502",
-      "concorrente": "SeguroCred",
-      "titulo": "Busca de Bens por CPF",
-      "mensagem": "Atenção Advogados. \nSomos uma plataforma de busca de bens através de CPF.\nAgilize seu trabalho e faça buscas de maneira rápida e fácil. Teste agora, não temos mensalidade, você paga só pelas buscas que realizar.",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-05-07",
-      "link": "https://www.facebook.com/ads/library/?id=963772026441502",
-      "categoria": "Produto",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "1310843850660588",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Tempo é o ativo mais caro de um escritório de advocacia de alto padrão. Colocar a sua equipe para fazer buscas manuais, superficiais ou depender apenas de ferramentas judiciais lentas drena a energia que deveria estar na estratégia do caso.\n\nA SeguroCred centraliza a investigação patrimonial. Com po",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-06-04",
-      "link": "https://www.facebook.com/ads/library/?id=1310843850660588",
-      "categoria": "Conversão",
-      "tom": "Urgência",
-      "objetivo": ""
-    },
-    {
-      "id": "1551700666340913",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Tempo é o ativo mais caro de um escritório de advocacia de alto padrão. Colocar a sua equipe para fazer buscas manuais, superficiais ou depender apenas de ferramentas judiciais lentas drena a energia que deveria estar na estratégia do caso.\n\nA SeguroCred centraliza a investigação patrimonial. Com po",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-06-27",
-      "link": "https://www.facebook.com/ads/library/?id=1551700666340913",
-      "categoria": "Conversão",
-      "tom": "Urgência",
-      "objetivo": ""
-    },
-    {
-      "id": "1009476574855073",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Descubra bens do devedor em segundos.\nPesquise por CPF ou CNPJ e tenha acesso imediato a informações essenciais para fortalecer sua cobrança.\n🔎 Exclusivo para advogados.\nClique e faça sua busca agora.",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-05-29",
-      "link": "https://www.facebook.com/ads/library/?id=1009476574855073",
-      "categoria": "Conversão",
-      "tom": "Urgência",
-      "objetivo": ""
-    },
-    {
-      "id": "1657776689315859",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Descubra bens do devedor em segundos.\nPesquise por CPF ou CNPJ e tenha acesso imediato a informações essenciais para fortalecer sua cobrança.\n🔎 Exclusivo para advogados.\nClique e faça sua busca agora.",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-06-27",
-      "link": "https://www.facebook.com/ads/library/?id=1657776689315859",
-      "categoria": "Conversão",
-      "tom": "Urgência",
-      "objetivo": ""
-    },
-    {
-      "id": "2459311457908808",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Blindar bens virou regra entre devedores profissionais, mas toda ocultação deixa rastros.\n\nA SeguroCred entrega ao seu escritório o poder de ir além das buscas superficiais. Nossa tecnologia faz o cruzamento dados entre CPF, CNPJ, grupos econômicos e vínculos familiares para localizar patrimônios oc",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-06-03",
-      "link": "https://www.facebook.com/ads/library/?id=2459311457908808",
-      "categoria": "Conversão",
-      "tom": "Urgência",
-      "objetivo": ""
-    },
-    {
-      "id": "2145757436216755",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Blindar bens virou regra entre devedores profissionais, mas toda ocultação deixa rastros.\n\nA SeguroCred entrega ao seu escritório o poder de ir além das buscas superficiais. Nossa tecnologia faz o cruzamento dados entre CPF, CNPJ, grupos econômicos e vínculos familiares para localizar patrimônios oc",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-06-27",
-      "link": "https://www.facebook.com/ads/library/?id=2145757436216755",
-      "categoria": "Conversão",
-      "tom": "Urgência",
-      "objetivo": ""
-    },
-    {
-      "id": "1008608715454569",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Você tem a placa, mas não tem o CPF para a penhora?\n\nTenha acesso imediato ao proprietário para não deixar o patrimônio escapar.\nInteligência jurídica rápida e sem custo fixo. Você só paga quando realizar a consulta.\n\nComece sua busca aqui. 👇",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-06-04",
-      "link": "https://www.facebook.com/ads/library/?id=1008608715454569",
-      "categoria": "Conversão",
-      "tom": "Urgência",
-      "objetivo": ""
-    },
-    {
-      "id": "2826932024327646",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Você tem a placa, mas não tem o CPF para a penhora?\n\nTenha acesso imediato ao proprietário para não deixar o patrimônio escapar.\nInteligência jurídica rápida e sem custo fixo. Você só paga quando realizar a consulta.\n\nComece sua busca aqui. 👇",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-06-27",
-      "link": "https://www.facebook.com/ads/library/?id=2826932024327646",
-      "categoria": "Conversão",
-      "tom": "Urgência",
-      "objetivo": ""
-    },
-    {
-      "id": "850116341477078",
-      "concorrente": "SeguroCred",
-      "titulo": "None",
-      "mensagem": "Descobrir fraudes de devedores em segundos? Sim, é possível!\nCom o Segurocred, você acessa dados do DPVAT e identifica irregularidades envolvendo veículos.\nTeste na prática agora mesmo!",
-      "cta": "None",
-      "status": "Ativo",
-      "data": "2026-05-25",
-      "link": "https://www.facebook.com/ads/library/?id=850116341477078",
-      "categoria": "Outro",
-      "tom": "Outro",
-      "objetivo": ""
-    },
-    {
-      "id": "1469979450933270",
-      "concorrente": "SeguroCred",
-      "titulo": "Teste o SNIPER",
-      "mensagem": "ADVOGADO, Está com processos de execução de bens parados? Liberamos uma poderosa ferramenta para te ajudar: o SNIPER SeguroCred. Com ela você pode identificar a rede de relacionamentos e ainda localizar bens do devedor. Assista o vídeo e descubra todos os recursos.",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-05-25",
-      "link": "https://www.facebook.com/ads/library/?id=1469979450933270",
-      "categoria": "Aquisição",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
     {
       "id": "4947759385327186",
       "concorrente": "Cálculo Jurídico",
@@ -207,7 +38,7 @@
       "data": "2022-11-23",
       "link": "https://www.facebook.com/ads/library/?id=4947759385327186",
       "categoria": "Produto",
-      "tom": "Direto/Comercial",
+      "tom": "Educativo",
       "objetivo": ""
     },
     {
@@ -220,7 +51,7 @@
       "data": "2022-11-10",
       "link": "https://www.facebook.com/ads/library/?id=896686295070130",
       "categoria": "Produto",
-      "tom": "Direto/Comercial",
+      "tom": "Educativo",
       "objetivo": ""
     },
     {
@@ -232,7 +63,7 @@
       "status": "Ativo",
       "data": "2026-02-17",
       "link": "https://www.facebook.com/ads/library/?id=1281254067149109",
-      "categoria": "Aquisição",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -245,7 +76,7 @@
       "status": "Ativo",
       "data": "2026-02-13",
       "link": "https://www.facebook.com/ads/library/?id=887549180541867",
-      "categoria": "Aquisição",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -258,7 +89,7 @@
       "status": "Ativo",
       "data": "2026-02-12",
       "link": "https://www.facebook.com/ads/library/?id=2410378519395671",
-      "categoria": "Aquisição",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -271,7 +102,7 @@
       "status": "Ativo",
       "data": "2026-06-25",
       "link": "https://www.facebook.com/ads/library/?id=1513904617096159",
-      "categoria": "Aquisição",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -284,7 +115,7 @@
       "status": "Ativo",
       "data": "2026-02-14",
       "link": "https://www.facebook.com/ads/library/?id=753623197468806",
-      "categoria": "Aquisição",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -297,7 +128,7 @@
       "status": "Ativo",
       "data": "2026-02-14",
       "link": "https://www.facebook.com/ads/library/?id=1599506981173562",
-      "categoria": "Outro",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -310,8 +141,8 @@
       "status": "Ativo",
       "data": "2026-02-12",
       "link": "https://www.facebook.com/ads/library/?id=925342803292420",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
+      "categoria": "Institucional",
+      "tom": "Emocional",
       "objetivo": ""
     },
     {
@@ -323,8 +154,8 @@
       "status": "Ativo",
       "data": "2026-02-12",
       "link": "https://www.facebook.com/ads/library/?id=1207241131544924",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
+      "categoria": "Institucional",
+      "tom": "Emocional",
       "objetivo": ""
     },
     {
@@ -337,7 +168,7 @@
       "data": "2026-02-15",
       "link": "https://www.facebook.com/ads/library/?id=1695739191391319",
       "categoria": "Outro",
-      "tom": "Direto/Comercial",
+      "tom": "Outro",
       "objetivo": ""
     },
     {
@@ -350,7 +181,7 @@
       "data": "2026-02-12",
       "link": "https://www.facebook.com/ads/library/?id=1604770023863879",
       "categoria": "Outro",
-      "tom": "Direto/Comercial",
+      "tom": "Outro",
       "objetivo": ""
     },
     {
@@ -362,7 +193,7 @@
       "status": "Ativo",
       "data": "2026-02-12",
       "link": "https://www.facebook.com/ads/library/?id=2118453562222996",
-      "categoria": "Outro",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -375,7 +206,7 @@
       "status": "Ativo",
       "data": "2026-02-12",
       "link": "https://www.facebook.com/ads/library/?id=1427377335456439",
-      "categoria": "Outro",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -388,7 +219,7 @@
       "status": "Ativo",
       "data": "2026-02-13",
       "link": "https://www.facebook.com/ads/library/?id=2090843625001950",
-      "categoria": "Outro",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -401,8 +232,8 @@
       "status": "Ativo",
       "data": "2026-02-12",
       "link": "https://www.facebook.com/ads/library/?id=1286086253349713",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
+      "categoria": "Branding",
+      "tom": "Emocional",
       "objetivo": ""
     },
     {
@@ -414,7 +245,7 @@
       "status": "Ativo",
       "data": "2026-02-14",
       "link": "https://www.facebook.com/ads/library/?id=892714186939173",
-      "categoria": "Outro",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -427,7 +258,7 @@
       "status": "Ativo",
       "data": "2026-02-15",
       "link": "https://www.facebook.com/ads/library/?id=2645470829158686",
-      "categoria": "Outro",
+      "categoria": "Conversão",
       "tom": "Direto/Comercial",
       "objetivo": ""
     },
@@ -440,8 +271,8 @@
       "status": "Ativo",
       "data": "2026-02-16",
       "link": "https://www.facebook.com/ads/library/?id=1173354298206234",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
+      "categoria": "Institucional",
+      "tom": "Emocional",
       "objetivo": ""
     },
     {
@@ -453,8 +284,8 @@
       "status": "Ativo",
       "data": "2026-02-13",
       "link": "https://www.facebook.com/ads/library/?id=1411689943392238",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
+      "categoria": "Institucional",
+      "tom": "Emocional",
       "objetivo": ""
     },
     {
@@ -497,19 +328,6 @@
       "objetivo": ""
     },
     {
-      "id": "1620070609635916",
-      "concorrente": "JusBrasil",
-      "titulo": "Jus IA especialista em Direito",
-      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
-      "cta": "Subscribe",
-      "status": "Ativo",
-      "data": "2026-06-24",
-      "link": "https://www.facebook.com/ads/library/?id=1620070609635916",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "2377085286113212",
       "concorrente": "JusBrasil",
       "titulo": "None",
@@ -518,6 +336,19 @@
       "status": "Ativo",
       "data": "2026-06-24",
       "link": "https://www.facebook.com/ads/library/?id=2377085286113212",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "1620070609635916",
+      "concorrente": "JusBrasil",
+      "titulo": "Jus IA especialista em Direito",
+      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
+      "cta": "Subscribe",
+      "status": "Ativo",
+      "data": "2026-06-24",
+      "link": "https://www.facebook.com/ads/library/?id=1620070609635916",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -575,6 +406,19 @@
       "objetivo": ""
     },
     {
+      "id": "960901526810917",
+      "concorrente": "JusBrasil",
+      "titulo": "Já faz um tempo que você não verifica a situação do seu processo. ",
+      "mensagem": "{{product.brand}}",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-05-29",
+      "link": "https://www.facebook.com/ads/library/?id=960901526810917",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
       "id": "3244233939044499",
       "concorrente": "Outro",
       "titulo": "None",
@@ -588,14 +432,27 @@
       "objetivo": ""
     },
     {
-      "id": "960901526810917",
+      "id": "4589800031253918",
       "concorrente": "JusBrasil",
-      "titulo": "Já faz um tempo que você não verifica a situação do seu processo. ",
-      "mensagem": "{{product.brand}}",
-      "cta": "See details",
+      "titulo": "Jus IA especialista em Direito",
+      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
+      "cta": "Subscribe",
       "status": "Ativo",
-      "data": "2026-05-29",
-      "link": "https://www.facebook.com/ads/library/?id=960901526810917",
+      "data": "2026-06-24",
+      "link": "https://www.facebook.com/ads/library/?id=4589800031253918",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "2008897349730746",
+      "concorrente": "JusBrasil",
+      "titulo": "Jus IA especialista em Direito",
+      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
+      "cta": "Subscribe",
+      "status": "Ativo",
+      "data": "2026-06-18",
+      "link": "https://www.facebook.com/ads/library/?id=2008897349730746",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -627,6 +484,19 @@
       "objetivo": ""
     },
     {
+      "id": "1247921570602308",
+      "concorrente": "Outro",
+      "titulo": "Converse conosco",
+      "mensagem": "Processos trabalhistas podem estar afetando sua vida, remova seus processos do jusbrasil e escavador agora mesmo.",
+      "cta": "Send WhatsApp message",
+      "status": "Ativo",
+      "data": "2026-06-16",
+      "link": "https://www.facebook.com/ads/library/?id=1247921570602308",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
       "id": "2100848690695479",
       "concorrente": "JusBrasil",
       "titulo": "Busca simples, rápida e organizada para advogados de todas as áreas.",
@@ -635,32 +505,6 @@
       "status": "Ativo",
       "data": "2026-04-13",
       "link": "https://www.facebook.com/ads/library/?id=2100848690695479",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "2008897349730746",
-      "concorrente": "JusBrasil",
-      "titulo": "Jus IA especialista em Direito",
-      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
-      "cta": "Subscribe",
-      "status": "Ativo",
-      "data": "2026-06-18",
-      "link": "https://www.facebook.com/ads/library/?id=2008897349730746",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "4589800031253918",
-      "concorrente": "JusBrasil",
-      "titulo": "Jus IA especialista em Direito",
-      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
-      "cta": "Subscribe",
-      "status": "Ativo",
-      "data": "2026-06-24",
-      "link": "https://www.facebook.com/ads/library/?id=4589800031253918",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -679,19 +523,6 @@
       "objetivo": ""
     },
     {
-      "id": "1247921570602308",
-      "concorrente": "Outro",
-      "titulo": "Converse conosco",
-      "mensagem": "Processos trabalhistas podem estar afetando sua vida, remova seus processos do jusbrasil e escavador agora mesmo.",
-      "cta": "Send WhatsApp message",
-      "status": "Ativo",
-      "data": "2026-06-16",
-      "link": "https://www.facebook.com/ads/library/?id=1247921570602308",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "475614275087576",
       "concorrente": "Outro",
       "titulo": "OAB Paraná",
@@ -705,14 +536,14 @@
       "objetivo": ""
     },
     {
-      "id": "966850129307932",
-      "concorrente": "Outro",
-      "titulo": "Juri Digital",
-      "mensagem": "🤖 O Estatuto da OAB foi escrito antes do GPT existir.\n\nEm 2026, ferramentas de IA generativa já produzem peças processuais, analisam contratos e respondem cliente final dentro do escritório. O Conselho Federal ainda não regulou a prática, e nenhum tribunal proibiu.\n\n⚖️ A frase \"IA não vai substituir",
-      "cta": "None",
+      "id": "2018950252039962",
+      "concorrente": "JusBrasil",
+      "titulo": "Jus IA especialista em Direito",
+      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
+      "cta": "Subscribe",
       "status": "Ativo",
-      "data": "2026-05-28",
-      "link": "https://www.facebook.com/ads/library/?id=966850129307932",
+      "data": "2026-06-24",
+      "link": "https://www.facebook.com/ads/library/?id=2018950252039962",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
