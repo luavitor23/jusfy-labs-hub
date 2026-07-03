@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LP Generator — Jusfy Labs</title>
+<meta name="description" content="Gerador de landing pages da Jusfy Labs — 3 versões automáticas via IA">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#fafaf8;
+  --paper:#ffffff;
+  --ink:#15151a;
+  --ink-soft:#46453f;
+  --ink-faint:#8a8578;
+  --line:#dedad0;
+  --line-soft:#ece9e1;
+  --blue:#1a4d8f;
+  --blue-deep:#0f3563;
+  --red:#a6332e;
+  --green:#3a6b4f;
+  --jusfy:#01AB7D;
+  --jusfy-tint:#41C78F;
+  --serif:'Source Serif 4',serif;
+  --mono:'IBM Plex Mono',monospace;
+  --sans:'Inter',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+
+header{border-bottom:1px solid var(--line);background:var(--paper)}
+.hdr-inner{max-width:1180px;margin:0 auto;padding:1.1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:0.02em;color:var(--ink);text-decoration:none}
+.brand-mark{width:22px;height:22px;border:1.5px solid var(--ink);border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:13px;font-weight:600;flex-shrink:0}
+.hdr-back{font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:0.03em;text-decoration:none}
+.hdr-back:hover{color:var(--blue)}
+
+.hero{max-width:1180px;margin:0 auto;padding:4rem 2rem 3rem;border-bottom:1px solid var(--line)}
+.hero-eyebrow{font-family:var(--mono);font-size:11px;color:var(--ink-faint);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:10px}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--ink-faint)}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.5vw,3.4rem);line-height:1.1;letter-spacing:-0.01em;max-width:20ch;margin-bottom:1.25rem}
+.hero h1 em{font-style:italic;color:var(--jusfy)}
+.hero-sub{font-size:16px;color:var(--ink-soft);max-width:58ch;line-height:1.65;margin-bottom:2rem}
+.hero-status{display:flex;gap:1.5rem;flex-wrap:wrap}
+.stat{font-family:var(--mono);font-size:11px;color:var(--ink-faint)}
+.stat b{color:var(--ink);font-size:13px;display:block;margin-top:2px}
+
+.section{max-width:1180px;margin:0 auto;padding:3rem 2rem}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;padding-bottom:1.25rem;flex-wrap:wrap;gap:.5rem}
+.section-title{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-faint)}
+
+.project{border-top:1px solid var(--line);padding:2rem 0}
+.project:last-child{border-bottom:1px solid var(--line)}
+.project-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem}
+.project-name{font-family:var(--serif);font-size:1.6rem;font-weight:500;letter-spacing:-0.005em}
+.project-origin{font-family:var(--mono);font-size:11px;color:var(--ink-faint);word-break:break-all;margin-top:4px}
+.project-meta{display:flex;gap:1.5rem;margin-top:1rem;flex-wrap:wrap}
+.score-box{font-family:var(--mono);font-size:11px;color:var(--ink-faint)}
+.score-box b{color:var(--jusfy);font-size:20px;font-family:var(--serif);display:block}
+.status{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;letter-spacing:0.03em}
+.status-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;background:var(--jusfy)}
+.status{color:var(--jusfy)}
+
+.versions{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:1.5rem}
+.version-card{border:1px solid var(--line);background:var(--paper);padding:1.25rem;text-decoration:none;transition:border-color .2s ease, transform .2s ease}
+.version-card:hover{border-color:var(--jusfy);transform:translateY(-2px)}
+.version-tag{font-family:var(--mono);font-size:10px;letter-spacing:0.06em;color:var(--jusfy);text-transform:uppercase}
+.version-name{font-family:var(--serif);font-size:1.15rem;margin:.4rem 0 .5rem;color:var(--ink)}
+.version-desc{font-size:13px;color:var(--ink-soft);line-height:1.5;margin-bottom:.9rem}
+.version-open{font-family:var(--mono);font-size:11px;color:var(--ink-faint);display:flex;align-items:center;gap:4px}
+.version-card:hover .version-open{color:var(--blue)}
+
+.notice{background:var(--paper);border:1px dashed var(--line);padding:1.5rem;font-size:13px;color:var(--ink-soft);line-height:1.6}
+.notice b{color:var(--ink)}
+
+footer{border-top:1px solid var(--line);margin-top:3rem}
+.footer-inner{max-width:1180px;margin:0 auto;padding:2rem 2rem 3rem;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem}
+.footer-note{font-family:var(--mono);font-size:11px;color:var(--ink-faint);line-height:1.7}
+.footer-stamp{font-family:var(--mono);font-size:10px;color:var(--line);letter-spacing:0.1em}
+
+@media(max-width:680px){
+  .hero{padding:3rem 1.5rem 2rem}
+  .section{padding:2rem 1.5rem}
+  .footer-inner{padding:2rem 1.5rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hdr-inner">
+    <a class="brand" href="https://jusfylabs.netlify.app">
+      <span class="brand-mark">J</span>
+      JUSFY&nbsp;LABS
+    </a>
+    <a class="hdr-back" href="https://jusfylabs.netlify.app">←&nbsp;VOLTAR&nbsp;AO&nbsp;ÍNDICE</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-eyebrow">Produto 05 — em teste</div>
+  <h1>Landing pages <em>reimaginadas</em> em 3 versões, automaticamente.</h1>
+  <p class="hero-sub">Envie uma landing page existente e a IA gera 3 versões — Evolução, Redesign e Criativa — mantendo a identidade da marca Jusfy. Esta é a primeira geração de teste, publicada para avaliação do time.</p>
+  <div class="hero-status">
+    <div class="stat">STATUS<b id="stat-status">carregando…</b></div>
+    <div class="stat">PROJETOS GERADOS<b id="stat-count">—</b></div>
+    <div class="stat">ATUALIZADO<b id="stat-updated">—</b></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-title">Gerações</span>
+  </div>
+  <div id="projects-list"></div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="notice">
+    <b>Sobre esta versão:</b> o upload self-service (subir sua própria LP e gerar novas versões direto por aqui) ainda está em construção. Por enquanto esta página mostra os resultados já gerados para avaliação — cada card abre a versão publicada de verdade, no domínio do Lovable. Feedback é bem-vindo.
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-note">
+      Jusfy Labs — plataformas internas construídas pelo time de growth &amp; produto.<br>
+      Acesso restrito a colaboradores Jusfy.
+    </div>
+    <div class="footer-stamp">JUSFY&nbsp;LABS&nbsp;/&nbsp;LP&nbsp;GENERATOR</div>
+  </div>
+</footer>
+
+<script>
+async function load() {
+  try {
+    const res = await fetch('data-lpgen.json?v=' + Date.now());
+    const data = await res.json();
+
+    document.getElementById('stat-status').textContent = 'ATIVO';
+    document.getElementById('stat-count').textContent = data.total_projects;
+    document.getElementById('stat-updated').textContent = new Date(data.updated_at).toLocaleDateString('pt-BR',{day:'2-digit',month:'short',year:'numeric'}).toUpperCase();
+
+    const list = document.getElementById('projects-list');
+    list.innerHTML = '';
+
+    data.projects.forEach(p => {
+      const versionLabels = {
+        v1: { tag: 'Versão 01 · Evolução', desc: 'Mantém ~80% da estrutura original, com UX, hierarquia e CTAs otimizados.' },
+        v2: { tag: 'Versão 02 · Redesign', desc: 'Mesma oferta, experiência visual reorganizada — outro hero, outra ordem de seções.' },
+        v3: { tag: 'Versão 03 · Criativa', desc: 'Storytelling, microanimações e simulação de busca interativa.' },
+      };
+
+      const versionsHtml = Object.entries(p.versoes || {}).map(([key, v]) => `
+        <a class="version-card" href="${v.url}" target="_blank" rel="noopener">
+          <div class="version-tag">${versionLabels[key]?.tag || key}</div>
+          <div class="version-name">${v.nome || key.toUpperCase()}</div>
+          <div class="version-desc">${versionLabels[key]?.desc || ''}</div>
+          <div class="version-open">ABRIR&nbsp;→</div>
+        </a>
+      `).join('');
+
+      const el = document.createElement('div');
+      el.className = 'project';
+      el.innerHTML = `
+        <div class="project-head">
+          <div>
+            <div class="project-name">${p.nome}</div>
+            <div class="project-origin">Origem: ${p.origem}</div>
+          </div>
+          <div class="status"><span class="status-dot"></span>${(p.status || '').toUpperCase()}</div>
+        </div>
+        <div class="project-meta">
+          <div class="score-box">SCORE ORIGINAL (HEURÍSTICO)<b>${p.score_original ?? '—'}/100</b></div>
+        </div>
+        <div class="versions">${versionsHtml}</div>
+      `;
+      list.appendChild(el);
+    });
+  } catch (e) {
+    document.getElementById('projects-list').innerHTML =
+      '<div class="notice">Não foi possível carregar os dados agora. Tente recarregar a página.</div>';
+    document.getElementById('stat-status').textContent = 'ERRO';
+  }
+}
+load();
+</script>
+
+</body>
+</html>
