@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04",
+  "updated_at": "2026-07-05",
   "total_ads": 60,
   "by_competitor": {
     "Cálculo Jurídico": 20,
@@ -11,7 +11,7 @@
     "Outro": 42,
     "Conversão": 11,
     "Institucional": 4,
-    "Produto": 2,
+    "Educação": 2,
     "Branding": 1
   },
   "by_tom": {
@@ -37,7 +37,7 @@
       "status": "Inativo",
       "data": "2022-11-23",
       "link": "https://www.facebook.com/ads/library/?id=4947759385327186",
-      "categoria": "Produto",
+      "categoria": "Educação",
       "tom": "Educativo",
       "objetivo": ""
     },
@@ -50,7 +50,7 @@
       "status": "Inativo",
       "data": "2022-11-10",
       "link": "https://www.facebook.com/ads/library/?id=896686295070130",
-      "categoria": "Produto",
+      "categoria": "Educação",
       "tom": "Educativo",
       "objetivo": ""
     },
