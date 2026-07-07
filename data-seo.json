@@ -1,7 +1,8 @@
 {
-  "updated_at": "2026-07-06",
-  "total_artigos": 20,
+  "updated_at": "2026-07-07",
+  "total_artigos": 21,
   "by_status": {
+    "📝 Briefing": 1,
     "👀 Em revisão": 12,
     "🚀 Publicado": 6,
     "⚙️ Aguardando Doc": 1,
@@ -13,9 +14,17 @@
     "Cível": 2
   },
   "by_intencao": {
-    "Informacional": 17
+    "Informacional": 18
   },
   "artigos": [
+    {
+      "titulo": "",
+      "keyword": "astreintes | 9900 | KD 21",
+      "status": "📝 Briefing",
+      "area": "",
+      "intencao": "Informacional",
+      "data_criacao": "2026-07-06"
+    },
     {
       "titulo": "",
       "keyword": "recurso inominado",
