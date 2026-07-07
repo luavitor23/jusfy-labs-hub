@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-06",
+  "updated_at": "2026-07-07",
   "total_ads": 80,
   "by_competitor": {
     "SeguroCred": 20,
@@ -10,14 +10,14 @@
   },
   "by_category": {
     "Outro": 68,
-    "Conversão": 9,
+    "Conversão": 8,
     "Produto": 2,
-    "Aquisição": 1
+    "Aquisição": 2
   },
   "by_tom": {
-    "Direto/Comercial": 64,
-    "Outro": 8,
-    "Urgência": 8
+    "Direto/Comercial": 63,
+    "Urgência": 9,
+    "Outro": 8
   },
   "by_cta": {
     "Learn more": 53,
@@ -76,8 +76,8 @@
       "status": "Ativo",
       "data": "2026-05-25",
       "link": "https://www.facebook.com/ads/library/?id=1472464337417433",
-      "categoria": "Conversão",
-      "tom": "Direto/Comercial",
+      "categoria": "Aquisição",
+      "tom": "Urgência",
       "objetivo": ""
     },
     {
