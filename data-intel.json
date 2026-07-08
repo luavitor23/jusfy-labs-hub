@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-07",
+  "updated_at": "2026-07-08",
   "total_ads": 80,
   "by_competitor": {
     "SeguroCred": 20,
@@ -11,13 +11,13 @@
   "by_category": {
     "Outro": 68,
     "Conversão": 8,
-    "Produto": 2,
-    "Aquisição": 2
+    "Aquisição": 2,
+    "Produto": 2
   },
   "by_tom": {
-    "Direto/Comercial": 63,
-    "Urgência": 9,
-    "Outro": 8
+    "Direto/Comercial": 64,
+    "Outro": 8,
+    "Urgência": 8
   },
   "by_cta": {
     "Learn more": 53,
@@ -39,6 +39,19 @@
       "link": "https://www.facebook.com/ads/library/?id=2249699125769302",
       "categoria": "Outro",
       "tom": "Outro",
+      "objetivo": ""
+    },
+    {
+      "id": "1472464337417433",
+      "concorrente": "SeguroCred",
+      "titulo": "Teste agora",
+      "mensagem": "Os melhores profissionais usam e indicam a SeguroCred.\nAdvogados que localizam rápido, executam melhor.\nConheça a plataforma que está mudando o jogo na execução judicial.",
+      "cta": "Learn more",
+      "status": "Ativo",
+      "data": "2026-05-25",
+      "link": "https://www.facebook.com/ads/library/?id=1472464337417433",
+      "categoria": "Aquisição",
+      "tom": "Direto/Comercial",
       "objetivo": ""
     },
     {
@@ -65,19 +78,6 @@
       "link": "https://www.facebook.com/ads/library/?id=1379576104097676",
       "categoria": "Produto",
       "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "1472464337417433",
-      "concorrente": "SeguroCred",
-      "titulo": "Teste agora",
-      "mensagem": "Os melhores profissionais usam e indicam a SeguroCred.\nAdvogados que localizam rápido, executam melhor.\nConheça a plataforma que está mudando o jogo na execução judicial.",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-05-25",
-      "link": "https://www.facebook.com/ads/library/?id=1472464337417433",
-      "categoria": "Aquisição",
-      "tom": "Urgência",
       "objetivo": ""
     },
     {
@@ -159,6 +159,32 @@
       "objetivo": ""
     },
     {
+      "id": "3059030617635563",
+      "concorrente": "SeguroCred",
+      "titulo": "None",
+      "mensagem": "Imagine ter um suporte que antecipa suas decisões. \n\nA IA do SeguroCred, disponível gratuitamente no sistema, entende suas dúvidas e guia você com respostas certeiras. \n\nExperimente agora e descubra o poder de uma prática mais ágil, segura e sem custos. \n\nClique no link e sinta a diferença.\n\n#Tecnol",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-07-01",
+      "link": "https://www.facebook.com/ads/library/?id=3059030617635563",
+      "categoria": "Outro",
+      "tom": "Outro",
+      "objetivo": ""
+    },
+    {
+      "id": "1016148434642486",
+      "concorrente": "SeguroCred",
+      "titulo": "None",
+      "mensagem": "Imagine ter um suporte que antecipa suas decisões. \n\nA IA do SeguroCred, disponível gratuitamente no sistema, entende suas dúvidas e guia você com respostas certeiras. \n\nExperimente agora e descubra o poder de uma prática mais ágil, segura e sem custos. \n\nClique no link e sinta a diferença.\n\n#Tecnol",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-07-02",
+      "link": "https://www.facebook.com/ads/library/?id=1016148434642486",
+      "categoria": "Outro",
+      "tom": "Outro",
+      "objetivo": ""
+    },
+    {
       "id": "2459311457908808",
       "concorrente": "SeguroCred",
       "titulo": "Faça sua busca agora",
@@ -167,6 +193,19 @@
       "status": "Ativo",
       "data": "2026-06-03",
       "link": "https://www.facebook.com/ads/library/?id=2459311457908808",
+      "categoria": "Conversão",
+      "tom": "Urgência",
+      "objetivo": ""
+    },
+    {
+      "id": "2145757436216755",
+      "concorrente": "SeguroCred",
+      "titulo": "Faça sua busca agora",
+      "mensagem": "Blindar bens virou regra entre devedores profissionais, mas toda ocultação deixa rastros.\n\nA SeguroCred entrega ao seu escritório o poder de ir além das buscas superficiais. Nossa tecnologia faz o cruzamento dados entre CPF, CNPJ, grupos econômicos e vínculos familiares para localizar patrimônios oc",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-06-27",
+      "link": "https://www.facebook.com/ads/library/?id=2145757436216755",
       "categoria": "Conversão",
       "tom": "Urgência",
       "objetivo": ""
@@ -182,19 +221,6 @@
       "link": "https://www.facebook.com/ads/library/?id=1291149029483817",
       "categoria": "Outro",
       "tom": "Outro",
-      "objetivo": ""
-    },
-    {
-      "id": "2145757436216755",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Blindar bens virou regra entre devedores profissionais, mas toda ocultação deixa rastros.\n\nA SeguroCred entrega ao seu escritório o poder de ir além das buscas superficiais. Nossa tecnologia faz o cruzamento dados entre CPF, CNPJ, grupos econômicos e vínculos familiares para localizar patrimônios oc",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-06-27",
-      "link": "https://www.facebook.com/ads/library/?id=2145757436216755",
-      "categoria": "Conversão",
-      "tom": "Urgência",
       "objetivo": ""
     },
     {
@@ -232,32 +258,6 @@
       "status": "Ativo",
       "data": "2026-07-02",
       "link": "https://www.facebook.com/ads/library/?id=2092314477989058",
-      "categoria": "Outro",
-      "tom": "Outro",
-      "objetivo": ""
-    },
-    {
-      "id": "3059030617635563",
-      "concorrente": "SeguroCred",
-      "titulo": "None",
-      "mensagem": "Imagine ter um suporte que antecipa suas decisões. \n\nA IA do SeguroCred, disponível gratuitamente no sistema, entende suas dúvidas e guia você com respostas certeiras. \n\nExperimente agora e descubra o poder de uma prática mais ágil, segura e sem custos. \n\nClique no link e sinta a diferença.\n\n#Tecnol",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-07-01",
-      "link": "https://www.facebook.com/ads/library/?id=3059030617635563",
-      "categoria": "Outro",
-      "tom": "Outro",
-      "objetivo": ""
-    },
-    {
-      "id": "1016148434642486",
-      "concorrente": "SeguroCred",
-      "titulo": "None",
-      "mensagem": "Imagine ter um suporte que antecipa suas decisões. \n\nA IA do SeguroCred, disponível gratuitamente no sistema, entende suas dúvidas e guia você com respostas certeiras. \n\nExperimente agora e descubra o poder de uma prática mais ágil, segura e sem custos. \n\nClique no link e sinta a diferença.\n\n#Tecnol",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-07-02",
-      "link": "https://www.facebook.com/ads/library/?id=1016148434642486",
       "categoria": "Outro",
       "tom": "Outro",
       "objetivo": ""
@@ -627,6 +627,19 @@
       "objetivo": ""
     },
     {
+      "id": "960901526810917",
+      "concorrente": "JusBrasil",
+      "titulo": "Já faz um tempo que você não verifica a situação do seu processo. ",
+      "mensagem": "{{product.brand}}",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-05-29",
+      "link": "https://www.facebook.com/ads/library/?id=960901526810917",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
       "id": "24568948866099029",
       "concorrente": "Outro",
       "titulo": "Clique e confira!",
@@ -648,19 +661,6 @@
       "status": "Inativo",
       "data": "2024-09-12",
       "link": "https://www.facebook.com/ads/library/?id=506590208914771",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "960901526810917",
-      "concorrente": "JusBrasil",
-      "titulo": "Já faz um tempo que você não verifica a situação do seu processo. ",
-      "mensagem": "{{product.brand}}",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-05-29",
-      "link": "https://www.facebook.com/ads/library/?id=960901526810917",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -705,14 +705,14 @@
       "objetivo": ""
     },
     {
-      "id": "795940766672720",
-      "concorrente": "Outro",
-      "titulo": "MBA em IA para Direito",
-      "mensagem": "MBA em IA para Direito: Revolucione seu Escritório!\n\n• Crie petições rapidamente\n• Organize processos com eficiência\n• Foque no que realmente importa\n\n100% Online | Reconhecido pelo MEC. Quer dominar a automação e impulsionar sua carreira jurídica?",
-      "cta": "Learn more",
+      "id": "2018950252039962",
+      "concorrente": "JusBrasil",
+      "titulo": "Jus IA especialista em Direito",
+      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
+      "cta": "Subscribe",
       "status": "Ativo",
-      "data": "2026-04-27",
-      "link": "https://www.facebook.com/ads/library/?id=795940766672720",
+      "data": "2026-06-24",
+      "link": "https://www.facebook.com/ads/library/?id=2018950252039962",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -731,14 +731,14 @@
       "objetivo": ""
     },
     {
-      "id": "2018950252039962",
-      "concorrente": "JusBrasil",
-      "titulo": "Jus IA especialista em Direito",
-      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
-      "cta": "Subscribe",
+      "id": "795940766672720",
+      "concorrente": "Outro",
+      "titulo": "MBA em IA para Direito",
+      "mensagem": "MBA em IA para Direito: Revolucione seu Escritório!\n\n• Crie petições rapidamente\n• Organize processos com eficiência\n• Foque no que realmente importa\n\n100% Online | Reconhecido pelo MEC. Quer dominar a automação e impulsionar sua carreira jurídica?",
+      "cta": "Learn more",
       "status": "Ativo",
-      "data": "2026-06-24",
-      "link": "https://www.facebook.com/ads/library/?id=2018950252039962",
+      "data": "2026-04-27",
+      "link": "https://www.facebook.com/ads/library/?id=795940766672720",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -783,19 +783,6 @@
       "objetivo": ""
     },
     {
-      "id": "475614275087576",
-      "concorrente": "Outro",
-      "titulo": "OAB Paraná",
-      "mensagem": "O que era bom acaba de ficar ainda melhor! 🚀 O Sexto Ano 2.0 está sendo lançado com uma novidade de peso: a nova parceria com a Associação dos Advogados de São Paulo, uma instituição respeitadíssima e que garante aos advogados e advogadas paranaenses ainda mais benefícios durante os primeiros anos d",
-      "cta": "Learn more",
-      "status": "Inativo",
-      "data": "2024-08-06",
-      "link": "https://www.facebook.com/ads/library/?id=475614275087576",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "966850129307932",
       "concorrente": "Outro",
       "titulo": "Juri Digital",
@@ -804,6 +791,19 @@
       "status": "Ativo",
       "data": "2026-05-28",
       "link": "https://www.facebook.com/ads/library/?id=966850129307932",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "475614275087576",
+      "concorrente": "Outro",
+      "titulo": "OAB Paraná",
+      "mensagem": "O que era bom acaba de ficar ainda melhor! 🚀 O Sexto Ano 2.0 está sendo lançado com uma novidade de peso: a nova parceria com a Associação dos Advogados de São Paulo, uma instituição respeitadíssima e que garante aos advogados e advogadas paranaenses ainda mais benefícios durante os primeiros anos d",
+      "cta": "Learn more",
+      "status": "Inativo",
+      "data": "2024-08-06",
+      "link": "https://www.facebook.com/ads/library/?id=475614275087576",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
