@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-09",
+  "updated_at": "2026-07-10",
   "total_ads": 80,
   "by_competitor": {
     "SeguroCred": 20,
@@ -94,19 +94,6 @@
       "objetivo": ""
     },
     {
-      "id": "995217983510010",
-      "concorrente": "SeguroCred",
-      "titulo": "None",
-      "mensagem": "Tempo é o ativo mais caro de um escritório de advocacia de alto padrão. Colocar a sua equipe para fazer buscas manuais, superficiais ou depender apenas de ferramentas judiciais lentas drena a energia que deveria estar na estratégia do caso.\n\nA SeguroCred centraliza a investigação patrimonial. Com po",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-07-02",
-      "link": "https://www.facebook.com/ads/library/?id=995217983510010",
-      "categoria": "Outro",
-      "tom": "Outro",
-      "objetivo": ""
-    },
-    {
       "id": "1551700666340913",
       "concorrente": "SeguroCred",
       "titulo": "Faça sua busca agora",
@@ -117,6 +104,19 @@
       "link": "https://www.facebook.com/ads/library/?id=1551700666340913",
       "categoria": "Conversão",
       "tom": "Urgência",
+      "objetivo": ""
+    },
+    {
+      "id": "995217983510010",
+      "concorrente": "SeguroCred",
+      "titulo": "None",
+      "mensagem": "Tempo é o ativo mais caro de um escritório de advocacia de alto padrão. Colocar a sua equipe para fazer buscas manuais, superficiais ou depender apenas de ferramentas judiciais lentas drena a energia que deveria estar na estratégia do caso.\n\nA SeguroCred centraliza a investigação patrimonial. Com po",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-07-02",
+      "link": "https://www.facebook.com/ads/library/?id=995217983510010",
+      "categoria": "Outro",
+      "tom": "Outro",
       "objetivo": ""
     },
     {
@@ -666,19 +666,6 @@
       "objetivo": ""
     },
     {
-      "id": "3244233939044499",
-      "concorrente": "Outro",
-      "titulo": "None",
-      "mensagem": "🚨 Mais um escândalo o ex-prefeito Farid Madi! \nO ex-prefeito Farid Madi, já condenado por corrupção, usou suas redes sociais para espalhar uma notícia falsa que acabou complicando ainda mais sua situação. Ele afirmou que seu adversário estava sendo investigado por um contrato da Prefeitura com uma e",
-      "cta": "No button",
-      "status": "Inativo",
-      "data": "2024-10-18",
-      "link": "https://www.facebook.com/ads/library/?id=3244233939044499",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "4589800031253918",
       "concorrente": "JusBrasil",
       "titulo": "Jus IA especialista em Direito",
@@ -700,6 +687,19 @@
       "status": "Ativo",
       "data": "2026-06-18",
       "link": "https://www.facebook.com/ads/library/?id=2008897349730746",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "3244233939044499",
+      "concorrente": "Outro",
+      "titulo": "None",
+      "mensagem": "🚨 Mais um escândalo o ex-prefeito Farid Madi! \nO ex-prefeito Farid Madi, já condenado por corrupção, usou suas redes sociais para espalhar uma notícia falsa que acabou complicando ainda mais sua situação. Ele afirmou que seu adversário estava sendo investigado por um contrato da Prefeitura com uma e",
+      "cta": "No button",
+      "status": "Inativo",
+      "data": "2024-10-18",
+      "link": "https://www.facebook.com/ads/library/?id=3244233939044499",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -744,19 +744,6 @@
       "objetivo": ""
     },
     {
-      "id": "647543425015062",
-      "concorrente": "JusBrasil",
-      "titulo": "Jusbrasil",
-      "mensagem": "Retrospectiva Jus IA 2025\n\nVocê contou com uma IA especializada no Direito Brasileiro, que alucina 43% menos que IAs generalistas, e teve ao seu lado a base de dados do Jusbrasil com mais de 7 bilhões de documentos jurídicos públicos.\n\nE se você ainda não usa o Jus IA, aproveite o período de experim",
-      "cta": "Learn more",
-      "status": "Inativo",
-      "data": "2025-12-08",
-      "link": "https://www.facebook.com/ads/library/?id=647543425015062",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "2100848690695479",
       "concorrente": "JusBrasil",
       "titulo": "Busca simples, rápida e organizada para advogados de todas as áreas.",
@@ -770,14 +757,14 @@
       "objetivo": ""
     },
     {
-      "id": "1793325324529184",
-      "concorrente": "Outro",
-      "titulo": "None",
-      "mensagem": "O que já era extremamente positivo para a advocacia iniciante acaba de ficar ainda melhor! Foi lançado nesta terça-feira (29) o programa Sexto Ano 2.0. É o Sexto Ano que você já conhece, mas turbinado!\n\nAgora, além dos benefícios da #OABPR, da @caa_parana, da @oabprevpr, da @esa_oabpr, do @sicoobadv",
+      "id": "647543425015062",
+      "concorrente": "JusBrasil",
+      "titulo": "Jusbrasil",
+      "mensagem": "Retrospectiva Jus IA 2025\n\nVocê contou com uma IA especializada no Direito Brasileiro, que alucina 43% menos que IAs generalistas, e teve ao seu lado a base de dados do Jusbrasil com mais de 7 bilhões de documentos jurídicos públicos.\n\nE se você ainda não usa o Jus IA, aproveite o período de experim",
       "cta": "Learn more",
       "status": "Inativo",
-      "data": "2024-08-06",
-      "link": "https://www.facebook.com/ads/library/?id=1793325324529184",
+      "data": "2025-12-08",
+      "link": "https://www.facebook.com/ads/library/?id=647543425015062",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -791,6 +778,19 @@
       "status": "Ativo",
       "data": "2026-05-28",
       "link": "https://www.facebook.com/ads/library/?id=966850129307932",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "1793325324529184",
+      "concorrente": "Outro",
+      "titulo": "None",
+      "mensagem": "O que já era extremamente positivo para a advocacia iniciante acaba de ficar ainda melhor! Foi lançado nesta terça-feira (29) o programa Sexto Ano 2.0. É o Sexto Ano que você já conhece, mas turbinado!\n\nAgora, além dos benefícios da #OABPR, da @caa_parana, da @oabprevpr, da @esa_oabpr, do @sicoobadv",
+      "cta": "Learn more",
+      "status": "Inativo",
+      "data": "2024-08-06",
+      "link": "https://www.facebook.com/ads/library/?id=1793325324529184",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -856,19 +856,6 @@
       "status": "Ativo",
       "data": "2025-10-27",
       "link": "https://www.facebook.com/ads/library/?id=1355207353054755",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "869375106016246",
-      "concorrente": "Astrea",
-      "titulo": "Comece grátis no Astrea",
-      "mensagem": "Processos, prazos, finanças e atendimentos, tudo espalhado?\nCentralize sua rotina jurídica em um só sistema.\n👉 Comece grátis.",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-01-22",
-      "link": "https://www.facebook.com/ads/library/?id=869375106016246",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -1064,6 +1051,19 @@
       "status": "Ativo",
       "data": "2025-10-23",
       "link": "https://www.facebook.com/ads/library/?id=1589651345745828",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "1564503228055087",
+      "concorrente": "Astrea",
+      "titulo": "Astrea - Mais segurança na sua rotina jurídica",
+      "mensagem": "Astrea, para mais segurança na sua rotina jurídica e mais liberdade no dia a dia.",
+      "cta": "Learn more",
+      "status": "Ativo",
+      "data": "2025-10-24",
+      "link": "https://www.facebook.com/ads/library/?id=1564503228055087",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
