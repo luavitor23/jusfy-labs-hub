@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-13",
+  "updated_at": "2026-07-14",
   "total_ads": 80,
   "by_competitor": {
     "SeguroCred": 20,
@@ -536,14 +536,14 @@
       "objetivo": ""
     },
     {
-      "id": "1173354298206234",
+      "id": "1194412719478239",
       "concorrente": "Cálculo Jurídico",
-      "titulo": "Precisou de ajuda? Conte com a gente!",
-      "mensagem": "De iniciantes a experientes, milhares de advogados investiram no CJ um valor menor do que aquele que cobre o cafézinho mensal do escritório e sabe qual foi o resultado?\n\nAtingiram outro nível de advocacia e estão ajudando várias vezes mais pessoas do que conseguiriam sem essa ferramenta.\n\nÉ que agor",
+      "titulo": "Software - Cálculo de Aposentadorias RPPS",
+      "mensagem": "Se você quer aproveitar a grande oportunidade de aumentar seu faturamento atuando com o RPPS, está no lugar certo!\n\nE pra não ter que se debruçar nas regras de cada uma das centenas de espécies de aposentadoria no Brasil, você precisa conhecer essa ferramenta inédita pra calcular, de forma automatiz",
       "cta": "Learn more",
       "status": "Ativo",
-      "data": "2026-02-16",
-      "link": "https://www.facebook.com/ads/library/?id=1173354298206234",
+      "data": "2026-06-25",
+      "link": "https://www.facebook.com/ads/library/?id=1194412719478239",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -614,19 +614,6 @@
       "objetivo": ""
     },
     {
-      "id": "4395385990727253",
-      "concorrente": "JusBrasil",
-      "titulo": "Busca simples, rápida e organizada para advogados de todas as áreas.",
-      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
-      "cta": "Subscribe",
-      "status": "Ativo",
-      "data": "2026-04-13",
-      "link": "https://www.facebook.com/ads/library/?id=4395385990727253",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "960901526810917",
       "concorrente": "JusBrasil",
       "titulo": "Já faz um tempo que você não verifica a situação do seu processo. ",
@@ -640,27 +627,14 @@
       "objetivo": ""
     },
     {
-      "id": "24568948866099029",
-      "concorrente": "Outro",
-      "titulo": "Clique e confira!",
-      "mensagem": "🔄 Tudo que vai, volta. E com sua anuidade, volta em forma de benefícios, estrutura e oportunidades para fortalecer a sua advocacia!\n\n🔗 Mais informações: oab-ba.org.br\n\n#oab #oabba",
-      "cta": "Learn more",
-      "status": "Inativo",
-      "data": "2025-09-19",
-      "link": "https://www.facebook.com/ads/library/?id=24568948866099029",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "506590208914771",
+      "id": "4395385990727253",
       "concorrente": "JusBrasil",
-      "titulo": "Jusbrasil",
-      "mensagem": "Como a informação jurídica pode transformar a sociedade? \nNo Jusbrasil, nosso compromisso é ir além de oferecer informação jurídica acessível e de qualidade. Com parcerias importantes, como o Abraji, Projeto Comprova e até mesmos projetos como JusAmazônia, Programa Tim Lopes e outros mostramos, como",
-      "cta": "Learn more",
-      "status": "Inativo",
-      "data": "2024-09-12",
-      "link": "https://www.facebook.com/ads/library/?id=506590208914771",
+      "titulo": "Busca simples, rápida e organizada para advogados de todas as áreas.",
+      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
+      "cta": "Subscribe",
+      "status": "Ativo",
+      "data": "2026-04-13",
+      "link": "https://www.facebook.com/ads/library/?id=4395385990727253",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -692,14 +666,27 @@
       "objetivo": ""
     },
     {
-      "id": "3244233939044499",
+      "id": "24568948866099029",
       "concorrente": "Outro",
-      "titulo": "None",
-      "mensagem": "🚨 Mais um escândalo o ex-prefeito Farid Madi! \nO ex-prefeito Farid Madi, já condenado por corrupção, usou suas redes sociais para espalhar uma notícia falsa que acabou complicando ainda mais sua situação. Ele afirmou que seu adversário estava sendo investigado por um contrato da Prefeitura com uma e",
-      "cta": "No button",
+      "titulo": "Clique e confira!",
+      "mensagem": "🔄 Tudo que vai, volta. E com sua anuidade, volta em forma de benefícios, estrutura e oportunidades para fortalecer a sua advocacia!\n\n🔗 Mais informações: oab-ba.org.br\n\n#oab #oabba",
+      "cta": "Learn more",
       "status": "Inativo",
-      "data": "2024-10-18",
-      "link": "https://www.facebook.com/ads/library/?id=3244233939044499",
+      "data": "2025-09-19",
+      "link": "https://www.facebook.com/ads/library/?id=24568948866099029",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "506590208914771",
+      "concorrente": "JusBrasil",
+      "titulo": "Jusbrasil",
+      "mensagem": "Como a informação jurídica pode transformar a sociedade? \nNo Jusbrasil, nosso compromisso é ir além de oferecer informação jurídica acessível e de qualidade. Com parcerias importantes, como o Abraji, Projeto Comprova e até mesmos projetos como JusAmazônia, Programa Tim Lopes e outros mostramos, como",
+      "cta": "Learn more",
+      "status": "Inativo",
+      "data": "2024-09-12",
+      "link": "https://www.facebook.com/ads/library/?id=506590208914771",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -713,6 +700,19 @@
       "status": "Ativo",
       "data": "2026-06-24",
       "link": "https://www.facebook.com/ads/library/?id=2018950252039962",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "3244233939044499",
+      "concorrente": "Outro",
+      "titulo": "None",
+      "mensagem": "🚨 Mais um escândalo o ex-prefeito Farid Madi! \nO ex-prefeito Farid Madi, já condenado por corrupção, usou suas redes sociais para espalhar uma notícia falsa que acabou complicando ainda mais sua situação. Ele afirmou que seu adversário estava sendo investigado por um contrato da Prefeitura com uma e",
+      "cta": "No button",
+      "status": "Inativo",
+      "data": "2024-10-18",
+      "link": "https://www.facebook.com/ads/library/?id=3244233939044499",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -952,19 +952,6 @@
       "objetivo": ""
     },
     {
-      "id": "1857952245093091",
-      "concorrente": "Astrea",
-      "titulo": "Conheça o Astrea",
-      "mensagem": "300 abas abertas e aquele processo urgente martelando na sua cabeça? Quando a rotina pesa, ter organização muda tudo. ☕",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-01-21",
-      "link": "https://www.facebook.com/ads/library/?id=1857952245093091",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "1430317955119278",
       "concorrente": "Astrea",
       "titulo": "Conheça o Astrea",
@@ -973,6 +960,19 @@
       "status": "Ativo",
       "data": "2026-01-20",
       "link": "https://www.facebook.com/ads/library/?id=1430317955119278",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "1857952245093091",
+      "concorrente": "Astrea",
+      "titulo": "Conheça o Astrea",
+      "mensagem": "300 abas abertas e aquele processo urgente martelando na sua cabeça? Quando a rotina pesa, ter organização muda tudo. ☕",
+      "cta": "Learn more",
+      "status": "Ativo",
+      "data": "2026-01-21",
+      "link": "https://www.facebook.com/ads/library/?id=1857952245093091",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
