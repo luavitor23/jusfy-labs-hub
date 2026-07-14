@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-13",
-  "total_artigos": 21,
+  "updated_at": "2026-07-14",
+  "total_artigos": 22,
   "by_status": {
-    "📝 Briefing": 1,
+    "📝 Briefing": 2,
     "👀 Em revisão": 12,
     "🚀 Publicado": 6,
     "⚙️ Aguardando Doc": 1,
@@ -14,9 +14,17 @@
     "Cível": 2
   },
   "by_intencao": {
-    "Informacional": 18
+    "Informacional": 19
   },
   "artigos": [
+    {
+      "titulo": "",
+      "keyword": "dosimetria da pena | 9900 | KD 22",
+      "status": "📝 Briefing",
+      "area": "",
+      "intencao": "Informacional",
+      "data_criacao": "2026-07-13"
+    },
     {
       "titulo": "",
       "keyword": "astreintes | 9900 | KD 21",
