@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-14",
+  "updated_at": "2026-07-15",
   "total_ads": 80,
   "by_competitor": {
     "SeguroCred": 20,
@@ -523,19 +523,6 @@
       "objetivo": ""
     },
     {
-      "id": "790425066751659",
-      "concorrente": "Cálculo Jurídico",
-      "titulo": "Experimente agora",
-      "mensagem": "O Cálculo Jurídico tem tudo que você precisa em um só lugar:  \n🔢 Calculadoras para várias áreas do Direito\n📊 Ferramentas para organizar e gerir seu escritório\n🤖 Assistentes de IA l que agilizam tarefas - geram petições, revisam contratos,...\n🎓 Cursos exclusivos sobre cálculos e temas jurídicos em al",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-02-14",
-      "link": "https://www.facebook.com/ads/library/?id=790425066751659",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "1194412719478239",
       "concorrente": "Cálculo Jurídico",
       "titulo": "Software - Cálculo de Aposentadorias RPPS",
@@ -544,6 +531,19 @@
       "status": "Ativo",
       "data": "2026-06-25",
       "link": "https://www.facebook.com/ads/library/?id=1194412719478239",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "790425066751659",
+      "concorrente": "Cálculo Jurídico",
+      "titulo": "Experimente agora",
+      "mensagem": "O Cálculo Jurídico tem tudo que você precisa em um só lugar:  \n🔢 Calculadoras para várias áreas do Direito\n📊 Ferramentas para organizar e gerir seu escritório\n🤖 Assistentes de IA l que agilizam tarefas - geram petições, revisam contratos,...\n🎓 Cursos exclusivos sobre cálculos e temas jurídicos em al",
+      "cta": "Learn more",
+      "status": "Ativo",
+      "data": "2026-02-14",
+      "link": "https://www.facebook.com/ads/library/?id=790425066751659",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -627,19 +627,6 @@
       "objetivo": ""
     },
     {
-      "id": "4395385990727253",
-      "concorrente": "JusBrasil",
-      "titulo": "Busca simples, rápida e organizada para advogados de todas as áreas.",
-      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
-      "cta": "Subscribe",
-      "status": "Ativo",
-      "data": "2026-04-13",
-      "link": "https://www.facebook.com/ads/library/?id=4395385990727253",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "4589800031253918",
       "concorrente": "JusBrasil",
       "titulo": "Jus IA especialista em Direito",
@@ -666,6 +653,32 @@
       "objetivo": ""
     },
     {
+      "id": "4395385990727253",
+      "concorrente": "JusBrasil",
+      "titulo": "Busca simples, rápida e organizada para advogados de todas as áreas.",
+      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
+      "cta": "Subscribe",
+      "status": "Ativo",
+      "data": "2026-04-13",
+      "link": "https://www.facebook.com/ads/library/?id=4395385990727253",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "2018950252039962",
+      "concorrente": "JusBrasil",
+      "titulo": "Jus IA especialista em Direito",
+      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
+      "cta": "Subscribe",
+      "status": "Ativo",
+      "data": "2026-06-24",
+      "link": "https://www.facebook.com/ads/library/?id=2018950252039962",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
       "id": "24568948866099029",
       "concorrente": "Outro",
       "titulo": "Clique e confira!",
@@ -687,19 +700,6 @@
       "status": "Inativo",
       "data": "2024-09-12",
       "link": "https://www.facebook.com/ads/library/?id=506590208914771",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "2018950252039962",
-      "concorrente": "JusBrasil",
-      "titulo": "Jus IA especialista em Direito",
-      "mensagem": "Evolua sua atuação jurídica com Jus IA, agora em todos os planos do Jusbrasil. Assine já",
-      "cta": "Subscribe",
-      "status": "Ativo",
-      "data": "2026-06-24",
-      "link": "https://www.facebook.com/ads/library/?id=2018950252039962",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
