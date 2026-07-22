@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-22",
   "total_ads": 80,
   "by_competitor": {
     "SeguroCred": 20,
     "Cálculo Jurídico": 20,
     "Astrea": 20,
-    "JusBrasil": 13,
-    "Outro": 7
+    "JusBrasil": 14,
+    "Outro": 6
   },
   "by_category": {
     "Outro": 80
@@ -15,9 +15,9 @@
     "Direto/Comercial": 80
   },
   "by_cta": {
-    "Learn more": 53,
+    "Learn more": 52,
     "See details": 15,
-    "Subscribe": 8,
+    "Subscribe": 9,
     "None": 2,
     "Send WhatsApp message": 1,
     "No button": 1
@@ -401,6 +401,19 @@
       "objetivo": ""
     },
     {
+      "id": "1194412719478239",
+      "concorrente": "Cálculo Jurídico",
+      "titulo": "Software - Cálculo de Aposentadorias RPPS",
+      "mensagem": "Se você quer aproveitar a grande oportunidade de aumentar seu faturamento atuando com o RPPS, está no lugar certo!\n\nE pra não ter que se debruçar nas regras de cada uma das centenas de espécies de aposentadoria no Brasil, você precisa conhecer essa ferramenta inédita pra calcular, de forma automatiz",
+      "cta": "Learn more",
+      "status": "Ativo",
+      "data": "2026-06-25",
+      "link": "https://www.facebook.com/ads/library/?id=1194412719478239",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
       "id": "1695739191391319",
       "concorrente": "Cálculo Jurídico",
       "titulo": "None",
@@ -479,14 +492,14 @@
       "objetivo": ""
     },
     {
-      "id": "1194412719478239",
+      "id": "1417293856435805",
       "concorrente": "Cálculo Jurídico",
-      "titulo": "Software - Cálculo de Aposentadorias RPPS",
-      "mensagem": "Se você quer aproveitar a grande oportunidade de aumentar seu faturamento atuando com o RPPS, está no lugar certo!\n\nE pra não ter que se debruçar nas regras de cada uma das centenas de espécies de aposentadoria no Brasil, você precisa conhecer essa ferramenta inédita pra calcular, de forma automatiz",
+      "titulo": "Precisa de ajuda? Conte com a gente!",
+      "mensagem": "Ficou com aquela dúvida cruel na hora de fazer os seus cálculos?\n\nRelaxe porque o Suporte do CJ resolve isso pra você! \nAlém de tutoriais dos cálculos em textos e em vídeos, você também conta com tours guiados pelo programa.\n\nE o melhor: nosso time de especialistas está à disposição em tempo real pr",
       "cta": "Learn more",
       "status": "Ativo",
-      "data": "2026-06-25",
-      "link": "https://www.facebook.com/ads/library/?id=1194412719478239",
+      "data": "2026-02-12",
+      "link": "https://www.facebook.com/ads/library/?id=1417293856435805",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -505,19 +518,6 @@
       "objetivo": ""
     },
     {
-      "id": "1821620168912611",
-      "concorrente": "Cálculo Jurídico",
-      "titulo": "STF mudou a regra da aposentadoria especial",
-      "mensagem": "Se você advoga na área previdenciária, atenção a essa reviravolta.\n\nO STF afastou a exigência de idade mínima para a concessão da aposentadoria especial aos segurados expostos a agentes nocivos (Nova Regra da EC 103/2019).\n\nNa prática, isso muda tudo no seu Planejamento Previdenciário!\n\nMas calma, p",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-06-26",
-      "link": "https://www.facebook.com/ads/library/?id=1821620168912611",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "864164989644822",
       "concorrente": "Cálculo Jurídico",
       "titulo": "Software - Cálculo de Aposentadorias RPPS",
@@ -531,14 +531,14 @@
       "objetivo": ""
     },
     {
-      "id": "1286086253349713",
+      "id": "1027459063156014",
       "concorrente": "Cálculo Jurídico",
-      "titulo": "Conheça o atendimento do CJ!",
-      "mensagem": "Bateu aquela dúvida cruel na hora de fazer cálculos no escritório?\n\nNo CJ você conta com o suporte de um time de profissionais especializados e apaixonados por Direito.\n\nSabe aquela pessoa que está ali sempre que você precisa?\n⠀\nPois é... Nosso time responde qualquer dúvida sua, dá exemplos práticos",
+      "titulo": "Você conhece todas as funcionalidades do CJ?",
+      "mensagem": "Você conhece todas as funcionalidades do Cálculo Jurídico?\n\nAlém dos cálculos das principais áreas do Direito, o CJ tem IA jurídica, petições, gestão de casos, tarefas e financeiro, e suporte especializado.\n\nSe você usa só uma parte disso, ainda não está aproveitando o que sua conta oferece.\n\nClique",
       "cta": "Learn more",
       "status": "Ativo",
-      "data": "2026-02-12",
-      "link": "https://www.facebook.com/ads/library/?id=1286086253349713",
+      "data": "2026-06-30",
+      "link": "https://www.facebook.com/ads/library/?id=1027459063156014",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -570,19 +570,6 @@
       "objetivo": ""
     },
     {
-      "id": "1270929701338657",
-      "concorrente": "JusBrasil",
-      "titulo": "Busca simples, rápida e organizada para advogados de todas as áreas.",
-      "mensagem": "Plataforma jurídica com IA: pesquise, estruture teses e produza peças num só lugar. Assine já!\n\n#PromptJurídico #Produtividade #JusIA #IAJurídica #Jusbrasil",
-      "cta": "Subscribe",
-      "status": "Ativo",
-      "data": "2026-04-24",
-      "link": "https://www.facebook.com/ads/library/?id=1270929701338657",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "1620070609635916",
       "concorrente": "JusBrasil",
       "titulo": "Jus IA especialista em Direito",
@@ -591,6 +578,19 @@
       "status": "Ativo",
       "data": "2026-06-24",
       "link": "https://www.facebook.com/ads/library/?id=1620070609635916",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "1270929701338657",
+      "concorrente": "JusBrasil",
+      "titulo": "Busca simples, rápida e organizada para advogados de todas as áreas.",
+      "mensagem": "Plataforma jurídica com IA: pesquise, estruture teses e produza peças num só lugar. Assine já!\n\n#PromptJurídico #Produtividade #JusIA #IAJurídica #Jusbrasil",
+      "cta": "Subscribe",
+      "status": "Ativo",
+      "data": "2026-04-24",
+      "link": "https://www.facebook.com/ads/library/?id=1270929701338657",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -791,14 +791,14 @@
       "objetivo": ""
     },
     {
-      "id": "475614275087576",
-      "concorrente": "Outro",
-      "titulo": "OAB Paraná",
-      "mensagem": "O que era bom acaba de ficar ainda melhor! 🚀 O Sexto Ano 2.0 está sendo lançado com uma novidade de peso: a nova parceria com a Associação dos Advogados de São Paulo, uma instituição respeitadíssima e que garante aos advogados e advogadas paranaenses ainda mais benefícios durante os primeiros anos d",
-      "cta": "Learn more",
-      "status": "Inativo",
-      "data": "2024-08-06",
-      "link": "https://www.facebook.com/ads/library/?id=475614275087576",
+      "id": "1504969501017486",
+      "concorrente": "JusBrasil",
+      "titulo": "Busca simples, rápida e organizada para advogados de todas as áreas.",
+      "mensagem": "Plataforma jurídica com IA: pesquise, estruture teses e produza peças num só lugar. Assine já!\n\n#PromptJurídico #Produtividade #JusIA #IAJurídica #Jusbrasil",
+      "cta": "Subscribe",
+      "status": "Ativo",
+      "data": "2026-04-24",
+      "link": "https://www.facebook.com/ads/library/?id=1504969501017486",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
