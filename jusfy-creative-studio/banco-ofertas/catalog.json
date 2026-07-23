@@ -1,0 +1,21 @@
+{
+  "items": [
+    { "id": "atual-modelo-1", "name": "Atual · Modelo 1 (padrão de produção)", "discount": "30", "price": "1990", "style": "atual", "source": "atual-modelo-1.png" },
+    { "id": "atual-modelo-2", "name": "Atual · Modelo 2 (padrão de produção)", "discount": "30", "price": "1990", "style": "atual", "source": "atual-modelo-2.png" },
+    { "id": "atual-modelo-3", "name": "Atual · Modelo 3 (padrão de produção)", "discount": "30", "price": "1990", "style": "atual", "source": "atual-modelo-3.png" },
+    { "id": "atual-modelo-5", "name": "Atual · Modelo 5 (padrão de produção)", "discount": "30", "price": "1990", "style": "atual", "source": "atual-modelo-5.png" },
+    { "id": "duas-caixas-1990-30", "name": "Duas caixas · R$19,90 · 30% OFF", "discount": "30", "price": "1990", "style": "duas-caixas", "source": "duas-caixas-1990-30.png" },
+    { "id": "duas-caixas-1990-20", "name": "Duas caixas · R$19,90 · 20% OFF", "discount": "20", "price": "1990", "style": "duas-caixas", "source": "duas-caixas-1990-20.png" },
+    { "id": "duas-caixas-990-30", "name": "Duas caixas · R$9,90 · 30% OFF", "discount": "30", "price": "990", "style": "duas-caixas", "source": "duas-caixas-990-30.png" },
+    { "id": "duas-caixas-990-20", "name": "Duas caixas · R$9,90 · 20% OFF", "discount": "20", "price": "990", "style": "duas-caixas", "source": "duas-caixas-990-20.png" },
+    { "id": "dividida-1990-30", "name": "Caixa dividida · R$19,90 · 30% OFF", "discount": "30", "price": "1990", "style": "dividida", "source": "dividida-1990-30.png" },
+    { "id": "dividida-1990-20", "name": "Caixa dividida · R$19,90 · 20% OFF", "discount": "20", "price": "1990", "style": "dividida", "source": "dividida-1990-20.png" },
+    { "id": "dividida-990-30", "name": "Caixa dividida · R$9,90 · 30% OFF", "discount": "30", "price": "990", "style": "dividida", "source": "dividida-990-30.png" },
+    { "id": "dividida-990-20", "name": "Caixa dividida · R$9,90 · 20% OFF", "discount": "20", "price": "990", "style": "dividida", "source": "dividida-990-20.png" },
+    { "id": "empilhada-1990-30", "name": "Caixa empilhada · R$19,90 · 30% OFF", "discount": "30", "price": "1990", "style": "empilhada", "source": "empilhada-1990-30.png" },
+    { "id": "empilhada-1990-20", "name": "Caixa empilhada · R$19,90 · 20% OFF", "discount": "20", "price": "1990", "style": "empilhada", "source": "empilhada-1990-20.png" },
+    { "id": "empilhada-990-30", "name": "Caixa empilhada · R$9,90 · 30% OFF", "discount": "30", "price": "990", "style": "empilhada", "source": "empilhada-990-30.png" },
+    { "id": "empilhada-990-20", "name": "Caixa empilhada · R$9,90 · 20% OFF", "discount": "20", "price": "990", "style": "empilhada", "source": "empilhada-990-20.png" },
+    { "id": "adesivo-990", "name": "Adesivo · R$9,90 (sem desconto)", "discount": null, "price": "990", "style": "adesivo", "source": "adesivo-990.png" }
+  ]
+}

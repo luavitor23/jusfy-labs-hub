@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "model3",
+  "order": 3,
+  "label": "Modelo 3",
+  "description": "IA jurídica · Benefícios",
+  "copyTags": ["model3"],
+  "copyScopes": ["OAB"],
+  "defaults": {"category":"","headline":"Advocacia do PI livre de tarefas manuais e repetitivas","support":"IA jurídica completa treinada por 50 mil advogados todos os dias","cta":"Começar agora"},
+  "formats": {
+    "square": {
+      "key":"model3Square","name":"Modelo 3 · 1:1","width":1080,"height":1080,"source":"feed.svg","type":"mapped","enabledFields":["headline","support","cta"],
+      "patches":[[250,90,580,100],[135,250,810,145],[143,412,554,126,"#FAFAFA"],[360,899,361,84],[199,704,682,178],[143,543,279,126,"#FAFAFA"],[704,412,232,126,"#FAFAFA"],[429,543,312,126,"#FAFAFA"],[748,543,188,126,"#FAFAFA"]],
+      "freeElements":{"badgeCalculos":{"label":"Selo · Cálculos automatizados","bounds":[146,546,273,120]},"badgeConsultas":{"label":"Selo · Consultas Legais","bounds":[707,415,226,120]},"badgeSolucoes":{"label":"Selo · + de 20 soluções integradas","bounds":[432,546,306,120]},"badgePlano":{"label":"Selo · Plano exclusivo","bounds":[751,546,182,120]}},
+      "category":{"x":540,"y":250,"width":1,"height":1,"maxSize":1,"minSize":1,"maxLines":1,"lineHeight":1,"color":"#212121","weight":700},
+      "headline":{"x":540,"y":272,"width":790,"height":115,"maxSize":50,"minSize":31,"maxLines":3,"lineHeight":1.3,"referenceLength":54,"lengthScaling":0.55,"color":"#212121","weight":700,"align":"center"},
+      "support":{"x":166,"y":444,"width":510,"height":76,"maxSize":30,"minSize":20,"maxLines":3,"lineHeight":1.3,"referenceLength":64,"lengthScaling":0.5,"color":"#212121","weight":600,"align":"left","button":{"dx":-20,"dy":-29,"width":548,"height":120,"radius":13.3263,"color":"#E7E8EC"}},
+      "cta":{"x":540,"y":925,"width":330,"height":48,"maxSize":30,"minSize":20,"maxLines":1,"lineHeight":1.2,"referenceLength":13,"lengthScaling":0.45,"color":"#FAFAFA","weight":700,"align":"center","button":{"dx":-180,"dy":-26,"width":361,"height":84,"radius":42,"color":"#01A379"}},
+      "logos":{"x":540,"y":100,"maxWidth":550,"maxHeight":80,"gap":50,"reverse":true},
+      "commercial":{"centerX":540,"centerY":793,"bounds":[201,706,678,174],"noteY":887},"commercialNoteMode":"runtime"
+    },
+    "story": {
+      "key":"model3Story","name":"Modelo 3 · 9:16","width":1080,"height":1920,"source":"stories.svg","type":"mapped","enabledFields":["headline","support","cta"],
+      "patches":[[263,386,580,100],[135,546,810,145],[156,706,554,126,"#FAFAFA"],[373,1195,361,84],[212,1000,682,178],[156,837,279,126,"#FAFAFA"],[717,706,232,126,"#FAFAFA"],[442,837,312,126,"#FAFAFA"],[761,837,188,126,"#FAFAFA"]],
+      "freeElements":{"badgeCalculos":{"label":"Selo · Cálculos automatizados","bounds":[159,840,273,120]},"badgeConsultas":{"label":"Selo · Consultas Legais","bounds":[720,709,226,120]},"badgeSolucoes":{"label":"Selo · + de 20 soluções integradas","bounds":[445,840,306,120]},"badgePlano":{"label":"Selo · Plano exclusivo","bounds":[764,840,182,120]}},
+      "category":{"x":540,"y":546,"width":1,"height":1,"maxSize":1,"minSize":1,"maxLines":1,"lineHeight":1,"color":"#212121","weight":700},
+      "headline":{"x":540,"y":568,"width":790,"height":115,"maxSize":50,"minSize":31,"maxLines":3,"lineHeight":1.3,"referenceLength":54,"lengthScaling":0.55,"color":"#212121","weight":700,"align":"center"},
+      "support":{"x":179,"y":738,"width":510,"height":76,"maxSize":30,"minSize":20,"maxLines":3,"lineHeight":1.3,"referenceLength":64,"lengthScaling":0.5,"color":"#212121","weight":600,"align":"left","button":{"dx":-20,"dy":-29,"width":548,"height":120,"radius":13.3263,"color":"#E7E8EC"}},
+      "cta":{"x":553,"y":1221,"width":330,"height":48,"maxSize":30,"minSize":20,"maxLines":1,"lineHeight":1.2,"referenceLength":13,"lengthScaling":0.45,"color":"#FAFAFA","weight":700,"align":"center","button":{"dx":-180,"dy":-26,"width":361,"height":84,"radius":42,"color":"#01A379"}},
+      "logos":{"x":553,"y":396,"maxWidth":550,"maxHeight":80,"gap":50,"reverse":true},
+      "commercial":{"centerX":553,"centerY":1089,"bounds":[214,1002,678,174],"noteY":1183},"commercialNoteMode":"runtime"
+    }
+  }
+}

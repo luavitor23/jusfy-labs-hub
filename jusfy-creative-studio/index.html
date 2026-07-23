@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Editor local de criativos SVG da Jusfy." />
+    <title>Studio de Criativos — Jusfy</title>
+    <link rel="stylesheet" href="styles.css?v=20260717z" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-lockup">
+        <img src="assets/logo-justfy.svg" alt="Jusfy" />
+        <span class="brand-divider" aria-hidden="true"></span>
+        <div><strong>Studio de Criativos</strong><small>Editor SVG local · MVP</small></div>
+      </div>
+      <div class="privacy"><span></span> Arquivos processados nesta máquina</div>
+    </header>
+
+    <main class="workspace">
+      <aside class="sidebar editor-panel" aria-label="Editor">
+        <section class="section">
+          <div class="section-title"><span>01</span><div><h1>Template</h1><p>Escolha primeiro o modelo e depois o formato.</p></div></div>
+          <label class="model-picker" for="familySelect">
+            <span>Modelo</span>
+            <select id="familySelect" aria-describedby="familyDescription"></select>
+            <small id="familyDescription"></small>
+          </label>
+          <div class="template-grid">
+            <button class="template-card is-active" data-format="square" type="button"><b>1:1</b><span>1080 × 1080</span></button>
+            <button class="template-card" data-format="story" type="button"><b>9:16</b><span>1080 × 1920</span></button>
+          </div>
+          <div class="format-imports">
+            <label class="upload-button" for="squareSvgInput"><span><b>Importar 1:1</b><em id="squareImportName">SVG quadrado</em></span><small>.svg</small></label>
+            <input id="squareSvgInput" type="file" accept="image/svg+xml,.svg" hidden />
+            <label class="upload-button" for="storySvgInput"><span><b>Importar 9:16</b><em id="storyImportName">SVG vertical</em></span><small>.svg</small></label>
+            <input id="storySvgInput" type="file" accept="image/svg+xml,.svg" hidden />
+          </div>
+          <p id="importStatus" class="import-status">Escolha o arquivo correspondente ao formato da arte.</p>
+          <div id="importModeControls" class="import-mode-controls" hidden>
+            <button id="originalModeButton" class="button secondary" type="button" hidden disabled aria-hidden="true">Original editável</button>
+            <button id="mappedModeButton" class="button secondary is-active" type="button">Textos protegidos</button>
+          </div>
+          <div id="svgHealth" class="health warning"><i>!</i><div><strong>SVG vetorizado</strong><span>Copy original convertida em curvas. Usando campos mapeados.</span></div></div>
+        </section>
+
+        <section class="section">
+          <div class="section-title"><span>02</span><div><h2>Conteúdo</h2><p>Campos autorizados do template.</p></div></div>
+          <label class="field"><span>Categoria <b id="categoryCount"></b></span><input id="categoryInput" maxlength="40" value="CONDIÇÃO ESPECIAL" /></label>
+          <label class="field"><span>Headline <b id="headlineCount"></b></span><textarea id="headlineInput" maxlength="120" rows="4">Sua advocacia pode produzir mais sem transformar a rotina em mais trabalho</textarea></label>
+          <label class="field"><span>Texto de apoio <b id="supportCount"></b></span><textarea id="supportInput" maxlength="180" rows="4">Automatize cálculos, pesquisas e tarefas jurídicas com as soluções integradas da Jusfy para advogados.</textarea></label>
+          <label class="field"><span>CTA regional <b id="ctaCount"></b></span><textarea id="ctaInput" maxlength="80" rows="2">Aproveite as condições especiais da OAB/SP</textarea></label>
+          <div id="detectedFields" class="detected-fields" hidden></div>
+        </section>
+
+        <section class="section">
+          <div class="section-title"><span>03</span><div><h2>Logos</h2><p>PNG, JPG ou SVG oficial.</p></div></div>
+          <div id="logoModeControls" class="import-mode-controls logo-mode-controls">
+            <button id="cobrandModeButton" class="button secondary is-active" type="button">Jusfy + Regional</button>
+            <button id="jusfyOnlyModeButton" class="button secondary" type="button">Somente Jusfy</button>
+          </div>
+          <p id="cobrandingNotice" class="copy-sync-message" hidden>Modelo sem co-branding — usa apenas a marca Jusfy.</p>
+          <div class="logo-row">
+            <label id="regionalLogoUpload" class="logo-upload"><span id="regionalLogoName">Logo regional</span><small>Selecionar arquivo</small><input id="regionalLogoInput" type="file" accept="image/*,.svg" hidden /></label>
+            <label class="logo-upload"><span id="jusfyLogoName">Logo Jusfy</span><small>Selecionar arquivo</small><input id="jusfyLogoInput" type="file" accept="image/*,.svg" hidden /></label>
+          </div>
+          <div id="logoBankHeading" class="library-heading"><strong>Banco de logos</strong><small id="logoBankStatus">Carregando marcas…</small></div>
+          <div id="logoBank" class="logo-bank" aria-label="Banco de logos aprovados"></div>
+          <div id="logoBankActions" class="logo-bank-actions">
+            <button id="selectVisibleLogosButton" class="button ghost" type="button">Selecionar regionais</button>
+            <button id="generateLogoVariationsButton" class="button primary" type="button">Gerar por regionais</button>
+          </div>
+          <button id="resetButton" class="button ghost wide" type="button">Restaurar copy aprovada</button>
+        </section>
+
+        <section class="section selection-section">
+          <div class="section-title"><span>04</span><div><h2>Elemento selecionado</h2><p>Arraste textos, logos ou o bloco comercial.</p></div></div>
+          <div id="selectionEmpty" class="selection-empty">Selecione um elemento editável na arte.</div>
+          <div id="selectionControls" class="selection-controls" hidden>
+            <strong id="selectedElementName"></strong>
+            <span id="selectedElementPos" class="selection-pos"></span>
+            <div id="fontControls" class="font-controls">
+              <span id="sizeControlLabel">Tamanho da fonte</span>
+              <div><button id="fontDecrease" type="button" aria-label="Diminuir fonte">−</button><b id="fontSizeValue">0 px</b><button id="fontIncrease" type="button" aria-label="Aumentar fonte">+</button></div>
+            </div>
+            <div class="selection-actions">
+              <button id="deleteElementButton" class="button danger" type="button">Excluir da arte</button>
+              <button id="restoreElementButton" class="button ghost" type="button">Restaurar posição</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="offerBankSection" hidden>
+          <div class="section-title"><span>05</span><div><h2>Banco de ofertas</h2><p>Escolha a imagem pronta do bloco de preço e desconto.</p></div></div>
+          <div id="offerBankHeading" class="library-heading"><strong>Ofertas disponíveis</strong><small id="offerBankStatus">Carregando ofertas…</small></div>
+          <div id="offerBank" class="logo-bank" aria-label="Banco de ofertas comerciais"></div>
+        </section>
+
+        <section class="section master-section">
+          <div class="section-title"><span>06</span><div><h2>Mestre local</h2><p>Guarde o formato revisado na pasta de aprovados.</p></div></div>
+          <label class="field"><span>Nome do mestre</span><input id="masterNameInput" maxlength="80" placeholder="Ex.: Condições especiais · CAASP V04" /></label>
+          <label class="approval-check"><input id="masterApproval" type="checkbox" /><span>Revisei este formato e aprovo o layout como mestre.</span></label>
+          <button id="saveMasterButton" class="button primary wide" type="button">Salvar como mestre</button>
+          <p id="masterSaveStatus" class="master-status">Serão salvos o SVG, a prévia PNG e o mapa editável.</p>
+        </section>
+      </aside>
+
+      <section class="stage" aria-label="Prévia do criativo">
+        <div class="stage-toolbar">
+          <div><span class="eyebrow">Prévia em tempo real · arraste os elementos editáveis</span><strong id="documentName">Breaking News · CAASP 1:1</strong></div>
+          <div class="stage-tools"><button id="rulerToggle" class="ruler-toggle" type="button" aria-pressed="false" title="Mostrar guias de alinhamento na prévia">Régua</button><button id="clearGuidesButton" class="ruler-toggle" type="button" hidden title="Remover todas as guias personalizadas deste modelo">Limpar guias</button><div class="zoom-control"><button id="zoomOut" type="button" aria-label="Diminuir zoom">−</button><span id="zoomLabel">Ajustar</span><button id="zoomIn" type="button" aria-label="Aumentar zoom">+</button></div></div>
+        </div>
+        <div id="canvasViewport" class="canvas-viewport">
+          <div id="canvasWrap" class="canvas-wrap"><canvas id="creativeCanvas" width="1080" height="1080"></canvas><canvas id="rulerTop" class="ruler-bar ruler-bar-top" hidden></canvas><canvas id="rulerLeft" class="ruler-bar ruler-bar-left" hidden></canvas><span id="guideDragLabel" class="guide-drag-label" hidden></span></div>
+          <div id="loadingState" class="loading-state">Preparando template…</div>
+        </div>
+        <div class="export-bar">
+          <div><span id="sizeLabel">1080 × 1080 px</span><small id="saveState">Alterações locais salvas automaticamente</small></div>
+          <button id="exportSvgButton" class="button secondary" type="button">Exportar SVG</button>
+          <button id="exportPngButton" class="button primary" type="button">Exportar PNG</button>
+        </div>
+      </section>
+
+      <aside class="sidebar batch-panel" aria-label="Variações em massa">
+        <section class="section copies-section">
+          <div class="section-title"><span>07</span><div><h2>Copies do Notion</h2><p>Combine as copies selecionadas com uma ou várias regionais.</p></div></div>
+          <div class="copy-toolbar">
+            <button id="loadNotionCopiesButton" class="button secondary" type="button">Atualizar do Notion</button>
+            <label><input id="includeReviewCopies" type="checkbox" /><span>Incluir em revisão</span></label>
+            <label id="scopeFilterToggle" hidden><input id="showAllScopes" type="checkbox" /><span>Mostrar todas</span></label>
+          </div>
+          <p id="copySyncMessage" class="copy-sync-message">Carregando o catálogo sincronizado…</p>
+          <p id="copyFieldsNotice" class="copy-sync-message copy-fields-notice" hidden></p>
+          <div id="copyLibrary" class="copy-library"></div>
+          <div class="copy-actions">
+            <button id="selectVisibleCopiesButton" class="button ghost" type="button">Selecionar visíveis</button>
+            <button id="generateNotionVariationsButton" class="button primary" type="button">Gerar selecionadas</button>
+          </div>
+          <p id="copyLibraryStatus" class="batch-message">Nenhuma copy carregada.</p>
+        </section>
+
+        <section class="section batch-section">
+          <div class="section-title"><span>08</span><div><h2>Variações em massa</h2><p>Uma linha por versão, separada por ponto e vírgula.</p></div></div>
+          <div class="csv-help"><code>nome;headline;apoio;cta</code></div>
+          <textarea id="batchInput" class="batch-input" rows="8" placeholder="OAB-PE;Headline de Pernambuco;Texto de apoio;CTA regional"></textarea>
+          <div class="batch-actions">
+            <button id="exampleBatchButton" class="button ghost" type="button">Usar exemplo</button>
+            <button id="generateBatchButton" class="button dark" type="button">Gerar versões</button>
+          </div>
+          <p id="batchMessage" class="batch-message">Nenhuma variação gerada.</p>
+          <div id="batchReviewBar" class="batch-review-bar" hidden>
+            <button id="approveAllButton" class="button ghost" type="button">Aprovar todas</button>
+            <span id="batchReviewSummary" class="batch-review-summary"></span>
+          </div>
+          <div id="batchList" class="batch-list"></div>
+          <button id="exportBatchButton" class="button primary wide" type="button" hidden>Exportar aprovadas (ZIP)</button>
+        </section>
+
+        <section class="section masters-section">
+          <div class="section-title"><span>09</span><div><h2>Mestres salvos</h2><p>Reabra um formato aprovado direto no editor.</p></div></div>
+          <button id="refreshMastersButton" class="button secondary wide" type="button">Atualizar lista</button>
+          <p id="mastersMessage" class="batch-message">Carregando mestres salvos…</p>
+          <div id="mastersList" class="masters-list"></div>
+        </section>
+
+        <section class="section protected-section">
+          <span class="eyebrow">Proteções ativas</span>
+          <ul>
+            <li><i>✓</i><span>Textos do bloco comercial</span><em>editáveis (Modelo 1)</em></li>
+            <li><i>✓</i><span>Posição do bloco comercial</span><em>ajustável</em></li>
+            <li><i>✓</i><span>Estrutura e cores</span><em>fixo</em></li>
+            <li><i>✓</i><span>Copy e co-branding</span><em>editável</em></li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+    <script src="zip-writer.js"></script>
+    <script type="module" src="js/main.js?v=20260723a"></script>
+  </body>
+</html>

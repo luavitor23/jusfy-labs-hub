@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "model6",
+  "order": 6,
+  "label": "Modelo 6",
+  "description": "IA jurídica · Produtividade",
+  "copyTags": ["model6"],
+  "copyScopes": ["OAB"],
+  "copyFields": ["headline"],
+  "defaults": {"category":"","headline":"Advogado, faça 8h de trabalho caberem em 3!","support":"","cta":"Acessar benefícios"},
+  "formats": {
+    "square": {
+      "key":"model6Square","name":"Modelo 6 · 1:1","width":1080,"height":1080,"source":"feed.svg","type":"mapped","enabledFields":["headline","cta"],
+      "patches":[[180,130,650,105,"#FAFAFA"],[90,270,900,200,"#FAFAFA"],[90,630,860,180,"#FAFAFA"],[445,805,80,35,"#FAFAFA"],[350,845,380,105,"#FAFAFA"],[168,498,499,126,"#FAFAFA"],[674,498,234,126,"#FAFAFA"],[896.7,762.7,42.5,43.6,"#FAFAFA"],[451.7,785.7,42.5,43.6,"#FAFAFA"],[100.7,659.7,42.5,43.6,"#FAFAFA"],[918.8,740.8,30.3,30.3,"#FAFAFA"],[131.8,641.8,30.3,30.3,"#FAFAFA"],[175.8,782.8,30.3,30.3,"#FAFAFA"],[490.8,808.8,30.3,30.3,"#FAFAFA"],[908.8,631.8,30.3,30.3,"#FAFAFA"]],
+      "freeElements":{"badge1":{"label":"Selo 1","bounds":[171,501,493,120]},"badge2":{"label":"Selo 2","bounds":[677,501,228,120]},"star1":{"label":"Estrela 1","bounds":[896.7,762.7,42.5,43.6]},"star2":{"label":"Estrela 2","bounds":[451.7,785.7,42.5,43.6]},"star3":{"label":"Estrela 3","bounds":[100.7,659.7,42.5,43.6]},"star4":{"label":"Estrela 4","bounds":[918.8,740.8,30.3,30.3]},"star5":{"label":"Estrela 5","bounds":[131.8,641.8,30.3,30.3]},"star6":{"label":"Estrela 6","bounds":[175.8,782.8,30.3,30.3]},"star7":{"label":"Estrela 7","bounds":[490.8,808.8,30.3,30.3]},"star8":{"label":"Estrela 8","bounds":[908.8,631.8,30.3,30.3]}},
+      "category":{"x":103,"y":281,"width":1,"height":1,"maxSize":1,"minSize":1,"maxLines":1,"lineHeight":1,"color":"#212121","weight":700,"align":"left"},
+      "headline":{"x":103.73,"y":281,"width":900,"height":210,"maxSize":70,"minSize":40,"maxLines":2,"lineHeight":1.3,"referenceLength":43,"lengthScaling":0.55,"color":"#212121","weight":700,"align":"left"},
+      "support":{"x":103,"y":281,"width":1,"height":1,"maxSize":1,"minSize":1,"maxLines":1,"lineHeight":1,"color":"#212121","weight":400,"align":"left"},
+      "cta":{"x":539.5,"y":882,"width":320,"height":42,"maxSize":30,"minSize":20,"maxLines":1,"lineHeight":1.2,"referenceLength":14,"lengthScaling":0.45,"color":"#FAFAFA","weight":700,"align":"center","button":{"dx":-180.5,"dy":-26,"width":361,"height":84,"radius":42,"color":"#01A379"}},
+      "logos":{"x":265,"y":180,"maxWidth":548,"maxHeight":80,"gap":86,"reverse":true,"anchor":"left"},
+      "commercial":{"centerX":538,"centerY":714,"bounds":[173,649,730,130],"noteY":821},"commercialNoteMode":"runtime"
+    },
+    "story": {
+      "key":"model6Story","name":"Modelo 6 · 9:16","width":1080,"height":1920,"source":"stories.svg","type":"mapped","enabledFields":["headline","cta"],
+      "patches":[[180,394,650,105,"#FAFAFA"],[90,534,900,200,"#FAFAFA"],[90,894,860,215,"#FAFAFA"],[350,1109,380,105,"#FAFAFA"],[168,761,499,126,"#FAFAFA"],[674,761,234,126,"#FAFAFA"],[896.7,1026.7,42.5,43.6,"#FAFAFA"],[451.7,1049.7,42.5,43.6,"#FAFAFA"],[100.7,923.7,42.5,43.6,"#FAFAFA"],[918.8,1004.8,30.3,30.3,"#FAFAFA"],[131.8,905.8,30.3,30.3,"#FAFAFA"],[175.8,1039.8,30.3,30.3,"#FAFAFA"],[490.8,1072.8,30.3,30.3,"#FAFAFA"],[908.8,895.8,30.3,30.3,"#FAFAFA"]],
+      "freeElements":{"badge1":{"label":"Selo 1","bounds":[171,764,493,120]},"badge2":{"label":"Selo 2","bounds":[677,764,228,120]},"star1":{"label":"Estrela 1","bounds":[896.7,1026.7,42.5,43.6]},"star2":{"label":"Estrela 2","bounds":[451.7,1049.7,42.5,43.6]},"star3":{"label":"Estrela 3","bounds":[100.7,923.7,42.5,43.6]},"star4":{"label":"Estrela 4","bounds":[918.8,1004.8,30.3,30.3]},"star5":{"label":"Estrela 5","bounds":[131.8,905.8,30.3,30.3]},"star6":{"label":"Estrela 6","bounds":[175.8,1039.8,30.3,30.3]},"star7":{"label":"Estrela 7","bounds":[490.8,1072.8,30.3,30.3]},"star8":{"label":"Estrela 8","bounds":[908.8,895.8,30.3,30.3]}},
+      "category":{"x":103,"y":545,"width":1,"height":1,"maxSize":1,"minSize":1,"maxLines":1,"lineHeight":1,"color":"#212121","weight":700,"align":"left"},
+      "headline":{"x":103.73,"y":545,"width":900,"height":210,"maxSize":70,"minSize":40,"maxLines":2,"lineHeight":1.3,"referenceLength":43,"lengthScaling":0.55,"color":"#212121","weight":700,"align":"left"},
+      "support":{"x":103,"y":545,"width":1,"height":1,"maxSize":1,"minSize":1,"maxLines":1,"lineHeight":1,"color":"#212121","weight":400,"align":"left"},
+      "cta":{"x":539.5,"y":1146,"width":320,"height":42,"maxSize":30,"minSize":20,"maxLines":1,"lineHeight":1.2,"referenceLength":14,"lengthScaling":0.45,"color":"#FAFAFA","weight":700,"align":"center","button":{"dx":-180.5,"dy":-26,"width":361,"height":84,"radius":42,"color":"#01A379"}},
+      "logos":{"x":265,"y":444,"maxWidth":548,"maxHeight":80,"gap":86,"reverse":true,"anchor":"left"},
+      "commercial":{"centerX":538,"centerY":978,"bounds":[173,913,730,130],"noteY":1085},"commercialNoteMode":"runtime"
+    }
+  }
+}
