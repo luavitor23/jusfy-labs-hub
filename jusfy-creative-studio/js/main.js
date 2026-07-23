@@ -11,7 +11,7 @@ import {
   toggleVisibleLogoSelection,
 } from "./assets-banks.js";
 import { loadNotionCopies, renderCopyLibrary, toggleVisibleCopySelection } from "./copies.js";
-import { generateLogoVariations, generateNotionVariations, parseBatch, activateBatchLogo, renderBatchList, generateBatchThumbs, exportApprovedBatch } from "./batch.js";
+import { generateLogoVariations, generateNotionVariations, activateBatchLogo, renderBatchList, generateBatchThumbs, exportApprovedBatch } from "./batch.js";
 import { saveApprovedMaster, loadMasters } from "./masters.js";
 import { currentValues } from "./draw.js";
 import { currentLayout } from "./catalog.js";
@@ -69,8 +69,6 @@ $("rulerLeft").addEventListener("pointerdown", (event) => beginGuideFromRuler(ev
 ["rulerTop","rulerLeft"].forEach((id) => { const bar = $(id); bar.addEventListener("pointermove", moveGuideDrag); bar.addEventListener("pointerup", endGuideDrag); bar.addEventListener("pointercancel", endGuideDrag); });
 $("zoomIn").addEventListener("click", () => { state.zoom = Math.min(1.5, state.zoom + .1); applyZoom(); });
 $("zoomOut").addEventListener("click", () => { state.zoom = Math.max(.1, state.zoom - .1); applyZoom(); });
-$("exampleBatchButton").addEventListener("click", () => { $("batchInput").value = "nome;headline;apoio;cta\nOAB-PE;Sua advocacia pode produzir mais sem aumentar o trabalho;Automatize tarefas jurídicas com a Jusfy.;Aproveite as condições especiais da OAB/PE\nOAB-RJ;Mais produtividade para a sua advocacia;Cálculos, pesquisas e tarefas jurídicas em um só lugar.;Conheça as condições da OAB/RJ"; });
-$("generateBatchButton").addEventListener("click", async () => { state.batch = parseBatch($("batchInput").value); state.selectedBatch = state.batch.length ? 0 : -1; if (state.selectedBatch >= 0) await activateBatchLogo(state.batch[0]); renderBatchList(); render(); await generateBatchThumbs(); });
 $("approveAllButton").addEventListener("click", () => { state.batch.forEach((item) => { item.review = "approved"; }); renderBatchList(); });
 $("exportBatchButton").addEventListener("click", () => exportApprovedBatch().catch(showError));
 

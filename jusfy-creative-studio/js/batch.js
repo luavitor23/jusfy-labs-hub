@@ -56,16 +56,6 @@ export async function generateNotionVariations() {
   await generateBatchThumbs();
 }
 
-export function parseBatch(text) {
-  const lines = text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean); if (!lines.length) return [];
-  const delimiter = lines[0].includes(";") ? ";" : ","; let start = 0;
-  if (/nome|headline|apoio|cta/i.test(lines[0])) start = 1;
-  return lines.slice(start).map((line, index) => {
-    const [name, headline, support, cta] = line.split(delimiter).map((cell) => cell.trim());
-    return { name:name || `versao-${index + 1}`, category:fields.category.value, headline:headline || fields.headline.value, support:support || fields.support.value, cta:cta || fields.cta.value, logoId:state.selectedLogoId, copySlug:"manual", review:"pending", thumb:"" };
-  });
-}
-
 function thumbFromCanvas() {
   const width = 150; const height = Math.max(1, Math.round(canvas.height * (width / canvas.width)));
   const small = document.createElement("canvas"); small.width = width; small.height = height;

@@ -150,9 +150,6 @@ canvas.is-dragging { cursor:grabbing; }
 .export-bar>div { margin-right:auto; }
 .export-bar span { font-size:10px; font-weight:700; }
 .export-bar small { color:#84908b; font-size:7px; }
-.csv-help { margin-bottom:8px; padding:8px 9px; border-radius:7px; background:#f0f3f2; color:#6a7671; font-size:8px; }
-.batch-input { min-height:116px; font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:8px; }
-.batch-actions { display:grid; grid-template-columns:1fr 1fr; gap:7px; margin-top:8px; }
 .batch-message { margin:12px 0 7px; color:#7d8883; font-size:8px; line-height:1.4; }
 .batch-message.error { color:#b33b32; }
 .batch-list { display:grid; gap:6px; }
