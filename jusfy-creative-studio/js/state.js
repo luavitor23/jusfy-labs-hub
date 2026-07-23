@@ -55,7 +55,7 @@ export const elementLabels = {
   category: "Categoria", headline: "Headline", support: "Texto de apoio", cta: "CTA regional",
   logoGroup: "Composto de logos", commercialBlock: "Bloco comercial",
 };
-export const familyDefaultOffer = { conditions:"atual-modelo-1", manual:"atual-modelo-2", model3:"atual-modelo-3", model5:"atual-modelo-5" };
+export const familyDefaultOffer = { conditions:"duas-caixas-1990-30", manual:"duas-caixas-1990-30", model3:"duas-caixas-1990-30", model5:"duas-caixas-1990-30" };
 
 export const $ = (id) => document.getElementById(id);
 export const debounce = (fn, wait = 180) => { let timer; return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), wait); }; };
