@@ -18,10 +18,12 @@ export function wrapLines(text, maxWidth) {
   if (line) lines.push(line); return lines;
 }
 
+export function fontString(spec, size) { return `${spec.italic ? "italic " : ""}${spec.weight} ${size}px Poppins, Arial, sans-serif`; }
+
 export function fittedLines(text, spec) {
   let size = spec.maxSize; let lines = [];
   while (size >= spec.minSize) {
-    ctx.font = `${spec.weight} ${size}px Poppins, Arial, sans-serif`; lines = wrapLines(text, spec.width);
+    ctx.font = fontString(spec, size); lines = wrapLines(text, spec.width);
     if (lines.length <= spec.maxLines && lines.length * size * spec.lineHeight <= spec.height) break;
     size -= 1;
   }
@@ -46,10 +48,12 @@ export function drawButtonBackground(item, button) {
 
 export function drawText(text, spec, key) {
   const result = fittedLines(text, spec); const lineHeight = result.size * spec.lineHeight;
-  ctx.save(); ctx.fillStyle = spec.color; ctx.font = `${spec.weight} ${result.size}px Poppins, Arial, sans-serif`;
+  ctx.save(); ctx.fillStyle = spec.color; ctx.font = fontString(spec, result.size);
   const align = spec.align || "center"; ctx.textAlign = align; ctx.textBaseline = "top";
   result.lines.forEach((line, index) => ctx.fillText(line, spec.x, spec.y + index * lineHeight)); ctx.restore();
-  const area = { key, x:align === "left" ? spec.x : spec.x - spec.width / 2, y:spec.y, width:spec.width, height:Math.max(lineHeight, result.lines.length * lineHeight) };
+  let areaX = spec.x - spec.width / 2;
+  if (align === "left") areaX = spec.x; else if (align === "right") areaX = spec.x - spec.width;
+  const area = { key, x:areaX, y:spec.y, width:spec.width, height:Math.max(lineHeight, result.lines.length * lineHeight) };
   state.hitAreas.push(area); return area;
 }
 
@@ -67,7 +71,7 @@ export function drawPriceRegionNote(spec) {
 export function textOverflows(text, spec) {
   const previousFont = ctx.font; let size = spec.maxSize; let overflows = true;
   while (size >= spec.minSize) {
-    ctx.font = `${spec.weight} ${size}px Poppins, Arial, sans-serif`;
+    ctx.font = fontString(spec, size);
     const lines = wrapLines(text, spec.width);
     const fitsBox = lines.length <= spec.maxLines && lines.length * size * spec.lineHeight <= spec.height;
     const fitsWidth = lines.every((line) => ctx.measureText(line).width <= spec.width + 1);

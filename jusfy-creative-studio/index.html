@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Editor local de criativos SVG da Jusfy." />
     <title>Studio de Criativos — Jusfy</title>
-    <link rel="stylesheet" href="styles.css?v=20260717z" />
+    <link rel="stylesheet" href="styles.css?v=20260723a" />
   </head>
   <body>
     <header class="topbar">
@@ -73,31 +73,14 @@
           <button id="resetButton" class="button ghost wide" type="button">Restaurar copy aprovada</button>
         </section>
 
-        <section class="section selection-section">
-          <div class="section-title"><span>04</span><div><h2>Elemento selecionado</h2><p>Arraste textos, logos ou o bloco comercial.</p></div></div>
-          <div id="selectionEmpty" class="selection-empty">Selecione um elemento editável na arte.</div>
-          <div id="selectionControls" class="selection-controls" hidden>
-            <strong id="selectedElementName"></strong>
-            <span id="selectedElementPos" class="selection-pos"></span>
-            <div id="fontControls" class="font-controls">
-              <span id="sizeControlLabel">Tamanho da fonte</span>
-              <div><button id="fontDecrease" type="button" aria-label="Diminuir fonte">−</button><b id="fontSizeValue">0 px</b><button id="fontIncrease" type="button" aria-label="Aumentar fonte">+</button></div>
-            </div>
-            <div class="selection-actions">
-              <button id="deleteElementButton" class="button danger" type="button">Excluir da arte</button>
-              <button id="restoreElementButton" class="button ghost" type="button">Restaurar posição</button>
-            </div>
-          </div>
-        </section>
-
         <section class="section" id="offerBankSection" hidden>
-          <div class="section-title"><span>05</span><div><h2>Banco de ofertas</h2><p>Escolha a imagem pronta do bloco de preço e desconto.</p></div></div>
+          <div class="section-title"><span>04</span><div><h2>Banco de ofertas</h2><p>Escolha a imagem pronta do bloco de preço e desconto.</p></div></div>
           <div id="offerBankHeading" class="library-heading"><strong>Ofertas disponíveis</strong><small id="offerBankStatus">Carregando ofertas…</small></div>
           <div id="offerBank" class="logo-bank" aria-label="Banco de ofertas comerciais"></div>
         </section>
 
         <section class="section master-section">
-          <div class="section-title"><span>06</span><div><h2>Mestre local</h2><p>Guarde o formato revisado na pasta de aprovados.</p></div></div>
+          <div class="section-title"><span>05</span><div><h2>Mestre local</h2><p>Guarde o formato revisado na pasta de aprovados.</p></div></div>
           <label class="field"><span>Nome do mestre</span><input id="masterNameInput" maxlength="80" placeholder="Ex.: Condições especiais · CAASP V04" /></label>
           <label class="approval-check"><input id="masterApproval" type="checkbox" /><span>Revisei este formato e aprovo o layout como mestre.</span></label>
           <button id="saveMasterButton" class="button primary wide" type="button">Salvar como mestre</button>
@@ -108,7 +91,34 @@
       <section class="stage" aria-label="Prévia do criativo">
         <div class="stage-toolbar">
           <div><span class="eyebrow">Prévia em tempo real · arraste os elementos editáveis</span><strong id="documentName">Breaking News · CAASP 1:1</strong></div>
+          <div class="stage-toolbar-right">
+          <div id="elementToolbar" class="element-toolbar">
+            <div id="selectionEmpty" class="selection-empty">Selecione um elemento editável na arte.</div>
+            <div id="selectionControls" class="selection-controls" hidden>
+              <div class="selection-heading"><strong id="selectedElementName"></strong><span id="selectedElementPos" class="selection-pos"></span></div>
+              <div id="fontControls" class="font-controls">
+                <span id="sizeControlLabel">Tamanho da fonte</span>
+                <div><button id="fontDecrease" type="button" aria-label="Diminuir fonte">−</button><b id="fontSizeValue">0 px</b><button id="fontIncrease" type="button" aria-label="Aumentar fonte">+</button></div>
+              </div>
+              <div id="textStyleControls" class="text-style-controls" hidden>
+                <div class="align-buttons" role="group" aria-label="Alinhamento do texto">
+                  <button id="alignLeftButton" type="button" aria-label="Alinhar à esquerda" title="Alinhar à esquerda">Esquerda</button>
+                  <button id="alignCenterButton" type="button" aria-label="Centralizar" title="Centralizar">Centro</button>
+                  <button id="alignRightButton" type="button" aria-label="Alinhar à direita" title="Alinhar à direita">Direita</button>
+                </div>
+                <div class="style-buttons" role="group" aria-label="Estilo do texto">
+                  <button id="boldToggleButton" type="button" aria-label="Negrito" title="Negrito"><b>N</b></button>
+                  <button id="italicToggleButton" type="button" aria-label="Itálico" title="Itálico"><i>I</i></button>
+                </div>
+              </div>
+              <div class="selection-actions">
+                <button id="deleteElementButton" class="button danger" type="button">Excluir da arte</button>
+                <button id="restoreElementButton" class="button ghost" type="button">Restaurar posição</button>
+              </div>
+            </div>
+          </div>
           <div class="stage-tools"><button id="rulerToggle" class="ruler-toggle" type="button" aria-pressed="false" title="Mostrar guias de alinhamento na prévia">Régua</button><button id="clearGuidesButton" class="ruler-toggle" type="button" hidden title="Remover todas as guias personalizadas deste modelo">Limpar guias</button><div class="zoom-control"><button id="zoomOut" type="button" aria-label="Diminuir zoom">−</button><span id="zoomLabel">Ajustar</span><button id="zoomIn" type="button" aria-label="Aumentar zoom">+</button></div></div>
+          </div>
         </div>
         <div id="canvasViewport" class="canvas-viewport">
           <div id="canvasWrap" class="canvas-wrap"><canvas id="creativeCanvas" width="1080" height="1080"></canvas><canvas id="rulerTop" class="ruler-bar ruler-bar-top" hidden></canvas><canvas id="rulerLeft" class="ruler-bar ruler-bar-left" hidden></canvas><span id="guideDragLabel" class="guide-drag-label" hidden></span></div>
@@ -123,7 +133,7 @@
 
       <aside class="sidebar batch-panel" aria-label="Variações em massa">
         <section class="section copies-section">
-          <div class="section-title"><span>07</span><div><h2>Copies do Notion</h2><p>Combine as copies selecionadas com uma ou várias regionais.</p></div></div>
+          <div class="section-title"><span>06</span><div><h2>Copies do Notion</h2><p>Combine as copies selecionadas com uma ou várias regionais.</p></div></div>
           <div class="copy-toolbar">
             <button id="loadNotionCopiesButton" class="button secondary" type="button">Atualizar do Notion</button>
             <label><input id="includeReviewCopies" type="checkbox" /><span>Incluir em revisão</span></label>
@@ -140,7 +150,7 @@
         </section>
 
         <section class="section batch-section">
-          <div class="section-title"><span>08</span><div><h2>Fila de revisão do lote</h2><p>Aprove ou rejeite cada variação gerada (regional ou copies) antes de exportar.</p></div></div>
+          <div class="section-title"><span>07</span><div><h2>Fila de revisão do lote</h2><p>Aprove ou rejeite cada variação gerada (regional ou copies) antes de exportar.</p></div></div>
           <p id="batchMessage" class="batch-message">Nenhuma variação gerada.</p>
           <div id="batchReviewBar" class="batch-review-bar" hidden>
             <button id="approveAllButton" class="button ghost" type="button">Aprovar todas</button>
@@ -151,7 +161,7 @@
         </section>
 
         <section class="section masters-section">
-          <div class="section-title"><span>09</span><div><h2>Mestres salvos</h2><p>Reabra um formato aprovado direto no editor.</p></div></div>
+          <div class="section-title"><span>08</span><div><h2>Mestres salvos</h2><p>Reabra um formato aprovado direto no editor.</p></div></div>
           <button id="refreshMastersButton" class="button secondary wide" type="button">Atualizar lista</button>
           <p id="mastersMessage" class="batch-message">Carregando mestres salvos…</p>
           <div id="mastersList" class="masters-list"></div>
@@ -169,6 +179,6 @@
       </aside>
     </main>
     <script src="zip-writer.js"></script>
-    <script type="module" src="js/main.js?v=20260723b"></script>
+    <script type="module" src="js/main.js?v=20260723c"></script>
   </body>
 </html>

@@ -106,12 +106,20 @@ export function regionalize(value) {
   return regionalizeFor(value, state.selectedRegion || "OAB/SP");
 }
 
+function escapeRegExp(text) { return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+
 export function regionalizeFor(value, region) {
   let text = String(value || "").replace(/OAB\/(?:UF|[A-Z]{2})/g, region || "OAB/SP");
   const targetUf = (/^OAB\/([A-Z]{2})$/.exec(region || "") || [])[1];
   if (targetUf) {
     const ufs = [...new Set(state.logoCatalog.map((item) => ((/^OAB\/([A-Z]{2})$/.exec(item.region || "") || [])[1])).filter(Boolean))];
     if (ufs.length) text = text.replace(new RegExp(`(?<![\\p{L}/])(?:${ufs.join("|")})(?!\\p{L})`, "gu"), targetUf);
+    const targetStateName = state.logoCatalog.find((item) => item.region === region)?.stateName;
+    const stateNames = [...new Set(state.logoCatalog.map((item) => item.stateName).filter(Boolean))];
+    if (targetStateName && stateNames.length) {
+      const pattern = stateNames.map(escapeRegExp).sort((a, b) => b.length - a.length).join("|");
+      text = text.replace(new RegExp(`(?<!\\p{L})(?:${pattern})(?!\\p{L})`, "gu"), targetStateName);
+    }
   }
   return text;
 }

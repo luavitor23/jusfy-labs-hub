@@ -19,6 +19,7 @@ import {
   adjustSelectedScale, restoreSelected, syncRulerButton, updateRulerBars, fitZoom, applyZoom,
   canvasPoint, widthHandlePoints, cornerScaleHandlePoints, guideNear, moveGuideDrag, endGuideDrag,
   beginGuideFromRuler, moveWidthDrag, moveScaleDrag, finishDrag, selectElement, toggleElementSelection,
+  setSelectedAlign, toggleSelectedBold, toggleSelectedItalic,
 } from "./interaction.js";
 import { showError } from "./errors.js";
 import { pushUndoSnapshot, beginChange, undo, redo } from "./history.js";
@@ -52,6 +53,11 @@ $("selectVisibleLogosButton").addEventListener("click", toggleVisibleLogoSelecti
 $("generateLogoVariationsButton").addEventListener("click", () => generateLogoVariations().catch(showError));
 $("fontDecrease").addEventListener("click", () => adjustSelectedScale(-.08));
 $("fontIncrease").addEventListener("click", () => adjustSelectedScale(.08));
+$("alignLeftButton").addEventListener("click", () => setSelectedAlign("left"));
+$("alignCenterButton").addEventListener("click", () => setSelectedAlign("center"));
+$("alignRightButton").addEventListener("click", () => setSelectedAlign("right"));
+$("boldToggleButton").addEventListener("click", () => toggleSelectedBold());
+$("italicToggleButton").addEventListener("click", () => toggleSelectedItalic());
 $("deleteElementButton").addEventListener("click", () => {
   const keys = state.multiSelection.size ? [...state.multiSelection] : (state.selection ? [state.selection] : []);
   const deletable = keys.filter((key) => !protectedKeys.includes(key) && currentLayout()[key]?.visible);

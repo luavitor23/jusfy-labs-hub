@@ -8,10 +8,10 @@ export function createLayout(key) {
   const enabled = spec.enabledFields || ["category", "headline", "support", "cta"];
   const logoMode = familyCobranding(spec.family) ? "cobrand" : "jusfy";
   const layout = {
-    category: { x:spec.category.x, y:spec.category.y, scale:1, visible:enabled.includes("category") },
-    headline: { x:spec.headline.x, y:spec.headline.y, scale:1, visible:enabled.includes("headline") },
-    support: { x:spec.support.x, y:spec.support.y, scale:1, visible:enabled.includes("support") },
-    cta: { x:spec.cta.x, y:spec.cta.y, scale:1, visible:enabled.includes("cta") },
+    category: { x:spec.category.x, y:spec.category.y, scale:1, visible:enabled.includes("category"), align:null, bold:null, italic:false },
+    headline: { x:spec.headline.x, y:spec.headline.y, scale:1, visible:enabled.includes("headline"), align:null, bold:null, italic:false },
+    support: { x:spec.support.x, y:spec.support.y, scale:1, visible:enabled.includes("support"), align:null, bold:null, italic:false },
+    cta: { x:spec.cta.x, y:spec.cta.y, scale:1, visible:enabled.includes("cta"), align:null, bold:null, italic:false },
     logoGroup: { x:spec.logos.x, y:spec.logos.y, scale:1, visible:true, mode:logoMode },
   };
   if (spec.commercial) {
@@ -41,7 +41,10 @@ export function resolvedTextSpec(key, value = "") {
   const scaledMax = base.maxSize * item.scale; const scaledMin = base.minSize * item.scale;
   const length = String(value).replace(/\s+/g," ").trim().length; let responsiveMax = scaledMax;
   if (base.referenceLength && length > base.referenceLength) responsiveMax *= Math.pow(base.referenceLength / length, base.lengthScaling ?? .5);
-  return { ...base, x:item.x, y:item.y, width:item.width ?? base.width, maxSize:Math.max(scaledMin,Math.min(scaledMax,responsiveMax)), minSize:scaledMin };
+  const align = item.align || base.align || "center";
+  const weight = item.bold === undefined || item.bold === null ? base.weight : (item.bold ? "700" : "400");
+  const italic = Boolean(item.italic);
+  return { ...base, x:item.x, y:item.y, width:item.width ?? base.width, align, weight, italic, maxSize:Math.max(scaledMin,Math.min(scaledMax,responsiveMax)), minSize:scaledMin };
 }
 
 export async function loadTemplateCatalog() {

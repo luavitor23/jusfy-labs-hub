@@ -182,6 +182,25 @@ export function adjustSelectedScale(delta) {
   item.scale = Math.min(max, Math.max(min, Math.round((item.scale + delta) * 100) / 100)); saveLocal(); render();
 }
 
+export function setSelectedAlign(align) {
+  if (!state.selection || !textKeys.includes(state.selection)) return;
+  const item = selectedItem(); if (!item) return;
+  pushUndoSnapshot(); item.align = align; saveLocal(); updateSelectionUi(); render();
+}
+
+export function toggleSelectedBold() {
+  if (!state.selection || !textKeys.includes(state.selection)) return;
+  const item = selectedItem(); if (!item) return;
+  const currentlyBold = resolvedTextSpec(state.selection, currentValues()[state.selection] || "").weight === "700";
+  pushUndoSnapshot(); item.bold = !currentlyBold; saveLocal(); updateSelectionUi(); render();
+}
+
+export function toggleSelectedItalic() {
+  if (!state.selection || !textKeys.includes(state.selection)) return;
+  const item = selectedItem(); if (!item) return;
+  pushUndoSnapshot(); item.italic = !item.italic; saveLocal(); updateSelectionUi(); render();
+}
+
 export function restoreSelected() {
   if (templates[state.template]?.type !== "mapped") return;
   const keys = state.multiSelection.size ? [...state.multiSelection] : (state.selection ? [state.selection] : []);
@@ -220,6 +239,7 @@ export function updateSelectionUi() {
     $("selectedElementName").textContent = `${keys.length} elementos selecionados`;
     $("selectedElementPos").textContent = "Arraste um deles para mover o grupo junto.";
     $("fontControls").hidden = true;
+    $("textStyleControls").hidden = true;
     const hasDeletable = keys.some((key) => !protectedKeys.includes(key) && currentLayout()[key]?.visible);
     $("deleteElementButton").hidden = !hasDeletable;
     $("restoreElementButton").textContent = "Restaurar posição e tamanho do grupo";
@@ -238,7 +258,18 @@ export function updateSelectionUi() {
     $("selectedElementPos").textContent = `x: ${Math.round(item.x)} · y: ${Math.round(item.y)}`;
   }
   $("sizeControlLabel").textContent = isText ? "Tamanho da fonte" : "Tamanho do componente";
-  if (isText) { const value = currentValues()[state.selection] || elementLabels[state.selection]; $("fontSizeValue").textContent = `${Math.round(fittedLines(value,resolvedTextSpec(state.selection,value)).size)} px`; }
+  $("textStyleControls").hidden = !isText;
+  if (isText) {
+    const value = currentValues()[state.selection] || elementLabels[state.selection];
+    const spec = resolvedTextSpec(state.selection, value);
+    $("fontSizeValue").textContent = `${Math.round(fittedLines(value,spec).size)} px`;
+    const align = spec.align || "center";
+    $("alignLeftButton").classList.toggle("is-on", align === "left");
+    $("alignCenterButton").classList.toggle("is-on", align === "center");
+    $("alignRightButton").classList.toggle("is-on", align === "right");
+    $("boldToggleButton").classList.toggle("is-on", spec.weight === "700");
+    $("italicToggleButton").classList.toggle("is-on", Boolean(spec.italic));
+  }
   else $("fontSizeValue").textContent = `${Math.round(item.scale * 100)}%`;
   $("deleteElementButton").hidden = protectedKeys.includes(state.selection) || !item.visible;
   $("restoreElementButton").textContent = item.visible ? "Restaurar posição e tamanho" : "Restaurar elemento";
