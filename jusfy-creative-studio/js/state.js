@@ -53,7 +53,7 @@ export const commercialLayoutVersion = 2;
 export const priceRegionNoteText = "para advogados da OAB/PI e depois";
 export const elementLabels = {
   category: "Categoria", headline: "Headline", support: "Texto de apoio", cta: "CTA regional",
-  logoGroup: "Composto de logos", commercialBlock: "Bloco comercial",
+  logoGroup: "Composto de logos", commercialBlock: "Bloco comercial", priceRegionNote: "Nota de regional",
 };
 export const familyDefaultOffer = { conditions:"duas-caixas-1990-30", manual:"duas-caixas-1990-30", model3:"duas-caixas-1990-30", model5:"duas-caixas-1990-30" };
 

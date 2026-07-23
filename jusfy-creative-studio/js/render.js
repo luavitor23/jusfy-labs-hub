@@ -124,7 +124,10 @@ export function overlaySvg(spec, values) {
     return `<rect x="${bx}" y="${by}" width="${textSpec.button.width}" height="${textSpec.button.height}" rx="${textSpec.button.radius}" fill="${textSpec.button.color}"/>`;
   }).join("");
   const editableText = textKeys.map((key) => { const value = values[key] || elementLabels[key]; return layout[key].visible ? textBlock(value, resolvedTextSpec(key,value)) : ""; }).join("");
-  const priceRegionNoteSvg = spec.priceRegionNote ? textBlock(regionalize(priceRegionNoteText), spec.priceRegionNote) : "";
+  const priceRegionNoteItem = layout.priceRegionNote;
+  const priceRegionNoteSvg = spec.priceRegionNote && priceRegionNoteItem?.visible
+    ? textBlock(regionalize(priceRegionNoteText), { ...spec.priceRegionNote, x:priceRegionNoteItem.x, y:priceRegionNoteItem.y, maxSize:spec.priceRegionNote.maxSize * priceRegionNoteItem.scale, minSize:spec.priceRegionNote.minSize * priceRegionNoteItem.scale })
+    : "";
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${spec.width}" height="${spec.height}" viewBox="0 0 ${spec.width} ${spec.height}"><image href="${base}" width="${spec.width}" height="${spec.height}"/>${patches}${buttonSvg}${editableText}${priceRegionNoteSvg}${protectedSvg}${logoSvg}${separatorSvg}${freeElementsSvg}</svg>`;
 }
 

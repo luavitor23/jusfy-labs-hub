@@ -59,13 +59,19 @@ export function drawText(text, spec, key) {
 
 export function drawPriceRegionNote(spec) {
   const noteSpec = spec.priceRegionNote; if (!noteSpec) return;
+  const item = currentLayout().priceRegionNote; if (!item || !item.visible) return;
   const text = regionalize(priceRegionNoteText);
-  const result = fittedLines(text, noteSpec); const lineHeight = result.size * noteSpec.lineHeight;
-  ctx.save(); ctx.globalAlpha = noteSpec.opacity ?? 1; ctx.fillStyle = noteSpec.color;
-  ctx.font = `${noteSpec.weight} ${result.size}px Poppins, Arial, sans-serif`;
-  ctx.textAlign = noteSpec.align || "left"; ctx.textBaseline = "top";
-  result.lines.forEach((line, index) => ctx.fillText(line, noteSpec.x, noteSpec.y + index * lineHeight));
+  const scaledSpec = { ...noteSpec, maxSize:noteSpec.maxSize * item.scale, minSize:noteSpec.minSize * item.scale };
+  const result = fittedLines(text, scaledSpec); const lineHeight = result.size * scaledSpec.lineHeight;
+  ctx.save(); ctx.globalAlpha = scaledSpec.opacity ?? 1; ctx.fillStyle = scaledSpec.color;
+  ctx.font = fontString(scaledSpec, result.size);
+  const align = scaledSpec.align || "left"; ctx.textAlign = align; ctx.textBaseline = "top";
+  result.lines.forEach((line, index) => ctx.fillText(line, item.x, item.y + index * lineHeight));
   ctx.restore();
+  let areaX = item.x - scaledSpec.width / 2;
+  if (align === "left") areaX = item.x; else if (align === "right") areaX = item.x - scaledSpec.width;
+  const area = { key:"priceRegionNote", x:areaX, y:item.y, width:scaledSpec.width, height:Math.max(lineHeight, result.lines.length * lineHeight) };
+  state.hitAreas.push(area); return area;
 }
 
 export function textOverflows(text, spec) {

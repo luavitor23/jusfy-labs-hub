@@ -18,6 +18,7 @@ export function createLayout(key) {
     layout.commercialBlock = { x:spec.commercial.centerX, y:spec.commercial.centerY, scale:1, visible:true };
     layout.commercialOffer = familyDefaultOffer[spec.family] || "";
   }
+  if (spec.priceRegionNote) layout.priceRegionNote = { x:spec.priceRegionNote.x, y:spec.priceRegionNote.y, scale:1, visible:true };
   Object.entries(spec.freeElements || {}).forEach(([elementKey, elementSpec]) => {
     const [bx,by,bw,bh] = elementSpec.bounds;
     layout[elementKey] = { x:bx + bw / 2, y:by + bh / 2, scale:1, visible:true };
