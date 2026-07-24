@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Editor local de criativos SVG da Jusfy." />
     <title>Studio de Criativos — Jusfy</title>
-    <link rel="stylesheet" href="styles.css?v=20260723a" />
+    <link rel="stylesheet" href="styles.css?v=20260724a" />
   </head>
   <body>
     <header class="topbar">
@@ -111,6 +111,15 @@
                   <button id="italicToggleButton" type="button" aria-label="Itálico" title="Itálico"><i>I</i></button>
                 </div>
               </div>
+              <div id="textOffsetControls" class="text-offset-controls" hidden title="Ajusta só o texto, sem mover o fundo do botão">
+                <span>Texto no botão</span>
+                <div class="offset-buttons" role="group" aria-label="Ajuste fino do texto dentro do botão">
+                  <button id="textOffsetLeftButton" type="button" aria-label="Mover texto para a esquerda">◀</button>
+                  <button id="textOffsetUpButton" type="button" aria-label="Mover texto para cima">▲</button>
+                  <button id="textOffsetDownButton" type="button" aria-label="Mover texto para baixo">▼</button>
+                  <button id="textOffsetRightButton" type="button" aria-label="Mover texto para a direita">▶</button>
+                </div>
+              </div>
               <div class="selection-actions">
                 <button id="deleteElementButton" class="button danger" type="button">Excluir da arte</button>
                 <button id="restoreElementButton" class="button ghost" type="button">Restaurar posição</button>
@@ -179,6 +188,6 @@
       </aside>
     </main>
     <script src="zip-writer.js"></script>
-    <script type="module" src="js/main.js?v=20260723c"></script>
+    <script type="module" src="js/main.js?v=20260724a"></script>
   </body>
 </html>

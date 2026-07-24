@@ -109,6 +109,11 @@ input:focus,textarea:focus { border-color:#02a378; box-shadow:0 0 0 3px rgba(2,1
 .align-buttons button + button, .style-buttons button + button { border-left:1px solid #d8e0dd; }
 .align-buttons button.is-on, .style-buttons button.is-on { background:#02a378; color:#fff; }
 .style-buttons button i { font-style:italic; }
+.text-offset-controls { display:flex; align-items:center; gap:6px; }
+.text-offset-controls>span { color:#65716c; font-size:8px; font-weight:700; white-space:nowrap; }
+.offset-buttons { display:flex; overflow:hidden; align-items:center; border:1px solid #d8e0dd; border-radius:8px; }
+.offset-buttons button { min-width:26px; height:27px; border:0; background:#f4f7f6; color:#31403a; cursor:pointer; font-size:9px; }
+.offset-buttons button + button { border-left:1px solid #d8e0dd; }
 .selection-actions { display:flex; gap:6px; }
 .selection-actions .button { min-height:27px; padding:0 10px; font-size:8px; white-space:nowrap; }
 .approval-check { display:flex; align-items:flex-start; gap:8px; margin-top:10px; padding:10px; border:1px solid #dce5e1; border-radius:9px; background:#f8faf9; color:#53605b; cursor:pointer; font-size:8px; line-height:1.45; }

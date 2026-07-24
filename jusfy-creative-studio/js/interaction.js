@@ -195,6 +195,14 @@ export function toggleSelectedBold() {
   pushUndoSnapshot(); item.bold = !currentlyBold; saveLocal(); updateSelectionUi(); render();
 }
 
+export function nudgeSelectedTextOffset(dx, dy) {
+  if (!state.selection || !textKeys.includes(state.selection)) return;
+  const item = selectedItem(); if (!item) return;
+  pushUndoSnapshot();
+  item.textOffsetX = (item.textOffsetX || 0) + dx; item.textOffsetY = (item.textOffsetY || 0) + dy;
+  saveLocal(); updateSelectionUi(); render();
+}
+
 export function toggleSelectedItalic() {
   if (!state.selection || !textKeys.includes(state.selection)) return;
   const item = selectedItem(); if (!item) return;
@@ -240,6 +248,7 @@ export function updateSelectionUi() {
     $("selectedElementPos").textContent = "Arraste um deles para mover o grupo junto.";
     $("fontControls").hidden = true;
     $("textStyleControls").hidden = true;
+    $("textOffsetControls").hidden = true;
     const hasDeletable = keys.some((key) => !protectedKeys.includes(key) && currentLayout()[key]?.visible);
     $("deleteElementButton").hidden = !hasDeletable;
     $("restoreElementButton").textContent = "Restaurar posição e tamanho do grupo";
@@ -269,8 +278,9 @@ export function updateSelectionUi() {
     $("alignRightButton").classList.toggle("is-on", align === "right");
     $("boldToggleButton").classList.toggle("is-on", spec.weight === "700");
     $("italicToggleButton").classList.toggle("is-on", Boolean(spec.italic));
+    $("textOffsetControls").hidden = !spec.button;
   }
-  else $("fontSizeValue").textContent = `${Math.round(item.scale * 100)}%`;
+  else { $("fontSizeValue").textContent = `${Math.round(item.scale * 100)}%`; $("textOffsetControls").hidden = true; }
   $("deleteElementButton").hidden = protectedKeys.includes(state.selection) || !item.visible;
   $("restoreElementButton").textContent = item.visible ? "Restaurar posição e tamanho" : "Restaurar elemento";
 }

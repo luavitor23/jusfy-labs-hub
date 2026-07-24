@@ -45,7 +45,8 @@ export function resolvedTextSpec(key, value = "") {
   const align = item.align || base.align || "center";
   const weight = item.bold === undefined || item.bold === null ? base.weight : (item.bold ? "700" : "400");
   const italic = Boolean(item.italic);
-  return { ...base, x:item.x, y:item.y, width:item.width ?? base.width, align, weight, italic, maxSize:Math.max(scaledMin,Math.min(scaledMax,responsiveMax)), minSize:scaledMin };
+  const x = item.x + (item.textOffsetX || 0); const y = item.y + (item.textOffsetY || 0);
+  return { ...base, x, y, width:item.width ?? base.width, align, weight, italic, maxSize:Math.max(scaledMin,Math.min(scaledMax,responsiveMax)), minSize:scaledMin };
 }
 
 export async function loadTemplateCatalog() {

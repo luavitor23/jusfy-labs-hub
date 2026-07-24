@@ -19,7 +19,7 @@ import {
   adjustSelectedScale, restoreSelected, syncRulerButton, updateRulerBars, fitZoom, applyZoom,
   canvasPoint, widthHandlePoints, cornerScaleHandlePoints, guideNear, moveGuideDrag, endGuideDrag,
   beginGuideFromRuler, moveWidthDrag, moveScaleDrag, finishDrag, selectElement, toggleElementSelection,
-  setSelectedAlign, toggleSelectedBold, toggleSelectedItalic,
+  setSelectedAlign, toggleSelectedBold, toggleSelectedItalic, nudgeSelectedTextOffset,
 } from "./interaction.js";
 import { showError } from "./errors.js";
 import { pushUndoSnapshot, beginChange, undo, redo } from "./history.js";
@@ -58,6 +58,10 @@ $("alignCenterButton").addEventListener("click", () => setSelectedAlign("center"
 $("alignRightButton").addEventListener("click", () => setSelectedAlign("right"));
 $("boldToggleButton").addEventListener("click", () => toggleSelectedBold());
 $("italicToggleButton").addEventListener("click", () => toggleSelectedItalic());
+$("textOffsetLeftButton").addEventListener("click", () => nudgeSelectedTextOffset(-2, 0));
+$("textOffsetRightButton").addEventListener("click", () => nudgeSelectedTextOffset(2, 0));
+$("textOffsetUpButton").addEventListener("click", () => nudgeSelectedTextOffset(0, -2));
+$("textOffsetDownButton").addEventListener("click", () => nudgeSelectedTextOffset(0, 2));
 $("deleteElementButton").addEventListener("click", () => {
   const keys = state.multiSelection.size ? [...state.multiSelection] : (state.selection ? [state.selection] : []);
   const deletable = keys.filter((key) => !protectedKeys.includes(key) && currentLayout()[key]?.visible);
