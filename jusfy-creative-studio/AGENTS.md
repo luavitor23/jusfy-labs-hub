@@ -17,7 +17,7 @@ Antes de executar uma nova solicitação:
 2. Ler o plano de ação, as regras de marca e a operação do Studio no mesmo local.
 3. Consultar as coleções `Solicitações de criativos` e `Copies — Condições especiais`.
 4. Registrar no Craft qualquer nova decisão, aprovação, alteração estrutural ou próximo passo — só quando o usuário pedir explicitamente para salvar (não a cada tarefa concluída).
-5. Usar o Notion somente para rastrear conteúdo histórico ainda não migrado.
+5. Sem acesso ao Craft (ex.: sessão a partir do GitHub, sem o MCP do Craft configurado): ler primeiro `🎨 Plano — Studio de Criativos (MVP)` no Notion, dentro de `JusfyLabs → Jusfybrain → Growth → Studio de Criativos` — é um espelho completo e atualizado do Craft (arquitetura, regras de marca, histórico, GitHub/deploy, pendências), mantido em sincronia sempre que o usuário pede. As bases `Solicitações de criativos` e `Copies — Condições especiais` também têm cópia lá, como databases do Notion. Fora isso, usar o Notion só para rastrear conteúdo histórico anterior à migração para o Craft.
 
 Código, SVGs, templates e assets operacionais do Studio ficam na pasta local do projeto. Arquivos finais para baixar ou compartilhar vão para o Google Drive.
 
