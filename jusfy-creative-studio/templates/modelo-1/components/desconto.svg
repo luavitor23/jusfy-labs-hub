@@ -1,0 +1,17 @@
+<svg width="411" height="242" viewBox="0 0 411 242" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.502267" y="0.502267" width="409.995" height="240.995" rx="9.54308" fill="#E7E8EC" fill-opacity="0.3" stroke="#02A378" stroke-width="1.00453"/>
+<g clip-path="url(#clip0_50_1771)">
+<path d="M370.804 20.4458C372.454 19.104 374.818 19.104 376.468 20.4458L377.256 21.0868L378.259 20.9256C380.358 20.5883 382.406 21.7706 383.163 23.7574L383.525 24.7065L384.474 25.0684C386.461 25.8259 387.644 27.8738 387.306 29.9731L387.145 30.976L387.786 31.7639C389.128 33.4133 389.128 35.778 387.786 37.4274L387.145 38.2154L387.306 39.2182C387.644 41.3175 386.461 43.3653 384.474 44.123L383.525 44.4848L383.163 45.4339C382.406 47.4207 380.358 48.603 378.259 48.2656L377.256 48.1046L376.468 48.7455C374.818 50.0874 372.454 50.0874 370.804 48.7455L370.016 48.1046L369.014 48.2656C366.914 48.603 364.866 47.4207 364.109 45.4339L363.747 44.4848L362.798 44.123C360.811 43.3653 359.629 41.3175 359.966 39.2182L360.127 38.2154L359.486 37.4274C358.145 35.778 358.145 33.4133 359.486 31.7639L360.127 30.976L359.966 29.9731C359.629 27.8738 360.811 25.8259 362.798 25.0684L363.747 24.7065L364.109 23.7574C364.866 21.7706 366.914 20.5883 369.014 20.9256L370.016 21.0868L370.804 20.4458Z" stroke="#02A378" stroke-width="2.36783" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M367.716 40.5149L379.555 28.6758" stroke="#02A378" stroke-width="2.36783" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M368.9 31.0436C369.554 31.0436 370.084 30.5135 370.084 29.8597C370.084 29.2058 369.554 28.6758 368.9 28.6758C368.246 28.6758 367.716 29.2058 367.716 29.8597C367.716 30.5135 368.246 31.0436 368.9 31.0436Z" stroke="#02A378" stroke-width="2.36783" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M378.372 40.5153C379.026 40.5153 379.556 39.9852 379.556 39.3314C379.556 38.6775 379.026 38.1475 378.372 38.1475C377.718 38.1475 377.188 38.6775 377.188 39.3314C377.188 39.9852 377.718 40.5153 378.372 40.5153Z" stroke="#02A378" stroke-width="2.36783" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<text fill="#008F69" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="32.2653" letter-spacing="0em"><tspan x="92.0201" y="147.749">garantido nos&#x2028;</tspan><tspan x="73.414" y="186.749">pr&#xf3;ximos meses</tspan></text>
+<text fill="#008F69" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="43.0204" font-weight="bold" letter-spacing="0em"><tspan x="299.279" y="108.749">&#x2028;</tspan></text>
+<text fill="#008F69" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="60" font-weight="bold" letter-spacing="0em"><tspan x="78.9082" y="108.749">30% OFF</tspan></text>
+<defs>
+<clipPath id="clip0_50_1771">
+<rect width="33.1496" height="33.1496" fill="white" transform="translate(357 18.082)"/>
+</clipPath>
+</defs>
+</svg>
