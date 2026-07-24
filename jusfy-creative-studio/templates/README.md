@@ -28,6 +28,14 @@ Regras obrigatórias:
 
 Arquivos adicionais do modelo ficam dentro da própria pasta, por exemplo `components/preco.svg`. Caminhos informados no manifesto não podem sair de `templates/`.
 
+## Composto de logos (`logos`)
+
+O composto Jusfy + regional é desenhado a partir de uma única imagem "lockup" por regional (arquivo em `banco-logos/`), que pode ter proporções bem diferentes entre uma regional e outra (ex.: uma logo com selo comemorativo "80 anos" fica bem mais larga que as demais depois de escalada para a mesma altura). Por isso:
+
+- **Padrão (recomendado para modelos com o composto centralizado no layout):** usar `"x":540` (centro do canvas, já que os dois formatos têm largura 1080) e **não declarar `"anchor"`** — o padrão do código é `"center"`, que mantém o composto sempre centrado em `x`, não importa a largura da imagem carregada. É o que os Modelos 1, 3 e 6 usam.
+- **Só quando o layout do modelo exige o composto alinhado à esquerda** (acompanhando um bloco de texto também alinhado à esquerda, como os Modelos 2 e 5): usar `"anchor":"left"` com um `x` calibrado para a borda esquerda pretendida — trocar de regional faz o composto crescer só para a direita, sem deslocar essa borda.
+- Bug já visto: copiar o `"anchor":"left"` de um modelo para outro sem recalcular o `x` para a borda esquerda real do novo layout deixa o composto fora do centro visual sempre que uma regional muda de largura — só aparece o problema ao testar com uma regional bem mais larga que a "padrão" (ex.: CAA-RS com "80 anos"), não com a primeira que você testar. Sempre validar trocando para a regional mais larga do banco antes de aprovar um modelo novo.
+
 ## Elementos decorativos livres (`freeElements`)
 
 Selos, estrelinhas e outros elementos decorativos fixos do SVG podem virar arrastáveis/redimensionáveis no Studio sem precisar de um banco de imagens: basta declarar `"freeElements"` no formato, com a região exata (em pixels do próprio SVG) que deve virar um elemento independente:
