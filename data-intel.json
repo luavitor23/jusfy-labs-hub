@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-07-26",
-  "total_ads": 73,
+  "updated_at": "2026-07-27",
+  "total_ads": 76,
   "by_competitor": {
     "Cálculo Jurídico": 20,
     "Astrea": 20,
-    "JusBrasil": 14,
-    "SeguroCred": 13,
-    "Outro": 6
+    "SeguroCred": 16,
+    "JusBrasil": 15,
+    "Outro": 5
   },
   "by_category": {
-    "Outro": 73
+    "Outro": 76
   },
   "by_tom": {
-    "Direto/Comercial": 73
+    "Direto/Comercial": 76
   },
   "by_cta": {
-    "Learn more": 51,
-    "See details": 9,
-    "Subscribe": 9,
+    "Learn more": 50,
+    "See details": 12,
+    "Subscribe": 10,
     "None": 2,
     "Send WhatsApp message": 1,
     "No button": 1
@@ -50,19 +50,6 @@
       "objetivo": ""
     },
     {
-      "id": "814052951699930",
-      "concorrente": "SeguroCred",
-      "titulo": "None",
-      "mensagem": "Descobrir fraudes de devedores em segundos? Sim, é possível!\nCom o Segurocred, você acessa dados do DPVAT e identifica irregularidades envolvendo veículos.\nTeste na prática agora mesmo!",
-      "cta": "None",
-      "status": "Ativo",
-      "data": "2026-07-23",
-      "link": "https://www.facebook.com/ads/library/?id=814052951699930",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
       "id": "1723512542106521",
       "concorrente": "SeguroCred",
       "titulo": "Busca de Bens por CPF",
@@ -71,32 +58,6 @@
       "status": "Ativo",
       "data": "2026-07-23",
       "link": "https://www.facebook.com/ads/library/?id=1723512542106521",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "2231114714398777",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Descubra bens do devedor em segundos.\nPesquise por CPF ou CNPJ e tenha acesso imediato a informações essenciais para fortalecer sua cobrança.\n🔎 Exclusivo para advogados.\nClique e faça sua busca agora.",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-07-23",
-      "link": "https://www.facebook.com/ads/library/?id=2231114714398777",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "991283607228504",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Descubra bens do devedor em segundos.\nPesquise por CPF ou CNPJ e tenha acesso imediato a informações essenciais para fortalecer sua cobrança.\n🔎 Exclusivo para advogados.\nClique e faça sua busca agora.",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-07-23",
-      "link": "https://www.facebook.com/ads/library/?id=991283607228504",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -115,6 +76,45 @@
       "objetivo": ""
     },
     {
+      "id": "814052951699930",
+      "concorrente": "SeguroCred",
+      "titulo": "None",
+      "mensagem": "Descobrir fraudes de devedores em segundos? Sim, é possível!\nCom o Segurocred, você acessa dados do DPVAT e identifica irregularidades envolvendo veículos.\nTeste na prática agora mesmo!",
+      "cta": "None",
+      "status": "Ativo",
+      "data": "2026-07-23",
+      "link": "https://www.facebook.com/ads/library/?id=814052951699930",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "991283607228504",
+      "concorrente": "SeguroCred",
+      "titulo": "Faça sua busca agora",
+      "mensagem": "Descubra bens do devedor em segundos.\nPesquise por CPF ou CNPJ e tenha acesso imediato a informações essenciais para fortalecer sua cobrança.\n🔎 Exclusivo para advogados.\nClique e faça sua busca agora.",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-07-23",
+      "link": "https://www.facebook.com/ads/library/?id=991283607228504",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "2231114714398777",
+      "concorrente": "SeguroCred",
+      "titulo": "Faça sua busca agora",
+      "mensagem": "Descubra bens do devedor em segundos.\nPesquise por CPF ou CNPJ e tenha acesso imediato a informações essenciais para fortalecer sua cobrança.\n🔎 Exclusivo para advogados.\nClique e faça sua busca agora.",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-07-23",
+      "link": "https://www.facebook.com/ads/library/?id=2231114714398777",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
       "id": "1549061500565729",
       "concorrente": "SeguroCred",
       "titulo": "None",
@@ -123,32 +123,6 @@
       "status": "Ativo",
       "data": "2026-07-23",
       "link": "https://www.facebook.com/ads/library/?id=1549061500565729",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "1067807039015182",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Você tem a placa, mas não tem o CPF para a penhora?\n\nTenha acesso imediato ao proprietário para não deixar o patrimônio escapar.\nInteligência jurídica rápida e sem custo fixo. Você só paga quando realizar a consulta.\n\nComece sua busca aqui. 👇",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-07-23",
-      "link": "https://www.facebook.com/ads/library/?id=1067807039015182",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "4507970792780582",
-      "concorrente": "SeguroCred",
-      "titulo": "Faça sua busca agora",
-      "mensagem": "Você tem a placa, mas não tem o CPF para a penhora?\n\nTenha acesso imediato ao proprietário para não deixar o patrimônio escapar.\nInteligência jurídica rápida e sem custo fixo. Você só paga quando realizar a consulta.\n\nComece sua busca aqui. 👇",
-      "cta": "See details",
-      "status": "Ativo",
-      "data": "2026-07-23",
-      "link": "https://www.facebook.com/ads/library/?id=4507970792780582",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -167,14 +141,40 @@
       "objetivo": ""
     },
     {
-      "id": "1202395516296756",
+      "id": "4507970792780582",
       "concorrente": "SeguroCred",
       "titulo": "Faça sua busca agora",
-      "mensagem": "Tempo é o ativo mais caro de um escritório de advocacia de alto padrão. Colocar a sua equipe para fazer buscas manuais, superficiais ou depender apenas de ferramentas judiciais lentas drena a energia que deveria estar na estratégia do caso.\n\nA SeguroCred centraliza a investigação patrimonial. Com po",
+      "mensagem": "Você tem a placa, mas não tem o CPF para a penhora?\n\nTenha acesso imediato ao proprietário para não deixar o patrimônio escapar.\nInteligência jurídica rápida e sem custo fixo. Você só paga quando realizar a consulta.\n\nComece sua busca aqui. 👇",
       "cta": "See details",
       "status": "Ativo",
       "data": "2026-07-23",
-      "link": "https://www.facebook.com/ads/library/?id=1202395516296756",
+      "link": "https://www.facebook.com/ads/library/?id=4507970792780582",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "1067807039015182",
+      "concorrente": "SeguroCred",
+      "titulo": "Faça sua busca agora",
+      "mensagem": "Você tem a placa, mas não tem o CPF para a penhora?\n\nTenha acesso imediato ao proprietário para não deixar o patrimônio escapar.\nInteligência jurídica rápida e sem custo fixo. Você só paga quando realizar a consulta.\n\nComece sua busca aqui. 👇",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-07-23",
+      "link": "https://www.facebook.com/ads/library/?id=1067807039015182",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "1573530554168745",
+      "concorrente": "SeguroCred",
+      "titulo": "Faça sua busca agora",
+      "mensagem": "Blindar bens virou regra entre devedores profissionais, mas toda ocultação deixa rastros.\n\nA SeguroCred entrega ao seu escritório o poder de ir além das buscas superficiais. Nossa tecnologia faz o cruzamento dados entre CPF, CNPJ, grupos econômicos e vínculos familiares para localizar patrimônios oc",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-07-26",
+      "link": "https://www.facebook.com/ads/library/?id=1573530554168745",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -188,6 +188,45 @@
       "status": "Ativo",
       "data": "2026-07-23",
       "link": "https://www.facebook.com/ads/library/?id=1662524731491068",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "2061323681233222",
+      "concorrente": "SeguroCred",
+      "titulo": "Faça sua busca agora",
+      "mensagem": "Blindar bens virou regra entre devedores profissionais, mas toda ocultação deixa rastros.\n\nA SeguroCred entrega ao seu escritório o poder de ir além das buscas superficiais. Nossa tecnologia faz o cruzamento dados entre CPF, CNPJ, grupos econômicos e vínculos familiares para localizar patrimônios oc",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-07-25",
+      "link": "https://www.facebook.com/ads/library/?id=2061323681233222",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "1202395516296756",
+      "concorrente": "SeguroCred",
+      "titulo": "Faça sua busca agora",
+      "mensagem": "Tempo é o ativo mais caro de um escritório de advocacia de alto padrão. Colocar a sua equipe para fazer buscas manuais, superficiais ou depender apenas de ferramentas judiciais lentas drena a energia que deveria estar na estratégia do caso.\n\nA SeguroCred centraliza a investigação patrimonial. Com po",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-07-23",
+      "link": "https://www.facebook.com/ads/library/?id=1202395516296756",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "27766324716334280",
+      "concorrente": "SeguroCred",
+      "titulo": "Faça sua busca agora",
+      "mensagem": "Tempo é o ativo mais caro de um escritório de advocacia de alto padrão. Colocar a sua equipe para fazer buscas manuais, superficiais ou depender apenas de ferramentas judiciais lentas drena a energia que deveria estar na estratégia do caso.\n\nA SeguroCred centraliza a investigação patrimonial. Com po",
+      "cta": "See details",
+      "status": "Ativo",
+      "data": "2026-07-25",
+      "link": "https://www.facebook.com/ads/library/?id=27766324716334280",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -349,6 +388,19 @@
       "objetivo": ""
     },
     {
+      "id": "1417293856435805",
+      "concorrente": "Cálculo Jurídico",
+      "titulo": "Precisa de ajuda? Conte com a gente!",
+      "mensagem": "Ficou com aquela dúvida cruel na hora de fazer os seus cálculos?\n\nRelaxe porque o Suporte do CJ resolve isso pra você! \nAlém de tutoriais dos cálculos em textos e em vídeos, você também conta com tours guiados pelo programa.\n\nE o melhor: nosso time de especialistas está à disposição em tempo real pr",
+      "cta": "Learn more",
+      "status": "Ativo",
+      "data": "2026-02-12",
+      "link": "https://www.facebook.com/ads/library/?id=1417293856435805",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
       "id": "2118453562222996",
       "concorrente": "Cálculo Jurídico",
       "titulo": "Experimente agora",
@@ -370,19 +422,6 @@
       "status": "Ativo",
       "data": "2026-02-12",
       "link": "https://www.facebook.com/ads/library/?id=1427377335456439",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "1417293856435805",
-      "concorrente": "Cálculo Jurídico",
-      "titulo": "Precisa de ajuda? Conte com a gente!",
-      "mensagem": "Ficou com aquela dúvida cruel na hora de fazer os seus cálculos?\n\nRelaxe porque o Suporte do CJ resolve isso pra você! \nAlém de tutoriais dos cálculos em textos e em vídeos, você também conta com tours guiados pelo programa.\n\nE o melhor: nosso time de especialistas está à disposição em tempo real pr",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-02-12",
-      "link": "https://www.facebook.com/ads/library/?id=1417293856435805",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -414,6 +453,32 @@
       "objetivo": ""
     },
     {
+      "id": "1019177473956565",
+      "concorrente": "Cálculo Jurídico",
+      "titulo": "STF mudou a regra da aposentadoria especial",
+      "mensagem": "Se você advoga na área previdenciária, atenção a essa reviravolta.\n\nO STF afastou a exigência de idade mínima para a concessão da aposentadoria especial aos segurados expostos a agentes nocivos (Nova Regra da EC 103/2019).\n\nNa prática, isso muda tudo no seu Planejamento Previdenciário!\n\nMas calma, p",
+      "cta": "Learn more",
+      "status": "Ativo",
+      "data": "2026-06-25",
+      "link": "https://www.facebook.com/ads/library/?id=1019177473956565",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
+      "id": "1737270870961635",
+      "concorrente": "Cálculo Jurídico",
+      "titulo": "STF mudou a regra da aposentadoria especial",
+      "mensagem": "Se você advoga na área previdenciária, atenção a essa reviravolta.\n\nO STF afastou a exigência de idade mínima para a concessão da aposentadoria especial aos segurados expostos a agentes nocivos (Nova Regra da EC 103/2019).\n\nNa prática, isso muda tudo no seu Planejamento Previdenciário!\n\nMas calma, p",
+      "cta": "Learn more",
+      "status": "Ativo",
+      "data": "2026-06-25",
+      "link": "https://www.facebook.com/ads/library/?id=1737270870961635",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
       "id": "1090213977131795",
       "concorrente": "Cálculo Jurídico",
       "titulo": "STF mudou a regra da aposentadoria especial",
@@ -422,32 +487,6 @@
       "status": "Ativo",
       "data": "2026-06-27",
       "link": "https://www.facebook.com/ads/library/?id=1090213977131795",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "1027459063156014",
-      "concorrente": "Cálculo Jurídico",
-      "titulo": "Você conhece todas as funcionalidades do CJ?",
-      "mensagem": "Você conhece todas as funcionalidades do Cálculo Jurídico?\n\nAlém dos cálculos das principais áreas do Direito, o CJ tem IA jurídica, petições, gestão de casos, tarefas e financeiro, e suporte especializado.\n\nSe você usa só uma parte disso, ainda não está aproveitando o que sua conta oferece.\n\nClique",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-06-30",
-      "link": "https://www.facebook.com/ads/library/?id=1027459063156014",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "864164989644822",
-      "concorrente": "Cálculo Jurídico",
-      "titulo": "Software - Cálculo de Aposentadorias RPPS",
-      "mensagem": "{{product.brand}}",
-      "cta": "Learn more",
-      "status": "Ativo",
-      "data": "2026-06-25",
-      "link": "https://www.facebook.com/ads/library/?id=864164989644822",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
@@ -635,6 +674,19 @@
       "objetivo": ""
     },
     {
+      "id": "1013119768176194",
+      "concorrente": "JusBrasil",
+      "titulo": "Licença de Estudante Jus IA",
+      "mensagem": "Estudante de Direito, o Jus IA agora tem licença de estudante e garante 6 meses de uso gratuitamente!\nEntre no site e aproveite",
+      "cta": "Subscribe",
+      "status": "Ativo",
+      "data": "2026-07-17",
+      "link": "https://www.facebook.com/ads/library/?id=1013119768176194",
+      "categoria": "Outro",
+      "tom": "Direto/Comercial",
+      "objetivo": ""
+    },
+    {
       "id": "795940766672720",
       "concorrente": "Outro",
       "titulo": "MBA em IA para Direito",
@@ -695,19 +747,6 @@
       "status": "Ativo",
       "data": "2026-04-24",
       "link": "https://www.facebook.com/ads/library/?id=1504969501017486",
-      "categoria": "Outro",
-      "tom": "Direto/Comercial",
-      "objetivo": ""
-    },
-    {
-      "id": "1793325324529184",
-      "concorrente": "Outro",
-      "titulo": "None",
-      "mensagem": "O que já era extremamente positivo para a advocacia iniciante acaba de ficar ainda melhor! Foi lançado nesta terça-feira (29) o programa Sexto Ano 2.0. É o Sexto Ano que você já conhece, mas turbinado!\n\nAgora, além dos benefícios da #OABPR, da @caa_parana, da @oabprevpr, da @esa_oabpr, do @sicoobadv",
-      "cta": "Learn more",
-      "status": "Inativo",
-      "data": "2024-08-06",
-      "link": "https://www.facebook.com/ads/library/?id=1793325324529184",
       "categoria": "Outro",
       "tom": "Direto/Comercial",
       "objetivo": ""
