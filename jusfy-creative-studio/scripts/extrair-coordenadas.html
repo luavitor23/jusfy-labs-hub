@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Extrair coordenadas do SVG — Studio de Criativos</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; padding: 24px; background: #f4f5f7; color: #1c1f26; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  p.sub { color: #555; margin: 0 0 20px; font-size: 14px; }
+  .row { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .panel { background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 16px; }
+  .preview-wrap { position: relative; flex: 0 0 auto; }
+  .preview-wrap svg { display: block; max-width: 480px; height: auto; border: 1px solid #ddd; background: #eee; }
+  .overlay { position: absolute; top: 0; left: 0; pointer-events: none; }
+  .output { flex: 1 1 420px; min-width: 380px; }
+  textarea { width: 100%; height: 360px; font-family: ui-monospace, Consolas, monospace; font-size: 12px; box-sizing: border-box; }
+  table { border-collapse: collapse; width: 100%; font-size: 12px; margin-top: 12px; }
+  td, th { border: 1px solid #ddd; padding: 4px 6px; text-align: left; }
+  .swatch { display: inline-block; width: 14px; height: 14px; border: 1px solid #999; vertical-align: middle; margin-right: 6px; }
+  .warn { color: #b30000; font-size: 13px; margin-top: 8px; }
+  button { padding: 8px 14px; border-radius: 6px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+  button:hover { background: #f0f0f0; }
+  .field-square { position: absolute; fill: rgba(2,163,120,0.28); stroke: #02a378; stroke-width: 1; }
+  .field-round { position: absolute; fill: rgba(217,83,79,0.22); stroke: #d9534f; stroke-width: 1; }
+  select, input[type=file] { font-size: 14px; }
+</style>
+</head>
+<body>
+
+<h1>Extrair coordenadas do SVG</h1>
+<p class="sub">Carregue um <code>feed.svg</code> ou <code>stories.svg</code> exportado com as camadas <code>studio-*</code> / <code>protected-*</code> nomeadas conforme o guia. A ferramenta lê a geometria real do SVG (sem medir na mão) e monta o bloco pronto para colar no <code>manifest.json</code>.</p>
+
+<div class="panel" style="margin-bottom:20px;">
+  <label>Arquivo SVG: <input type="file" id="file-input" accept=".svg"></label>
+  &nbsp;&nbsp;
+  <label>Formato: <select id="format-select">
+    <option value="square">square (1:1 — feed.svg)</option>
+    <option value="story">story (9:16 — stories.svg)</option>
+  </select></label>
+</div>
+
+<div class="row">
+  <div class="panel preview-wrap" id="preview-wrap">
+    <div id="svg-host"></div>
+    <svg class="overlay" id="overlay"></svg>
+  </div>
+
+  <div class="panel output">
+    <h3 style="margin-top:0;">Resultado</h3>
+    <div id="warnings"></div>
+    <table id="found-table"><thead><tr><th>id</th><th>x</th><th>y</th><th>w</th><th>h</th><th>cor amostrada</th></tr></thead><tbody></tbody></table>
+    <p style="margin-top:14px;"><strong>JSON para colar no manifest.json</strong> (bloco <code>formats.square</code>/<code>formats.story</code>):</p>
+    <textarea id="output-json" readonly></textarea>
+    <button id="copy-btn" style="margin-top:8px;">Copiar JSON</button>
+  </div>
+</div>
+
+<script>
+const STUDIO_TEXT_IDS = ["studio-category", "studio-headline", "studio-support", "studio-cta"];
+const STUDIO_LOGO_IDS = ["studio-logo-regional", "studio-logo-jusfy"];
+const PROTECTED_COMMERCIAL_IDS = ["protected-commercial", "protected-price", "protected-discount", "protected-commercial-note"];
+
+const fileInput = document.getElementById("file-input");
+const formatSelect = document.getElementById("format-select");
+const svgHost = document.getElementById("svg-host");
+const overlay = document.getElementById("overlay");
+const outputJson = document.getElementById("output-json");
+const foundTable = document.querySelector("#found-table tbody");
+const warningsEl = document.getElementById("warnings");
+const copyBtn = document.getElementById("copy-btn");
+
+let lastSvgText = "";
+
+fileInput.addEventListener("change", handleFile);
+formatSelect.addEventListener("change", () => { if (lastSvgText) process(lastSvgText); });
+copyBtn.addEventListener("click", () => {
+  outputJson.select();
+  document.execCommand("copy");
+  copyBtn.textContent = "Copiado!";
+  setTimeout(() => copyBtn.textContent = "Copiar JSON", 1200);
+});
+
+function handleFile(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    lastSvgText = reader.result;
+    process(lastSvgText);
+  };
+  reader.readAsText(file);
+}
+
+function cornersOf(bbox) {
+  return [
+    {x: bbox.x, y: bbox.y},
+    {x: bbox.x + bbox.width, y: bbox.y},
+    {x: bbox.x, y: bbox.y + bbox.height},
+    {x: bbox.x + bbox.width, y: bbox.y + bbox.height},
+  ];
+}
+
+function transformPoint(pt, matrix) {
+  return {
+    x: matrix.a * pt.x + matrix.c * pt.y + matrix.e,
+    y: matrix.b * pt.x + matrix.d * pt.y + matrix.f,
+  };
+}
+
+function rootSpaceBBox(el, rootSvg) {
+  const bbox = el.getBBox();
+  const rootScreenCTM = rootSvg.getScreenCTM();
+  const elScreenCTM = el.getScreenCTM();
+  if (!rootScreenCTM || !elScreenCTM) return { x: bbox.x, y: bbox.y, width: bbox.width, height: bbox.height };
+  // Compose via screen-space CTMs (not el.getCTM() directly) so the result is
+  // independent of how big the <svg> happens to be rendered on the page —
+  // getCTM() alone can pick up the on-page CSS scale in some engines, which
+  // silently shrinks/grows every coordinate by the preview's zoom factor.
+  const ctm = rootScreenCTM.inverse().multiply(elScreenCTM);
+  const pts = cornersOf(bbox).map(p => transformPoint(p, ctm));
+  const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
+  const minX = Math.min(...xs), maxX = Math.max(...xs);
+  const minY = Math.min(...ys), maxY = Math.max(...ys);
+  return { x: minX, y: minY, width: maxX - minX, height: maxY - minY };
+}
+
+function round(n) { return Math.round(n * 10) / 10; }
+
+function sampleColor(ctx, x, y) {
+  const data = ctx.getImageData(Math.max(0, Math.round(x)), Math.max(0, Math.round(y)), 1, 1).data;
+  return "#" + [data[0], data[1], data[2]].map(v => v.toString(16).padStart(2, "0")).join("");
+}
+
+function process(svgText) {
+  svgHost.innerHTML = svgText;
+  const svgEl = svgHost.querySelector("svg");
+  if (!svgEl) { warningsEl.innerHTML = '<p class="warn">Não encontrei uma tag &lt;svg&gt; válida no arquivo.</p>'; return; }
+
+  const viewBox = (svgEl.getAttribute("viewBox") || "").trim().split(/[\s,]+/).map(Number);
+  const svgW = viewBox.length === 4 ? viewBox[2] : parseFloat(svgEl.getAttribute("width")) || svgEl.clientWidth;
+  const svgH = viewBox.length === 4 ? viewBox[3] : parseFloat(svgEl.getAttribute("height")) || svgEl.clientHeight;
+
+  overlay.setAttribute("viewBox", `0 0 ${svgW} ${svgH}`);
+  overlay.innerHTML = "";
+
+  const allTargetIds = [...STUDIO_TEXT_IDS, ...STUDIO_LOGO_IDS, ...PROTECTED_COMMERCIAL_IDS];
+  const found = {};
+  const warnings = [];
+
+  allTargetIds.forEach(id => {
+    const el = svgEl.querySelector(`#${CSS.escape(id)}`);
+    if (el) found[id] = rootSpaceBBox(el, svgEl);
+  });
+
+  if (!found["studio-headline"]) warnings.push("studio-headline não encontrado (é obrigatório).");
+  STUDIO_LOGO_IDS.forEach(id => { if (!found[id]) warnings.push(`${id} não encontrado.`); });
+
+  // Rasterize the SVG to a canvas for background color sampling.
+  const blob = new Blob([svgText], { type: "image/svg+xml" });
+  const url = URL.createObjectURL(blob);
+  const img = new Image();
+  img.onload = () => {
+    const canvas = document.createElement("canvas");
+    canvas.width = svgW; canvas.height = svgH;
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0, svgW, svgH);
+    URL.revokeObjectURL(url);
+    finish(svgEl, found, warnings, ctx, svgW, svgH);
+  };
+  img.onerror = () => finish(svgEl, found, warnings, null, svgW, svgH);
+  img.src = url;
+}
+
+function finish(svgEl, found, warnings, ctx, svgW, svgH) {
+  foundTable.innerHTML = "";
+  overlay.innerHTML = "";
+  const colors = {};
+
+  Object.entries(found).forEach(([id, box]) => {
+    const isRound = STUDIO_LOGO_IDS.includes(id);
+    const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    rect.setAttribute("x", box.x); rect.setAttribute("y", box.y);
+    rect.setAttribute("width", box.width); rect.setAttribute("height", box.height);
+    rect.setAttribute("class", isRound ? "field-round" : "field-square");
+    overlay.appendChild(rect);
+
+    let color = "";
+    if (ctx && STUDIO_TEXT_IDS.includes(id)) {
+      const samplePoints = [
+        [box.x - 6, box.y + box.height / 2],
+        [box.x + box.width + 6, box.y + box.height / 2],
+        [box.x + box.width / 2, box.y - 6],
+        [box.x + box.width / 2, box.y + box.height + 6],
+      ];
+      const votes = {};
+      samplePoints.forEach(([x, y]) => {
+        if (x < 0 || y < 0 || x >= svgW || y >= svgH) return;
+        const c = sampleColor(ctx, x, y);
+        votes[c] = (votes[c] || 0) + 1;
+      });
+      color = Object.entries(votes).sort((a, b) => b[1] - a[1])[0]?.[0] || "";
+      colors[id] = color;
+    }
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${id}</td><td>${round(box.x)}</td><td>${round(box.y)}</td><td>${round(box.width)}</td><td>${round(box.height)}</td>` +
+      `<td>${color ? `<span class="swatch" style="background:${color}"></span>${color}` : "-"}</td>`;
+    foundTable.appendChild(tr);
+  });
+
+  warningsEl.innerHTML = warnings.map(w => `<p class="warn">⚠ ${w}</p>`).join("");
+  outputJson.value = buildManifestBlock(found, colors, svgW, svgH);
+}
+
+function buildManifestBlock(found, colors, svgW, svgH) {
+  const format = formatSelect.value;
+  const centerX = svgW / 2;
+  const block = {
+    key: format,
+    name: "TODO",
+    width: svgW,
+    height: svgH,
+    source: format === "square" ? "feed.svg" : "stories.svg",
+    type: "mapped",
+  };
+
+  const patches = [];
+  const textFieldMap = {
+    "studio-category": "category",
+    "studio-headline": "headline",
+    "studio-support": "support",
+    "studio-cta": "cta",
+  };
+
+  Object.entries(textFieldMap).forEach(([svgId, fieldName]) => {
+    const box = found[svgId];
+    if (!box) return;
+    block[fieldName] = {
+      x: round(centerX),
+      y: round(box.y + box.height / 2),
+      width: round(box.width),
+      height: round(box.height),
+      maxSize: "TODO",
+      minSize: "TODO",
+      maxLines: "TODO",
+      lineHeight: "TODO",
+      color: "TODO",
+      weight: "TODO",
+    };
+    const margin = 3;
+    const color = colors[svgId] || "TODO_cor_de_fundo";
+    patches.push([round(box.x - margin), round(box.y - margin), round(box.width + margin * 2), round(box.height + margin * 2), color]);
+  });
+
+  const regional = found["studio-logo-regional"];
+  const jusfy = found["studio-logo-jusfy"];
+  if (regional && jusfy) {
+    const top = Math.min(regional.y, jusfy.y);
+    const bottom = Math.max(regional.y + regional.height, jusfy.y + jusfy.height);
+    const left = Math.min(regional.x, jusfy.x);
+    const right = Math.max(regional.x + regional.width, jusfy.x + jusfy.width);
+    const gap = regional.x < jusfy.x
+      ? round(jusfy.x - (regional.x + regional.width))
+      : round(regional.x - (jusfy.x + jusfy.width));
+    block.logos = {
+      x: round(centerX),
+      y: round(bottom),
+      maxWidth: round(Math.max(regional.width, jusfy.width)),
+      maxHeight: round(bottom - top),
+      gap: gap,
+    };
+  } else {
+    block.logos = { x: round(centerX), y: "TODO", maxWidth: "TODO", maxHeight: "TODO", gap: "TODO" };
+  }
+
+  const commercial = found["protected-commercial"];
+  const price = found["protected-price"];
+  const discount = found["protected-discount"];
+  const note = found["protected-commercial-note"];
+  if (commercial) {
+    block.commercial = {
+      centerX: round(centerX),
+      centerY: round(commercial.y + commercial.height / 2),
+      bounds: [round(commercial.x), round(commercial.y), round(commercial.width), round(commercial.height)],
+      price: price ? [round(price.x), round(price.y), round(price.width), round(price.height)] : "TODO",
+      discount: discount ? [round(discount.x), round(discount.y), round(discount.width), round(discount.height)] : "TODO",
+      noteY: note ? round(note.y) : "TODO",
+    };
+    block.protected = {
+      box: price ? [round(price.x), round(price.y), round(price.width), round(price.height)] : "TODO",
+      x: price ? round(price.x + price.width / 2) : "TODO",
+      top: price ? round(price.y) : "TODO",
+      iconX: "TODO",
+      iconY: "TODO",
+      noteY: note ? round(note.y) : "TODO",
+    };
+    block.commercialAssets = { price: "components/preco.svg", discount: "components/desconto.svg" };
+    block.commercialNoteMode = "runtime";
+  }
+
+  block.patches = patches;
+
+  return "// Confira visualmente antes de colar. Campos \"TODO\" são decisões tipográficas/design, não geometria — preencha à mão.\n" +
+    JSON.stringify(block, null, 2);
+}
+</script>
+
+</body>
+</html>
