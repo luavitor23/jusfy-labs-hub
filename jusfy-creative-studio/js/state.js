@@ -44,6 +44,9 @@ export const state = {
   guides: {}, guideDrag: null,
   masters: [],
   freeElementCrops: {},
+  // Grupos de elementos por modelo/formato: state.groups[template] = [[chave1, chave2, ...], ...].
+  // Clicar em qualquer membro seleciona o grupo inteiro (ver groupFor em interaction.js).
+  groups: {},
 };
 
 export const textKeys = ["category", "headline", "support", "cta"];

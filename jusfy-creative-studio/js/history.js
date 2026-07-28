@@ -9,13 +9,14 @@ const undoStack = [];
 const redoStack = [];
 
 function snapshot() {
-  return JSON.stringify({ layouts: state.layouts, guides: state.guides });
+  return JSON.stringify({ layouts: state.layouts, guides: state.guides, groups: state.groups });
 }
 
 function applySnapshot(raw) {
   const data = JSON.parse(raw);
   state.layouts = data.layouts || {};
   state.guides = data.guides || {};
+  state.groups = data.groups || {};
 }
 
 export function pushUndoSnapshot() {

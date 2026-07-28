@@ -37,6 +37,44 @@ export function currentLayout() {
   return state.layouts[state.template];
 }
 
+// Sincroniza 1:1 → 9:16 (nunca o contrário): sempre que o usuário mexe em algo no formato 1:1 —
+// arrasta, centraliza, espaça, muda alinhamento/negrito/itálico/tamanho, agrupa, escolhe oferta —
+// o Studio aplica o MESMO ajuste sobre os valores padrão do 9:16, em vez de copiar a posição bruta
+// (que não faria sentido: as duas artes são desenhos separados do Figma, só a largura é igual).
+// O ajuste é medido como "o quanto o campo se afastou do padrão do próprio 1:1" e reaplicado a
+// partir do padrão do próprio 9:16 — o X é igual (mesma largura, 1080px nos dois formatos) e o Y é
+// escalado pela proporção de altura entre os formatos. Chamada em toda saveLocal() (render.js);
+// se o usuário ajustar algo diretamente no 9:16, essa alteração fica valendo até a próxima mudança
+// no 1:1, que substitui de novo — de propósito, pois o 1:1 é quem manda.
+export function syncStoryFromSquare() {
+  const squareKey = templateKeyFor(state.family, "square"); const storyKey = templateKeyFor(state.family, "story");
+  if (!squareKey || !storyKey || squareKey === storyKey || state.template !== squareKey) return;
+  const squareLayout = state.layouts[squareKey]; if (!squareLayout) return;
+  if (templates[squareKey]?.type !== "mapped" || templates[storyKey]?.type !== "mapped") return;
+  const squareDefaults = createLayout(squareKey); const storyDefaults = createLayout(storyKey);
+  const heightRatio = (templates[storyKey].height || 1) / (templates[squareKey].height || 1);
+  const nextStory = { ...(state.layouts[storyKey] || {}) };
+  Object.entries(storyDefaults).forEach(([key, stDefault]) => {
+    const sq = squareLayout[key]; const sqDefault = squareDefaults[key];
+    if (!sq || typeof stDefault !== "object" || stDefault === null || typeof sqDefault !== "object" || sqDefault === null) return;
+    const merged = { ...stDefault };
+    if (typeof sq.x === "number" && typeof sqDefault.x === "number") merged.x = stDefault.x + (sq.x - sqDefault.x);
+    if (typeof sq.y === "number" && typeof sqDefault.y === "number") merged.y = stDefault.y + (sq.y - sqDefault.y) * heightRatio;
+    if (typeof sq.scale === "number") merged.scale = sq.scale;
+    if (typeof sq.visible === "boolean") merged.visible = sq.visible;
+    if ("align" in sq) merged.align = sq.align;
+    if ("bold" in sq) merged.bold = sq.bold;
+    if ("italic" in sq) merged.italic = sq.italic;
+    if ("mode" in sq) merged.mode = sq.mode;
+    if (typeof sq.textOffsetX === "number") merged.textOffsetX = sq.textOffsetX;
+    if (typeof sq.textOffsetY === "number") merged.textOffsetY = sq.textOffsetY;
+    nextStory[key] = merged;
+  });
+  if (typeof squareLayout.commercialOffer === "string") nextStory.commercialOffer = squareLayout.commercialOffer;
+  state.layouts[storyKey] = nextStory;
+  if (state.groups[squareKey]) state.groups[storyKey] = state.groups[squareKey].map((group) => [...group]);
+}
+
 export function resolvedTextSpec(key, value = "") {
   const base = templates[state.template][key]; const item = currentLayout()[key];
   const scaledMax = base.maxSize * item.scale; const scaledMin = base.minSize * item.scale;

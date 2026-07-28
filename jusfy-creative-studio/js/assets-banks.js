@@ -45,10 +45,9 @@ export function renderOfferBank() {
   state.offerCatalog.forEach((item) => {
     const card = document.createElement("article"); card.className = `logo-bank-item${item.id === activeId ? " is-active" : ""}`;
     const button = document.createElement("button"); button.type = "button"; button.className = "logo-bank-main"; button.setAttribute("aria-label", `Usar ${item.name}`);
-    const preview = document.createElement("span"); const name = document.createElement("small"); name.textContent = item.name;
-    button.append(preview,name); button.addEventListener("click", () => selectOffer(item).catch(showError)); card.append(button);
+    const name = document.createElement("small"); name.textContent = item.name;
+    button.append(name); button.addEventListener("click", () => selectOffer(item).catch(showError)); card.append(button);
     host.append(card);
-    offerAssetDataUrl(item).then((url) => { const image = document.createElement("img"); image.src = url; image.alt = ""; preview.append(image); }).catch(() => { preview.textContent = "!"; });
   });
   $("offerBankStatus").textContent = `${state.offerCatalog.length} oferta(s) disponível(is)`;
 }
@@ -67,16 +66,15 @@ export function renderLogoBank() {
   state.logoCatalog.forEach((item) => {
     const card = document.createElement("article"); card.dataset.logoId = item.id; card.className = `logo-bank-item${item.id === state.selectedLogoId ? " is-active" : ""}`;
     const button = document.createElement("button"); button.type = "button"; button.className = "logo-bank-main"; button.setAttribute("aria-label", `Usar ${item.name}`);
-    const preview = document.createElement("span"); const name = document.createElement("small"); name.textContent = item.name;
-    button.append(preview,name); button.addEventListener("click", () => selectCatalogLogo(item).catch(showError)); card.append(button);
-    if (item.sourceKind === "file-svg") { card.title = `SVG individual: banco-logos/${item.id}.svg`; const dot = document.createElement("i"); dot.className = "logo-file-dot"; card.append(dot); }
+    const name = document.createElement("small"); name.textContent = item.name;
+    button.append(name); button.addEventListener("click", () => selectCatalogLogo(item).catch(showError)); card.append(button);
+    if (item.sourceKind === "file") { card.title = `Arquivo individual: banco-logos/${item.sourceFile || item.id}`; const dot = document.createElement("i"); dot.className = "logo-file-dot"; card.append(dot); }
     if (item.target === "regional") {
       const check = document.createElement("input"); check.type = "checkbox"; check.className = "logo-bank-check"; check.dataset.logoSelect = item.id;
       check.checked = state.logoSelection.has(item.id); check.setAttribute("aria-label", `Incluir ${item.name} nas variações`);
       check.addEventListener("change", () => { if (check.checked) state.logoSelection.add(item.id); else state.logoSelection.delete(item.id); renderLogoBank(); }); card.append(check);
     }
     host.append(card);
-    catalogAssetDataUrl(item, 1).then((url) => { const image = document.createElement("img"); image.src = url; image.alt = ""; preview.append(image); }).catch(() => { preview.textContent = "!"; });
   });
   const regionals = state.logoCatalog.filter((item) => item.target === "regional");
   $("logoBankStatus").textContent = `${regionals.length} regionais · ${state.logoSelection.size} selecionada(s)`;
@@ -87,7 +85,9 @@ export async function selectCatalogLogo(item, shouldRender = true) {
   const kind = item.target === "jusfy" ? "jusfy" : "regional"; const url = await catalogAssetDataUrl(item);
   state.logoUrls[kind] = url; state.logos[kind] = await loadImage(url);
   if (kind === "regional") {
-    state.selectedLogoId = item.id; state.selectedRegion = item.region || state.selectedRegion; state.regionalIsLockup = item.sourceKind === "file-svg";
+    // "legacy" é o único valor que significa "sem arquivo próprio" (id não bateu com nada em banco-logos/);
+    // qualquer outro valor (inclusive futuras variações do backend) já é um arquivo composto pronto.
+    state.selectedLogoId = item.id; state.selectedRegion = item.region || state.selectedRegion; state.regionalIsLockup = item.sourceKind !== "legacy";
     [fields.headline,fields.support,fields.cta].forEach((field) => { field.value = regionalize(field.value); }); updateCounters();
   }
   if (currentLayout()?.logoGroup) currentLayout().logoGroup.visible = true;

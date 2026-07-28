@@ -1,8 +1,7 @@
 // Bootstrap do Studio: liga todos os eventos de UI e inicia o carregamento do catálogo.
 import { $, canvas, state, fields, defaults, familyFieldDefaults, templates, protectedKeys, elementLabels, debounce } from "./state.js";
 import { loadTemplateCatalog, renderFamilySelect, templateKeyFor, updateCopyFieldsNotice, resolvedTextSpec } from "./catalog.js";
-import { fetchAsDataUrl, loadImage } from "./svg-io.js";
-import { render, saveLocal, restoreLocal, updateCounters, exportSvg, exportPng, scheduleRender } from "./render.js";
+import { render, saveLocal, restoreLocal, updateCounters, exportSvg, exportPng, scheduleRender, openFullscreenPreview, closeFullscreenPreview } from "./render.js";
 import {
   selectFamily, selectFormat, handleTemplateImport, setImportMode, loadTemplate, applyFamilyFields,
 } from "./template-loader.js";
@@ -20,6 +19,7 @@ import {
   canvasPoint, widthHandlePoints, cornerScaleHandlePoints, guideNear, moveGuideDrag, endGuideDrag,
   beginGuideFromRuler, moveWidthDrag, moveScaleDrag, finishDrag, selectElement, toggleElementSelection,
   setSelectedAlign, toggleSelectedBold, toggleSelectedItalic, nudgeSelectedTextOffset,
+  centerSelectedOnCanvas, distributeSelectedSpacing, groupFor, groupSelected, ungroupSelected, setInspectorTab,
 } from "./interaction.js";
 import { showError } from "./errors.js";
 import { pushUndoSnapshot, beginChange, undo, redo } from "./history.js";
@@ -38,10 +38,13 @@ $("regionalLogoInput").addEventListener("change", (event) => handleLogo("regiona
 $("jusfyLogoInput").addEventListener("change", (event) => handleLogo("jusfy", event.target.files[0]).catch(showError));
 $("resetButton").addEventListener("click", () => {
   pushUndoSnapshot();
-  Object.entries(familyFieldDefaults[state.family] || defaults).forEach(([key,value]) => fields[key].value = value); state.familyFields[state.family] = { ...(familyFieldDefaults[state.family] || defaults) }; state.selectedBatch = -1; state.selection = null; state.multiSelection = new Set(); state.layouts = {}; state.selectedLogoId = "caasp";
+  Object.entries(familyFieldDefaults[state.family] || defaults).forEach(([key,value]) => fields[key].value = value); state.familyFields[state.family] = { ...(familyFieldDefaults[state.family] || defaults) }; state.selectedBatch = -1; state.selection = null; state.multiSelection = new Set(); state.layouts = {}; state.groups = {}; state.selectedLogoId = "caasp";
   localStorage.removeItem("jusfy-creative-draft"); updateCounters(); const logo = state.logoCatalog.find((item) => item.id === "caasp"); if (logo) selectCatalogLogo(logo).catch(showError); else render();
 });
 $("exportSvgButton").addEventListener("click", exportSvg); $("exportPngButton").addEventListener("click", () => exportPng());
+$("fullscreenPreviewButton").addEventListener("click", () => openFullscreenPreview().catch(showError));
+$("fullscreenPreviewClose").addEventListener("click", closeFullscreenPreview);
+$("fullscreenPreview").addEventListener("click", (event) => { if (event.target.id === "fullscreenPreview") closeFullscreenPreview(); });
 $("saveMasterButton").addEventListener("click", saveApprovedMaster);
 $("refreshMastersButton").addEventListener("click", () => loadMasters());
 $("loadNotionCopiesButton").addEventListener("click", () => loadNotionCopies(true).catch(showError));
@@ -62,6 +65,12 @@ $("textOffsetLeftButton").addEventListener("click", () => nudgeSelectedTextOffse
 $("textOffsetRightButton").addEventListener("click", () => nudgeSelectedTextOffset(2, 0));
 $("textOffsetUpButton").addEventListener("click", () => nudgeSelectedTextOffset(0, -2));
 $("textOffsetDownButton").addEventListener("click", () => nudgeSelectedTextOffset(0, 2));
+$("centerHorizontalButton").addEventListener("click", () => centerSelectedOnCanvas("x"));
+$("centerVerticalButton").addEventListener("click", () => centerSelectedOnCanvas("y"));
+$("distributeSpacingButton").addEventListener("click", () => distributeSelectedSpacing());
+$("groupElementsButton").addEventListener("click", () => groupSelected());
+$("ungroupElementsButton").addEventListener("click", () => ungroupSelected());
+document.querySelectorAll("#inspectorTabs .inspector-tab").forEach((button) => button.addEventListener("click", () => setInspectorTab(button.dataset.tab)));
 $("deleteElementButton").addEventListener("click", () => {
   const keys = state.multiSelection.size ? [...state.multiSelection] : (state.selection ? [state.selection] : []);
   const deletable = keys.filter((key) => !protectedKeys.includes(key) && currentLayout()[key]?.visible);
@@ -122,7 +131,12 @@ canvas.addEventListener("pointerdown", (event) => {
   const hit = [...state.hitAreas].reverse().find((area) => point.x >= area.x && point.x <= area.x + area.width && point.y >= area.y && point.y <= area.y + area.height);
   if (!hit) { if (!event.shiftKey) selectElement(null); return; }
   if (event.shiftKey) { toggleElementSelection(hit.key); return; }
-  if (!state.multiSelection.has(hit.key)) { state.selection = hit.key; state.multiSelection = new Set([hit.key]); }
+  if (!state.multiSelection.has(hit.key)) {
+    // Clicar num membro de grupo seleciona o grupo inteiro, não só o item clicado — é o que
+    // permite arrastar/centralizar o conjunto como bloco sem precisar Shift+clicar cada vez.
+    const group = groupFor(hit.key);
+    state.selection = hit.key; state.multiSelection = new Set(group || [hit.key]);
+  }
   else { state.selection = hit.key; }
   beginChange();
   const item = currentLayout()[hit.key]; state.drag = { key:hit.key, pointerId:event.pointerId, offsetX:point.x - item.x, offsetY:point.y - item.y };
@@ -174,6 +188,7 @@ canvas.addEventListener("pointermove", (event) => {
 
 canvas.addEventListener("pointerup", finishDrag); canvas.addEventListener("pointercancel", finishDrag);
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !$("fullscreenPreview").hidden) { closeFullscreenPreview(); return; }
   const target = event.target; const isEditable = target.matches("input,textarea") || target.isContentEditable;
   const withModifier = event.ctrlKey || event.metaKey;
   if (withModifier && !isEditable && event.key.toLowerCase() === "z") {
@@ -191,17 +206,28 @@ document.addEventListener("keydown", (event) => {
 });
 window.addEventListener("resize", debounce(fitZoom, 120));
 
+// Abas das barras laterais (Template/Conteúdo/Logos à esquerda, Copies/Lote/Mestres à direita) —
+// navegação simples, sem depender do estado de seleção do canvas.
+function wireSidebarTabs(tabsId, panelClass) {
+  const nav = $(tabsId); if (!nav) return;
+  const tabs = [...nav.querySelectorAll(".sidebar-tab")];
+  const panels = [...document.querySelectorAll(`.${panelClass}`)];
+  tabs.forEach((tab) => tab.addEventListener("click", () => {
+    tabs.forEach((other) => other.classList.toggle("is-active", other === tab));
+    panels.forEach((panel) => { panel.hidden = panel.dataset.panel !== tab.dataset.tab; });
+  }));
+}
+wireSidebarTabs("editorSidebarTabs", "editor-sidebar-panel");
+wireSidebarTabs("batchSidebarTabs", "batch-sidebar-panel");
+
 async function startStudio() {
   await loadTemplateCatalog();
   restoreLocal(); applyFamilyFields(state.family); renderFamilySelect(); updateCopyFieldsNotice(); updateCounters();
-  const [, , regionalUrl, jusfyUrl] = await Promise.all([
+  await Promise.all([
     document.fonts?.load("700 48px Poppins") || Promise.resolve(),
     document.fonts?.load("400 27px Poppins") || Promise.resolve(),
-    fetchAsDataUrl("tmp/pdfs/editable-master/logo-caasp.png"),
-    fetchAsDataUrl("tmp/pdfs/editable-master/logo-jusfy.png"),
   ]);
-  state.logos.regional = await loadImage(regionalUrl); state.logos.jusfy = await loadImage(jusfyUrl);
-  state.logoUrls.regional = regionalUrl; state.logoUrls.jusfy = jusfyUrl;
+  // As logos vêm sempre do banco (banco-logos/), incluindo a Jusfy e a regional padrão.
   const results = await Promise.allSettled([loadLogoCatalog(),loadNotionCopies(false),loadMasters(),loadOfferCatalog()]); results.filter((item) => item.status === "rejected").forEach((item) => console.warn(item.reason));
   await loadTemplate(templateKeyFor(state.family,state.format));
 }

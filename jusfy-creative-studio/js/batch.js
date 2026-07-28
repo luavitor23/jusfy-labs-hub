@@ -14,7 +14,7 @@ export function variationForLogo(values, logo, name, copySlug = "") {
 export async function activateBatchLogo(item) {
   const logo = state.logoCatalog.find((candidate) => candidate.id === item?.logoId && candidate.target === "regional"); if (!logo) return;
   const url = await catalogAssetDataUrl(logo); state.logoUrls.regional = url; state.logos.regional = await loadImage(url);
-  state.selectedLogoId = logo.id; state.selectedRegion = logo.region || item.region || state.selectedRegion; state.regionalIsLockup = logo.sourceKind === "file-svg"; $("regionalLogoName").textContent = logo.name; renderLogoBank();
+  state.selectedLogoId = logo.id; state.selectedRegion = logo.region || item.region || state.selectedRegion; state.regionalIsLockup = logo.sourceKind !== "legacy"; $("regionalLogoName").textContent = logo.name; renderLogoBank();
 }
 
 export async function generateLogoVariations() {

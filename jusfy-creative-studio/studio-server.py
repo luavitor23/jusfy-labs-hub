@@ -31,6 +31,22 @@ def read_json(path, fallback):
         return fallback
 
 
+def logo_files_by_id():
+    """Mapeia o id da regional para o arquivo real em banco-logos/ (png primeiro, svg como fallback).
+
+    A busca ignora a caixa do nome do arquivo: o Windows aceita `CAASP.png` para `caasp.png`,
+    mas o Linux não — o mapa evita que uma logo suba com a caixa errada e quebre em outra máquina.
+    """
+    found = {}
+    if not LOGO_DIR.is_dir():
+        return found
+    for extension in ("svg", "png"):  # png é lido depois e sobrepõe um svg de mesmo id
+        for path in LOGO_DIR.glob("*"):
+            if path.is_file() and path.suffix.lower() == f".{extension}":
+                found[path.stem.lower()] = path.name
+    return found
+
+
 def notion_property(properties, name):
     prop = properties.get(name) or {}
     kind = prop.get("type")
@@ -155,16 +171,16 @@ class StudioHandler(SimpleHTTPRequestHandler):
             return
         if self.path == "/api/logos":
             payload = read_json(LOGO_CATALOG, {"items": []})
+            files = logo_files_by_id()
             for item in payload.get("items") or []:
-                logo_id = str(item.get("id") or "")
+                logo_id = str(item.get("id") or "").lower()
                 item["sourceKind"] = "legacy"
-                if logo_id and re.fullmatch(r"[a-z0-9_-]+", logo_id):
-                    for extension in ("svg", "png"):
-                        if (LOGO_DIR / f"{logo_id}.{extension}").is_file():
-                            item["source"] = f"/banco-logos/{logo_id}.{extension}"
-                            item.pop("crop", None)
-                            item["sourceKind"] = "file-svg"
-                            break
+                file_name = files.get(logo_id)
+                if file_name:
+                    item["source"] = f"/banco-logos/{file_name}"
+                    item["sourceFile"] = file_name
+                    item.pop("crop", None)
+                    item["sourceKind"] = "file"
             self.send_json(200, payload)
             return
         if self.path == "/api/ofertas":

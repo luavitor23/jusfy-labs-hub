@@ -50,10 +50,26 @@ export function drawText(text, spec, key) {
   const result = fittedLines(text, spec); const lineHeight = result.size * spec.lineHeight;
   ctx.save(); ctx.fillStyle = spec.color; ctx.font = fontString(spec, result.size);
   const align = spec.align || "center"; ctx.textAlign = align; ctx.textBaseline = "top";
-  result.lines.forEach((line, index) => ctx.fillText(line, spec.x, spec.y + index * lineHeight)); ctx.restore();
+  result.lines.forEach((line, index) => ctx.fillText(line, spec.x, spec.y + index * lineHeight));
   let areaX = spec.x - spec.width / 2;
   if (align === "left") areaX = spec.x; else if (align === "right") areaX = spec.x - spec.width;
-  const area = { key, x:areaX, y:spec.y, width:spec.width, height:Math.max(lineHeight, result.lines.length * lineHeight) };
+  // A caixa de seleção/arraste segue a tinta real do texto (ascent da 1ª linha + descent da última),
+  // não a "caixa tipográfica" cheia (lines × lineHeight) — essa sempre sobra alguns px de entrelinha
+  // abaixo do texto, o que fazia a área parecer bem maior que logos/imagens (recortados justos) ao
+  // centralizar ou igualar espaçamento entre elementos.
+  const lastIndex = result.lines.length - 1;
+  let area;
+  if (lastIndex < 0) {
+    area = { key, x:areaX, y:spec.y, width:spec.width, height:lineHeight };
+  } else {
+    const firstMetrics = ctx.measureText(result.lines[0]);
+    const lastMetrics = lastIndex === 0 ? firstMetrics : ctx.measureText(result.lines[lastIndex]);
+    const topAscent = Math.max(0, firstMetrics.actualBoundingBoxAscent || 0);
+    const bottomDescent = Math.max(0, lastMetrics.actualBoundingBoxDescent || 0);
+    const height = Math.max(1, lastIndex * lineHeight + bottomDescent + topAscent);
+    area = { key, x:areaX, y:spec.y - topAscent, width:spec.width, height };
+  }
+  ctx.restore();
   state.hitAreas.push(area); return area;
 }
 

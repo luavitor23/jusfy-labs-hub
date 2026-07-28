@@ -1,6 +1,6 @@
 // Orquestra o desenho do quadro (render), persistência local do rascunho e exportação SVG/PNG.
 import { $, canvas, ctx, fields, state, templates, textKeys, elementLabels, commercialLayoutVersion, designFamilies, debounce } from "./state.js";
-import { currentLayout, createLayout, resolvedTextSpec } from "./catalog.js";
+import { currentLayout, createLayout, resolvedTextSpec, syncStoryFromSquare } from "./catalog.js";
 import { parseSvg, escapeXml, safeName, download, distributeTextLines, loadImage } from "./svg-io.js";
 import { currentValues, fittedLines, drawText, drawButtonBackground, drawCommercial, drawLogos, drawPriceRegionNote, updateOverflowWarnings, clearOverflowWarnings, logoGroupGeometry, drawFreeElements, ensureFreeElementCrop } from "./draw.js";
 import { drawSelection, drawCustomGuides, updateSelectionUi } from "./interaction.js";
@@ -57,7 +57,8 @@ export function updateCounters() {
 export function captureFamilyFields() { state.familyFields[state.family] = Object.fromEntries(Object.entries(fields).map(([key,field]) => [key,field.value])); }
 
 export function saveLocal() {
-  captureFamilyFields(); const data = { fields:Object.fromEntries(Object.entries(fields).map(([key, field]) => [key, field.value])), familyFields:state.familyFields, family:state.family, format:state.format, layouts:state.layouts, guides:state.guides, selectedLogoId:state.selectedLogoId, commercialLayoutVersion };
+  syncStoryFromSquare();
+  captureFamilyFields(); const data = { fields:Object.fromEntries(Object.entries(fields).map(([key, field]) => [key, field.value])), familyFields:state.familyFields, family:state.family, format:state.format, layouts:state.layouts, guides:state.guides, groups:state.groups, selectedLogoId:state.selectedLogoId, commercialLayoutVersion };
   localStorage.setItem("jusfy-creative-draft", JSON.stringify(data)); $("saveState").textContent = "Salvando…";
 }
 
@@ -71,6 +72,7 @@ export function restoreLocal() {
     Object.entries(fields).forEach(([key, field]) => { if (Object.hasOwn(savedFields,key)) field.value = savedFields[key]; });
     if (data.layouts) state.layouts = data.layouts;
     if (data.guides && typeof data.guides === "object") state.guides = data.guides;
+    if (data.groups && typeof data.groups === "object") state.groups = data.groups;
     if (data.commercialLayoutVersion !== commercialLayoutVersion) Object.keys(templates).forEach((key) => { if (state.layouts[key]) state.layouts[key].commercialBlock = createLayout(key).commercialBlock; });
     if (data.selectedLogoId) state.selectedLogoId = data.selectedLogoId;
   } catch (_) { /* rascunho opcional */ }
@@ -143,4 +145,19 @@ export function exportSvg() {
 
 export async function exportPng(name) {
   await render(false); download(canvas.toDataURL("image/png"), `${safeName(name || currentValues().name || templates[state.template].name)}.png`); render();
+}
+
+// Reusa o mesmo render "limpo" (sem caixas de seleção, guias ou réguas) do export para a prévia em
+// tela cheia — assim o que o usuário vê pra conferir medidas é exatamente o que sai no PNG final.
+export async function openFullscreenPreview() {
+  await render(false);
+  const spec = templates[state.template];
+  $("fullscreenPreviewImage").src = canvas.toDataURL("image/png");
+  $("fullscreenPreviewDims").textContent = `${spec.width} × ${spec.height} px · ${spec.format === "story" ? "9:16" : "1:1"}`;
+  $("fullscreenPreview").hidden = false;
+  render();
+}
+
+export function closeFullscreenPreview() {
+  $("fullscreenPreview").hidden = true; $("fullscreenPreviewImage").removeAttribute("src");
 }

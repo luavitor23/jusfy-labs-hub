@@ -49,7 +49,7 @@ Frontend (ES modules em `js/`, carregados por `index.html` via `<script type="mo
 | `svg-io.js` | parsing de SVG, arquivos, imagens, fontes — sem estado |
 | `draw.js` | primitivas de desenho no canvas (texto ajustado, bloco comercial, logos) |
 | `render.js` | orquestra o `render()`, persistência local (`saveLocal`/`restoreLocal`), export SVG/PNG |
-| `interaction.js` | réguas, guias, seleção de elemento e drag (posição/largura/escala) |
+| `interaction.js` | réguas, guias, seleção de elemento, drag (posição/largura/escala) e alinhamento na arte (centralizar/espaçar) |
 | `assets-banks.js` | banco de logos, banco de ofertas, regionalização (OAB/UF) |
 | `template-loader.js` | troca de modelo/formato, import de SVG externo, diagnóstico de saúde do arquivo |
 | `copies.js` | biblioteca de copies sincronizadas do Notion |
@@ -67,6 +67,8 @@ Para adicionar um modelo novo, **nenhum arquivo de `js/` precisa ser alterado**:
 - Preço do selo padrão: `R$ 19,90` no primeiro mês (agora escolhido no banco de ofertas, não fixo).
 - Nota legal obrigatória **removida** a pedido do usuário (22/07/2026) — não é mais desenhada em nenhum modelo.
 - Co-branding: composto único Jusfy + regional, espaçamento fixo borda-a-borda; opção "Jusfy somente" quando `cobranding: false` no manifesto.
+- Banco de logos: um arquivo por regional em `banco-logos/<id>.png` (padrão desde 27/07/2026; SVG só como fallback), já contendo o composto fechado. O nome do arquivo precisa bater com o `id` do `catalog.json` — é assim que o servidor encontra a imagem. Ver `banco-logos/README.md`.
+- Alinhamento na arte: os botões "⇔ Centro", "⇕ Centro" e "≡ Espaçar" da barra do elemento selecionado trabalham sobre a área desenhada (`state.hitAreas`), não sobre `item.x/item.y` — é o que faz a centralização acertar textos com âncora à esquerda, botões de CTA e o composto de logos com `anchor`.
 - Nenhuma peça ou lote é considerada aprovada sem revisão humana.
 
 ## Legado — Notion e Canva

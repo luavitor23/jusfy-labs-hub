@@ -10,7 +10,7 @@
 </g>
 <g id="protected-image">
 <g id="Frame 1000002475">
-<text id="title" transform="translate(684.476 761.093) rotate(9.7769)" fill="#131313" style="white-space: pre" xml:space="preserve" font-family="Noto Sans" font-size="19.2163" font-weight="600" letter-spacing="0em"><tspan x="0" y="20.9559">Como a IA da Jusfy pode te ajudar hoje?</tspan></text>
+<text id="title" transform="translate(684.476 761.093) rotate(9.7769)" fill="#131313" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="19.2163" font-weight="600" letter-spacing="0em"><tspan x="0" y="20.9559">Como a IA da Jusfy pode te ajudar hoje?</tspan></text>
 </g>
 <g id="chat">
 <g clip-path="url(#clip1_596_12)">
@@ -19,7 +19,7 @@
 <g id="Card">
 <path d="M704.235 827.483L918.857 864.465C922.779 865.141 925.41 868.868 924.734 872.79L919.187 904.984C918.511 908.906 914.784 911.537 910.862 910.861L696.24 873.879C692.318 873.203 689.686 869.476 690.362 865.554L695.909 833.36C696.585 829.438 700.312 826.807 704.235 827.483Z" fill="#FAFBFF"/>
 <path d="M704.235 827.483L918.857 864.465C922.779 865.141 925.41 868.868 924.734 872.79L919.187 904.984C918.511 908.906 914.784 911.537 910.862 910.861L696.24 873.879C692.318 873.203 689.686 869.476 690.362 865.554L695.909 833.36C696.585 829.438 700.312 826.807 704.235 827.483Z" stroke="#E7E8EC" stroke-width="0.960817"/>
-<text id="Resumir casos" transform="translate(709.28 843.464) rotate(9.7769)" fill="#383839" style="white-space: pre" xml:space="preserve" font-family="Noto Sans" font-size="12.4906" letter-spacing="0em"><tspan x="0" y="13.3464">Resumir casos</tspan></text>
+<text id="Resumir casos" transform="translate(709.28 843.464) rotate(9.7769)" fill="#383839" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="12.4906" letter-spacing="0em"><tspan x="0" y="13.3464">Resumir casos</tspan></text>
 <g id="chevron-forward-outline 1">
 <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M896.725 879.021C897.091 878.762 897.597 878.849 897.855 879.215L901.822 884.835C902.08 885.2 901.993 885.706 901.628 885.965L896.008 889.932C895.642 890.19 895.136 890.103 894.878 889.737C894.62 889.372 894.707 888.866 895.073 888.608L900.03 885.108L896.53 880.15C896.272 879.785 896.359 879.279 896.725 879.021Z" fill="#01AB7D"/>
 </g>
@@ -28,14 +28,14 @@
 <path d="M945.368 869.034L1159.99 906.016C1163.91 906.692 1166.54 910.419 1165.87 914.341L1160.32 946.535C1159.64 950.457 1155.92 953.088 1152 952.412L937.374 915.43C933.452 914.754 930.82 911.027 931.496 907.105L937.043 874.911C937.719 870.989 941.446 868.358 945.368 869.034Z" fill="#FAFBFF"/>
 <path d="M945.368 869.034L1159.99 906.016C1163.91 906.692 1166.54 910.419 1165.87 914.341L1160.32 946.535C1159.64 950.457 1155.92 953.088 1152 952.412L937.374 915.43C933.452 914.754 930.82 911.027 931.496 907.105L937.043 874.911C937.719 870.989 941.446 868.358 945.368 869.034Z" stroke="#E7E8EC" stroke-width="0.960817"/>
 <g id="Content">
-<text id="Gerar documentos" transform="translate(950.414 885.015) rotate(9.7769)" fill="#383839" style="white-space: pre" xml:space="preserve" font-family="Noto Sans" font-size="12.4906" letter-spacing="0em"><tspan x="0" y="13.3464">Gerar documentos</tspan></text>
+<text id="Gerar documentos" transform="translate(950.414 885.015) rotate(9.7769)" fill="#383839" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="12.4906" letter-spacing="0em"><tspan x="0" y="13.3464">Gerar documentos</tspan></text>
 </g>
 </g>
 </g>
 <g id="Group">
 <path d="M694.096 913.483L1381.9 1032C1384.03 1032.37 1385.59 1032.64 1386.82 1032.95C1388.03 1033.27 1388.86 1033.61 1389.53 1034.11C1390.75 1035.03 1391.65 1036.3 1392.1 1037.75C1392.35 1038.55 1392.4 1039.45 1392.29 1040.7C1392.17 1041.96 1391.9 1043.53 1391.54 1045.66L1386.56 1074.54C1386.19 1076.67 1385.92 1078.24 1385.61 1079.46C1385.29 1080.68 1384.95 1081.51 1384.45 1082.18C1383.53 1083.4 1382.26 1084.3 1380.81 1084.75C1380.01 1084.99 1379.11 1085.04 1377.86 1084.93C1376.6 1084.82 1375.03 1084.55 1372.9 1084.18L685.105 965.664C682.976 965.298 681.407 965.027 680.185 964.712C678.969 964.398 678.137 964.05 677.469 963.551C676.25 962.64 675.351 961.366 674.9 959.913C674.653 959.116 674.605 958.215 674.716 956.964C674.829 955.708 675.098 954.14 675.465 952.011L680.443 923.123C680.809 920.994 681.081 919.426 681.395 918.204C681.709 916.987 682.056 916.155 682.555 915.487C683.466 914.268 684.74 913.369 686.194 912.918C686.99 912.671 687.891 912.623 689.142 912.735C690.398 912.847 691.967 913.116 694.096 913.483Z" stroke="#E7E8EC" stroke-width="0.960817"/>
 <g id="Text">
-<text id="Como posso te ajudar?" transform="translate(690.455 930.081) rotate(9.7769)" fill="#5E5E60" style="white-space: pre" xml:space="preserve" font-family="Noto Sans" font-size="13.4514" letter-spacing="0em"><tspan x="0" y="14.7192">Como posso te ajudar?</tspan></text>
+<text id="Como posso te ajudar?" transform="translate(690.455 930.081) rotate(9.7769)" fill="#5E5E60" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="13.4514" letter-spacing="0em"><tspan x="0" y="14.7192">Como posso te ajudar?</tspan></text>
 </g>
 </g>
 </g>

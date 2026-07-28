@@ -12,7 +12,7 @@
 </g>
 <g id="protected-image">
 <g id="Frame 1000002475">
-<text id="title" transform="translate(536.337 1282.22) rotate(9.7769)" fill="#131313" style="white-space: pre" xml:space="preserve" font-family="Noto Sans" font-size="28.0487" font-weight="600" letter-spacing="0em"><tspan x="0" y="30.3829">Como a IA da Jusfy pode te ajudar hoje?</tspan></text>
+<text id="title" transform="translate(536.337 1282.22) rotate(9.7769)" fill="#131313" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="28.0487" font-weight="600" letter-spacing="0em"><tspan x="0" y="30.3829">Como a IA da Jusfy pode te ajudar hoje?</tspan></text>
 </g>
 <g id="chat">
 <g clip-path="url(#clip1_597_13)">
@@ -21,7 +21,7 @@
 <g id="Card">
 <path d="M565.248 1378.72L878.516 1432.7C884.241 1433.69 888.082 1439.13 887.096 1444.86L878.87 1492.59C877.884 1498.31 872.443 1502.16 866.718 1501.17L553.45 1447.19C547.726 1446.2 543.884 1440.76 544.871 1435.04L553.096 1387.3C554.083 1381.58 559.524 1377.74 565.248 1378.72Z" fill="#FAFBFF"/>
 <path d="M565.248 1378.72L878.516 1432.7C884.241 1433.69 888.082 1439.13 887.096 1444.86L878.87 1492.59C877.884 1498.31 872.443 1502.16 866.718 1501.17L553.45 1447.19C547.726 1446.2 543.884 1440.76 544.871 1435.04L553.096 1387.3C554.083 1381.58 559.524 1377.74 565.248 1378.72Z" stroke="#E7E8EC" stroke-width="1.40243"/>
-<text id="Resumir casos" transform="translate(572.613 1402.05) rotate(9.7769)" fill="#383839" style="white-space: pre" xml:space="preserve" font-family="Noto Sans" font-size="18.2316" letter-spacing="0em"><tspan x="0" y="20.0739">Resumir casos</tspan></text>
+<text id="Resumir casos" transform="translate(572.613 1402.05) rotate(9.7769)" fill="#383839" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="18.2316" letter-spacing="0em"><tspan x="0" y="20.0739">Resumir casos</tspan></text>
 <g id="chevron-forward-outline 1">
 <path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M846.212 1453.95C846.746 1453.57 847.485 1453.7 847.862 1454.23L853.653 1462.44C854.03 1462.97 853.902 1463.71 853.368 1464.08L845.166 1469.88C844.632 1470.25 843.894 1470.13 843.517 1469.59C843.14 1469.06 843.267 1468.32 843.801 1467.94L851.037 1462.83L845.928 1455.6C845.551 1455.06 845.679 1454.33 846.212 1453.95Z" fill="#01AB7D"/>
 </g>
@@ -30,14 +30,14 @@
 <path d="M917.214 1439.37L1230.48 1493.35C1236.21 1494.34 1240.05 1499.78 1239.06 1505.5L1230.84 1553.24C1229.85 1558.96 1224.41 1562.81 1218.68 1561.82L905.416 1507.84C899.692 1506.85 895.85 1501.41 896.837 1495.69L905.062 1447.95C906.049 1442.23 911.489 1438.38 917.214 1439.37Z" fill="#FAFBFF"/>
 <path d="M917.214 1439.37L1230.48 1493.35C1236.21 1494.34 1240.05 1499.78 1239.06 1505.5L1230.84 1553.24C1229.85 1558.96 1224.41 1562.81 1218.68 1561.82L905.416 1507.84C899.692 1506.85 895.85 1501.41 896.837 1495.69L905.062 1447.95C906.049 1442.23 911.489 1438.38 917.214 1439.37Z" stroke="#E7E8EC" stroke-width="1.40243"/>
 <g id="Content">
-<text id="Gerar documentos" transform="translate(924.579 1462.7) rotate(9.7769)" fill="#383839" style="white-space: pre" xml:space="preserve" font-family="Noto Sans" font-size="18.2316" letter-spacing="0em"><tspan x="0" y="20.0739">Gerar documentos</tspan></text>
+<text id="Gerar documentos" transform="translate(924.579 1462.7) rotate(9.7769)" fill="#383839" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="18.2316" letter-spacing="0em"><tspan x="0" y="20.0739">Gerar documentos</tspan></text>
 </g>
 </g>
 </g>
 <g id="Group">
 <path d="M550.319 1505L1554.25 1677.99C1557.36 1678.52 1559.65 1678.92 1561.43 1679.38C1563.21 1679.84 1564.42 1680.34 1565.4 1681.07C1567.18 1682.4 1568.49 1684.26 1569.15 1686.38C1569.51 1687.55 1569.58 1688.86 1569.42 1690.69C1569.25 1692.52 1568.86 1694.81 1568.32 1697.92L1561.06 1740.08C1560.52 1743.19 1560.13 1745.48 1559.67 1747.26C1559.24 1748.93 1558.76 1750.1 1558.11 1751.04L1557.97 1751.23C1556.64 1753.01 1554.78 1754.32 1552.66 1754.98C1551.5 1755.34 1550.19 1755.41 1548.36 1755.25C1546.52 1755.08 1544.24 1754.69 1541.13 1754.15L537.195 1581.16C534.088 1580.63 531.799 1580.23 530.015 1579.77C528.24 1579.31 527.025 1578.81 526.05 1578.08C524.271 1576.75 522.958 1574.89 522.301 1572.77C521.94 1571.6 521.868 1570.29 522.032 1568.46C522.195 1566.63 522.589 1564.34 523.125 1561.23L530.391 1519.07C530.926 1515.96 531.321 1513.67 531.78 1511.89C532.238 1510.11 532.746 1508.9 533.475 1507.92C534.804 1506.14 536.663 1504.83 538.785 1504.17C539.948 1503.81 541.262 1503.74 543.089 1503.9C544.923 1504.07 547.212 1504.46 550.319 1505Z" stroke="#E7E8EC" stroke-width="1.40243"/>
 <g id="Text">
-<text id="Como posso te ajudar?" transform="translate(544.944 1529.58) rotate(9.7769)" fill="#5E5E60" style="white-space: pre" xml:space="preserve" font-family="Noto Sans" font-size="19.6341" letter-spacing="0em"><tspan x="0" y="21.118">Como posso te ajudar?</tspan></text>
+<text id="Como posso te ajudar?" transform="translate(544.944 1529.58) rotate(9.7769)" fill="#5E5E60" style="white-space: pre" xml:space="preserve" font-family="Poppins" font-size="19.6341" letter-spacing="0em"><tspan x="0" y="21.118">Como posso te ajudar?</tspan></text>
 </g>
 </g>
 </g>
