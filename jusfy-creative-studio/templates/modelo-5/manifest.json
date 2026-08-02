@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "model5",
+  "order": 5,
+  "label": "Modelo 5",
+  "description": "IA jurídica · Nova estagiária",
+  "copyTags": ["model5"],
+  "copyScopes": ["OAB"],
+  "copyFields": ["headline"],
+  "defaults": {"category":"","headline":"Sua nova estagiária é uma IA treinada por mais de 50 mil advogados!","support":"para advogados da OAB/UF e depois","cta":"Liberar acesso"},
+  "formats": {
+    "square": {
+      "key":"model5Square","name":"Modelo 5 · 1:1","width":1080,"height":1080,"source":"feed.svg","type":"mapped","enabledFields":["headline","support","cta"],
+      "patches":[[90,155,585,110],[70,295,840,270],[100,601,515,244],[100,839,361,84]],
+      "category":{"x":108,"y":295,"width":1,"height":1,"maxSize":1,"minSize":1,"maxLines":1,"lineHeight":1,"color":"#212121","weight":700,"align":"left"},
+      "headline":{"x":108,"y":317,"width":690,"height":225,"maxSize":60,"minSize":34,"maxLines":3,"lineHeight":1.3,"referenceLength":69,"lengthScaling":0.55,"color":"#212121","weight":700,"align":"left"},
+      "support":{"x":139,"y":779,"width":365,"height":30,"maxSize":24,"minSize":16,"maxLines":1,"lineHeight":1.2,"referenceLength":35,"lengthScaling":0.5,"color":"#212121","weight":400,"align":"left"},
+      "cta":{"x":280,"y":866,"width":320,"height":42,"maxSize":30,"minSize":20,"maxLines":1,"lineHeight":1.2,"referenceLength":14,"lengthScaling":0.45,"color":"#FAFAFA","weight":700,"align":"center","button":{"dx":-180,"dy":-27,"width":361,"height":84,"radius":42,"color":"#01A379"}},
+      "logos":{"x":190.2,"y":209,"maxWidth":570,"maxHeight":80,"gap":86,"reverse":true,"anchor":"left"},
+      "commercial":{"centerX":357.5,"centerY":682,"bounds":[102,603,511,158],"noteY":821},"commercialNoteMode":"runtime"
+    },
+    "story": {
+      "key":"model5Story","name":"Modelo 5 · 9:16","width":1080,"height":1920,"source":"stories.svg","type":"mapped","enabledFields":["headline","support","cta"],
+      "patches":[[82,385,585,110],[62,525,840,270],[100,825,508,262],[100,1077,361,84],[68,908,32,32,"#FAFAFA"]],
+      "category":{"x":100,"y":525,"width":1,"height":1,"maxSize":1,"minSize":1,"maxLines":1,"lineHeight":1,"color":"#212121","weight":700,"align":"left"},
+      "headline":{"x":100,"y":547,"width":690,"height":225,"maxSize":60,"minSize":34,"maxLines":3,"lineHeight":1.3,"referenceLength":69,"lengthScaling":0.55,"color":"#212121","weight":700,"align":"left"},
+      "support":{"x":131,"y":1022,"width":365,"height":30,"maxSize":24,"minSize":16,"maxLines":1,"lineHeight":1.2,"referenceLength":35,"lengthScaling":0.5,"color":"#212121","weight":400,"align":"left"},
+      "cta":{"x":280,"y":1104,"width":320,"height":42,"maxSize":30,"minSize":20,"maxLines":1,"lineHeight":1.2,"referenceLength":14,"lengthScaling":0.45,"color":"#FAFAFA","weight":700,"align":"center","button":{"dx":-180,"dy":-27,"width":361,"height":84,"radius":42,"color":"#01A379"}},
+      "logos":{"x":182.2,"y":439,"maxWidth":570,"maxHeight":80,"gap":86,"reverse":true,"anchor":"left"},
+      "commercial":{"centerX":354,"centerY":915.5,"bounds":[102,827,504,177],"noteY":1064},"commercialNoteMode":"runtime"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "items": [
+    { "id": "caasp", "name": "OAB/SP — CAASP", "region": "OAB/SP", "stateName": "São Paulo", "target": "regional", "source": "/banco-logos/caasp.png" },
+    { "id": "caars", "name": "OAB/RS — CAARS", "region": "OAB/RS", "stateName": "Rio Grande do Sul", "target": "regional", "source": "/banco-logos/caars.png" },
+    { "id": "caarj", "name": "OAB/RJ — CAARJ", "region": "OAB/RJ", "stateName": "Rio de Janeiro", "target": "regional", "source": "/banco-logos/caarj.png" },
+    { "id": "caams", "name": "OAB/MS — CAAMS", "region": "OAB/MS", "stateName": "Mato Grosso do Sul", "target": "regional", "source": "/banco-logos/caams.png" },
+    { "id": "caamg", "name": "OAB/MG — CAAMG", "region": "OAB/MG", "stateName": "Minas Gerais", "target": "regional", "source": "/banco-logos/caamg.png" },
+    { "id": "caadf", "name": "OAB/DF — CAA/DF", "region": "OAB/DF", "stateName": "Distrito Federal", "target": "regional", "source": "/banco-logos/caadf.png" },
+    { "id": "caapi", "name": "OAB/PI — CAAPI", "region": "OAB/PI", "stateName": "Piauí", "target": "regional", "source": "/banco-logos/caapi.png" },
+    { "id": "caapa", "name": "OAB/PA — CAAPA", "region": "OAB/PA", "stateName": "Pará", "target": "regional", "source": "/banco-logos/caapa.png" },
+    { "id": "caaac", "name": "OAB/AC — CAAAC", "region": "OAB/AC", "stateName": "Acre", "target": "regional", "source": "/banco-logos/caaac.png" },
+    { "id": "caaam", "name": "OAB/AM — CAAAM", "region": "OAB/AM", "stateName": "Amazonas", "target": "regional", "source": "/banco-logos/caaam.png" },
+    { "id": "caapr", "name": "OAB/PR — CAAPR", "region": "OAB/PR", "stateName": "Paraná", "target": "regional", "source": "/banco-logos/caapr.png" },
+    { "id": "jusfy", "name": "Jusfy oficial", "region": "", "target": "jusfy", "source": "/banco-logos/jusfy.png" }
+  ]
+}

@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+tmp/
+output/
+previews/
+imports/
+mestres-aprovados/
+app.js.bak
+.studio-server.pid

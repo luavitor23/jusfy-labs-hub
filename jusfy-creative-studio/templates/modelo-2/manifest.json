@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "manual",
+  "order": 2,
+  "label": "Modelo 2",
+  "description": "Manual · Produtividade jurídica",
+  "copyTags": ["manual"],
+  "copyScopes": ["OAB"],
+  "defaults": {"category":"","headline":"Advogado, você ainda faz tudo no manual?","support":"Quem perde tempo no operacional costuma deixar dinheiro na mesa.","cta":"Aproveitar agora"},
+  "formats": {
+    "square": {
+      "key":"manualSquare","name":"Modelo 2 · 1:1","width":1080,"height":1080,"source":"feed.svg","type":"mapped","enabledFields":["headline","support","cta"],
+      "patches":[[70,70,650,145],[85,250,750,180],[85,420,750,115],[100,854,361,84],[507,592,486,218],[97,589,402,224,"#FAFAFA"],[469.7,806.7,43.6,42.5,"#FAFAFA"],[891.7,534.7,42.5,43.6,"#FAFAFA"],[504.8,828.8,30.3,30.3,"#FAFAFA"],[534.8,554.8,30.3,30.3,"#FAFAFA"],[942.8,828.8,30.3,30.3,"#FAFAFA"],[932.8,560.8,30.3,30.3,"#FAFAFA"]],
+      "freeElements":{"badge1":{"label":"Selo","bounds":[100,592,396,218]},"star1":{"label":"Estrela 1","bounds":[469.7,806.7,43.6,42.5]},"star2":{"label":"Estrela 2","bounds":[891.7,534.7,42.5,43.6]},"star3":{"label":"Estrela 3","bounds":[504.8,828.8,30.3,30.3]},"star4":{"label":"Estrela 4","bounds":[534.8,554.8,30.3,30.3]},"star5":{"label":"Estrela 5","bounds":[942.8,828.8,30.3,30.3]},"star6":{"label":"Estrela 6","bounds":[932.8,560.8,30.3,30.3]}},
+      "category":{"x":100,"y":250,"width":1,"height":1,"maxSize":1,"minSize":1,"maxLines":1,"lineHeight":1,"color":"#212121","weight":700,"align":"left"},
+      "headline":{"x":100,"y":260,"width":720,"height":165,"maxSize":60,"minSize":34,"maxLines":3,"lineHeight":1.3,"referenceLength":43,"lengthScaling":0.55,"color":"#212121","weight":700,"align":"left"},
+      "support":{"x":100,"y":425,"width":720,"height":105,"maxSize":35,"minSize":20,"maxLines":3,"lineHeight":1.3,"referenceLength":64,"lengthScaling":0.5,"color":"#212121","weight":400,"align":"left"},
+      "cta":{"x":280,"y":881,"width":300,"height":52,"maxSize":30,"minSize":20,"maxLines":2,"lineHeight":1.2,"referenceLength":16,"lengthScaling":0.45,"color":"#fafafa","weight":700,"align":"center","button":{"dx":-180,"dy":-27,"width":361,"height":84,"radius":42,"color":"#01A379"}},
+      "priceRegionNote":{"x":531.6,"y":819,"width":480,"height":32,"maxSize":23.8273,"minSize":18,"maxLines":1,"lineHeight":1.2,"color":"#212121","weight":400,"align":"left","opacity":0.9},
+      "logos":{"x":169.3,"y":140,"maxWidth":560,"maxHeight":95,"gap":34,"reverse":true,"anchor":"left"},
+      "commercial":{"centerX":750,"centerY":701,"bounds":[509,594,482,214],"noteY":856},"commercialNoteMode":"runtime"
+    },
+    "story": {
+      "key":"manualStory","name":"Modelo 2 · 9:16","width":1080,"height":1920,"source":"stories.svg","type":"mapped","enabledFields":["headline","support","cta"],
+      "patches":[[70,365,650,145],[85,570,750,180],[85,750,750,115],[100,1188,361,84],[507,926,474,218],[97,923,402,224,"#FAFAFA"],[469.7,1140.7,43.6,42.5,"#FAFAFA"],[891.7,868.7,42.5,43.6,"#FAFAFA"],[504.8,1162.8,30.3,30.3,"#FAFAFA"],[534.8,888.8,30.3,30.3,"#FAFAFA"],[942.8,1162.8,30.3,30.3,"#FAFAFA"],[932.8,894.8,30.3,30.3,"#FAFAFA"]],
+      "freeElements":{"badge1":{"label":"Selo","bounds":[100,926,396,218]},"star1":{"label":"Estrela 1","bounds":[469.7,1140.7,43.6,42.5]},"star2":{"label":"Estrela 2","bounds":[891.7,868.7,42.5,43.6]},"star3":{"label":"Estrela 3","bounds":[504.8,1162.8,30.3,30.3]},"star4":{"label":"Estrela 4","bounds":[534.8,888.8,30.3,30.3]},"star5":{"label":"Estrela 5","bounds":[942.8,1162.8,30.3,30.3]},"star6":{"label":"Estrela 6","bounds":[932.8,894.8,30.3,30.3]}},
+      "category":{"x":100,"y":570,"width":1,"height":1,"maxSize":1,"minSize":1,"maxLines":1,"lineHeight":1,"color":"#212121","weight":700,"align":"left"},
+      "headline":{"x":100,"y":582,"width":720,"height":165,"maxSize":60,"minSize":34,"maxLines":3,"lineHeight":1.3,"referenceLength":43,"lengthScaling":0.55,"color":"#212121","weight":700,"align":"left"},
+      "support":{"x":100,"y":756,"width":720,"height":105,"maxSize":35,"minSize":20,"maxLines":3,"lineHeight":1.3,"referenceLength":64,"lengthScaling":0.5,"color":"#212121","weight":400,"align":"left"},
+      "cta":{"x":280,"y":1215,"width":300,"height":52,"maxSize":30,"minSize":20,"maxLines":2,"lineHeight":1.2,"referenceLength":16,"lengthScaling":0.45,"color":"#fafafa","weight":700,"align":"center","button":{"dx":-180,"dy":-27,"width":361,"height":84,"radius":42,"color":"#01A379"}},
+      "priceRegionNote":{"x":531,"y":1153,"width":470,"height":32,"maxSize":23.8273,"minSize":18,"maxLines":1,"lineHeight":1.2,"color":"#212121","weight":400,"align":"left","opacity":0.9},
+      "logos":{"x":169.3,"y":440,"maxWidth":560,"maxHeight":95,"gap":34,"reverse":true,"anchor":"left"},
+      "commercial":{"centerX":744,"centerY":1035,"bounds":[509,928,470,214],"noteY":1190},"commercialNoteMode":"runtime"
+    }
+  }
+}
